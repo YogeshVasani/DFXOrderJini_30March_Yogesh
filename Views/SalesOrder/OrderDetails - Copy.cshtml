@@ -1,0 +1,375 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+                  <div class="wrapper ng-scope" >
+    <div class="refresh ng-scope"></div>
+    <div class="row ng-scope">
+        <div class="col-lg-12">
+            <!-- ngIf: tab.id == 0 --><div class="card px-2 ng-scope" ng-if="tab.id == 0">
+
+                <!---
+                     ----- Standard B2BOMS Order Detail View -----
+                -->
+
+                <!-- ngIf: coID != 'DSGR' --><div ng-if="coID != &#39;DSGR&#39;" class="card-body ng-scope">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <!-- ngIf: !orderDetails[0].source || orderDetails[0].source != 'Pos' --><h3 class="text-left ng-binding ng-scope" ng-if="!orderDetails[0].source || orderDetails[0].source != &#39;Pos&#39;">Order Details</h3><!-- end ngIf: !orderDetails[0].source || orderDetails[0].source != 'Pos' -->
+                                <!-- ngIf: orderDetails[0].source == 'Pos' -->
+                            </div>
+                            <!-- ngIf: settings.statusChange && standardOrderFulfilFlag -->
+                            <!-- ngIf: !settings.statusChange --><div class="col-sm-4 ng-scope" ng-if="!settings.statusChange">
+                                <h3 class="text-right">
+                                    <!-- ngIf: !orderDetails[0].status || orderDetails[0].status == 'new' --><span class="badge badge-primary badge-pill ng-binding ng-scope" ng-if="!orderDetails[0].status || orderDetails[0].status == &#39;new&#39;">New</span><!-- end ngIf: !orderDetails[0].status || orderDetails[0].status == 'new' -->
+                                    <!-- ngIf: orderDetails[0].status && orderDetails[0].status == 'open' -->
+                                    <!-- ngIf: orderDetails[0].status && orderDetails[0].status == 'closed' -->
+                                    <!-- ngIf: orderDetails[0].status && orderDetails[0].status != 'closed' && orderDetails[0].status != 'new' && orderDetails[0].status != 'open' -->
+                                </h3>
+                            </div><!-- end ngIf: !settings.statusChange -->
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="container-fluid d-flex justify-content-between">
+                        <div class="col-12">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <!---- Customer Name  -->
+                                    <p class="mb-0 ng-binding">
+                                        <strong class="ng-binding">Customer</strong> :<span id="CustomeraName"></span>
+                                    <!-- ngIf: orderDetails[0].dealerphone --><span ng-if="orderDetails[0].dealerphone" class="ng-binding ng-scope" style="">(9629549479)</span><!-- end ngIf: orderDetails[0].dealerphone -->
+                                    <!--<span class="pull-right" ng-if="addAsDealer" style="color:rgb(7, 51, 102); font-size:10px; text-decoration: underline; cursor:pointer;" ng-click="posAddDealer()"><i class="fa fa-plus-circle" aria-hidden="true" style="color:#003366; font-size:12px;"></i>Add As {{nav[2].tab | singular}}</span>-->
+                                </p>
+                                <!---- Customer Code / ID  -->
+                                <!-- ngIf: orderDetails[0].dealercode --><p class="mb-0 ng-binding ng-scope" ng-if="orderDetails[0].dealercode" style=""><strong>CustID / StoreID</strong> : 105514</p><!-- end ngIf: orderDetails[0].dealercode -->
+                                <!---- Customer Address  -->
+                                <p ng-show="!objAddr" class="mb-0" aria-hidden="false"><strong>Address</strong> :
+                                        <span id="BillingAdd"></span>
+                                </p>
+                                <!---- Customer Address (Swiss Obj)  -->
+                                <p ng-show="objAddr &amp;&amp; orderDetails[0].objAddress" class="mb-0 ng-hide" aria-hidden="true"><strong>Address</strong> :
+                                    <span ng-show="objAddr" class="ng-binding ng-hide" aria-hidden="true">
+                                        Name : ,
+                                        Phone No : ,
+                                        Address : 
+                                        <!-- ngIf: orderDetails[0].objAddress.district -->
+                                        <!-- ngIf: orderDetails[0].objAddress.state -->
+                                        <!-- ngIf: orderDetails[0].objAddress.pinCode -->
+                                    </span>
+                                </p>
+                                <!---- Shipping Address  -->
+                                <p class="mb-0" ng-show="orderDetails[0].shipping_address" aria-hidden="false" style="">
+                                    <strong>Shipping Address</strong> :
+                                   <span id="ShippingAdd"></span>
+                                    <span ng-show="objAddr" class="ng-binding ng-hide" aria-hidden="true">Name : , Phone No : , Address : <!-- ngIf: orderDetails[0].objShipAddress.district --><!-- ngIf: orderDetails[0].objShipAddress.state --><!-- ngIf: orderDetails[0].objShipAddress.pinCode -->
+                                        </span>
+                                </p>
+                                <!---- Email ID -->
+                                <!-- ngIf: orderDetails[0].email -->
+                                <!---- Site Code (BBFW)-->
+                                <!---- TODO : To be deprecated -->
+                                <p class="mb-0 ng-binding ng-hide" ng-show="orderDetails[0].siteCode" aria-hidden="true"><strong>Site Code</strong> :  <br>
+                                    <strong>Advance To Be Paid</strong> : 
+                                </p>
+                                <!---- Payment Mode Chosen -->
+                                <p class="mb-0 ng-binding ng-hide" ng-show="orderDetails[0].paymentMode" aria-hidden="true">
+                                    <strong>Payment Mode</strong> :
+                                </p>
+
+                                <!---- Tecknovate : Customer IDs -->
+                                <!-- ngIf: instance_details.coID == 'GLGR' -->
+                            </div>
+
+                            <!---- Salesperson information -->
+                            <div class="col-lg-6">
+                                <!---- Order ID  -->
+                                <p class="mb-0 ng-binding"><strong class="ng-binding">Order ID</strong> : 2023000007</p>
+                                <!---- Order Date  -->
+                                <p class="mb-0 ng-binding"><strong class="ng-binding">Order Date</strong> : 20 - Feb - 2023 at 1:57 PM</p>
+                                <!---- Order Placed BY Name  -->
+                                <p class="mb-0 ng-binding"><strong>Order Placed by</strong> : </p>
+                                <!---- Salesperson Name  -->
+                                <p class="mb-0 ng-binding"><strong class="ng-binding">Salesperson</strong> : SATHYARAJ</p>
+                                <!--<p class="mb-0 " ><strong>{{getRoleName('Salesperson')}}</strong> : {{getUserName(orderDetails[0].salesperson)}}</p>-->
+                                <!---- Stockist Name -->
+                                <!-- ngIf: orderDetails[0].stockistname -->
+                                <!---- Customer Group / Class -->
+                                <p class="mb-0 ng-binding ng-hide" ng-show="orderDetails[0].class" aria-hidden="true">
+                                    <strong>Group</strong> : 
+                                </p>
+                                <!---- Customer Plant Code (Duroflex) -->
+                                <p class="mb-0 ng-binding" ng-show="orderDetails[0].plant" aria-hidden="false" style="">
+                                    <strong>Plant Code</strong> : P001
+                                </p>
+                                <!-- Customer request date-->
+                                <p class="mb-0 ng-binding ng-hide" ng-show="orderDetails[0].customerRequestDate" aria-hidden="true">
+                                    <strong>﻿Customer Request Date </strong> : 
+                                </p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
+                <!---- Order Details Table -->
+                <div class="container-fluid mt-5 d-flex justify-content-center w-100">
+                    <!-- ngIf: instance_details.coID != 'GLGR' --><div class="table-responsive w-100 ng-scope" ng-if="instance_details.coID != &#39;GLGR&#39;">
+                        <table class="table" style=" border-collapse: separate; border-spacing: 0 5px;">
+                            <!-- ngIf: !nav[25].activated --><thead ng-if="!nav[25].activated" class="ng-scope">
+                            <tr class="bg-dark text-white">
+                                <!-- Product Details Qty -->
+                                <th class="text-white ng-binding">Sl#</th>
+                                <th class="text-white ng-binding">Item Code</th>
+                                <th class="text-white text-left ng-binding">Item Name</th>
+                                <!-- Ordered Qty -->
+                                <th class="text-white text-right ng-binding">Qty</th>
+                                <!-- Line Unit -->
+                                <th class="text-white text-right ng-binding">Unit</th>
+                                <!-- GST -->
+                                <!-- ngIf: orderDetails[0].GST.cgst && orderDetails[0].country != 'ghana' -->
+                                <!-- ngIf: orderDetails[0].GST.sgst && orderDetails[0].country != 'ghana' -->
+                                <!-- ngIf: orderDetails[0].GST.igst && orderDetails[0].country != 'ghana' -->
+                                <!-- Product Price -->
+                                <th class="text-white text-right ng-binding">List Price</th>
+                                <th class="text-white text-right ng-binding">Order Price </th>
+                                <!-- Discounting -->
+                                <th class="text-white text-right ng-binding">Discount Applied(%)</th>
+                                <!-- Totals -->
+                                <th class="text-white text-right ng-binding">List Total</th>
+                                <th class="text-white text-right ng-binding">OrderTotal </th>
+                                <!-- Actions on the order -->
+                                <!-- ngIf: !settings.invoice --><th class="text-white text-right ng-binding ng-scope" ng-if="!settings.invoice">Fulfiller</th><!-- end ngIf: !settings.invoice -->
+                                <!-- ngIf: !settings.invoice --><th class="text-white text-right ng-binding ng-scope" ng-if="!settings.invoice">Delivery Date</th><!-- end ngIf: !settings.invoice -->
+                                <th class="text-white text-center ng-binding">Status</th>
+                            </tr>
+                            </thead><!-- end ngIf: !nav[25].activated -->
+                            <!-- ngRepeat: order in orderDetails --><!-- ngIf: (settings.invoice && (order.transaction_id || order.receive_id)) || (!settings.invoice) --><tbody ng-hide="nav[25].activated" class="text-right ng-scope" ng-repeat="order in orderDetails" ng-if="(settings.invoice &amp;&amp; (order.transaction_id || order.receive_id)) || (!settings.invoice)" aria-hidden="false" style="">
+                            <tr>
+                                <td class="text-center ng-binding">1</td>
+                                <td class="text-center ng-binding">GLGAYC21001800125023D</td>
+                                <td class="text-left ng-binding">023D GLG AYUSH CUSHIONS
+                                    <br><div> <!-- ngIf: order.hsn_code --></div>
+                                    <div><!-- ngIf: order.size --><small ng-if="order.size" class="ng-scope">(<!-- ngIf: order.size.leng --><span ng-if="order.size.leng" class="ng-binding ng-scope">Length - 21</span><!-- end ngIf: order.size.leng --><!-- ngIf: order.size.width --><span ng-if="order.size.width" class="ng-binding ng-scope"> Width - 18</span><!-- end ngIf: order.size.width --><!-- ngIf: order.size.thickness --><span ng-if="order.size.thickness" class="ng-binding ng-scope"> Thickness - 125</span><!-- end ngIf: order.size.thickness -->)</small><!-- end ngIf: order.size --></div>
+                                    <div><!-- ngIf: order.LDPE --><small ng-if="order.LDPE" class="ng-binding ng-scope">(LDPE - YES)</small><!-- end ngIf: order.LDPE --></div>
+                                    <!--<div ng-if="order.itemDetails[0] && order.itemDetails[0].Description"  style="font-size:11px; color:darkgrey;"><span style="color:#000000;">Description : </span>{{order.itemDetails[0].Description ? order.itemDetails[0].Description : 'N/A'}}</div>-->
+                                    <!--<div ng-if="order.itemDetails[0] && order.itemDetails[0].itemCode" style="font-size:11px; color:darkgrey;"><span style="color:#000000;">Model Code  : </span>{{order.itemDetails[0].itemCode ? order.itemDetails[0].itemCode : 'N/A'}}</div>-->
+                                    <!--<div ng-if="order.itemDetails[0] && order.itemDetails[0].Product" style="font-size:11px; color:darkgrey;"><span style="color:#000000;">Model Name  : </span>{{order.itemDetails[0].Product ? order.itemDetails[0].Product : 'N/A'}}</div>-->
+                                    <div style="font-size:11px; color:darkgrey;" class="ng-binding"><span style="color:#000000;">Description  : </span>N/A</div>
+                                    <!-- ngRepeat: line in order.lineComment -->
+                                </td>
+                                <!--..... B&B related columns ... -->
+                                <!-- ngIf: settings.invoice -->
+                                <!-- ngIf: settings.invoice -->
+                                <!-- ngIf: settings.invoice -->
+                                <!-- ngIf: settings.invoice -->
+                                <!-- ngIf: settings.invoice -->
+                                <!-- ngIf: settings.invoice -->
+                                <td class="text-center ng-binding">1</td>
+
+                                <td class="text-left ng-binding">N/A</td>
+                                <!-- ngIf: orderDetails[0].GST.cgst && orderDetails[0].country != 'ghana' -->
+                                <!-- ngIf: orderDetails[0].GST.sgst && orderDetails[0].country != 'ghana' -->
+                                <!-- ngIf: orderDetails[0].GST.igst && orderDetails[0].country != 'ghana' -->
+                                <!-- ngIf: !nav[25].activated --><td class="text-center ng-binding ng-scope" ng-if="!nav[25].activated">N/A</td><!-- end ngIf: !nav[25].activated -->
+                                <!-- ngIf: nav[25].activated -->
+                                <td class="text-center ng-binding ng-hide" ng-show="api_key==&#39;8f9c1a2b3044f02b4a04d1bfbcdbb18f&#39;" aria-hidden="true"></td>
+                                <!-- ngIf: !order.BulkPrice && !nav[25].activated --><td class="text-center ng-binding ng-scope" ng-if="!order.BulkPrice &amp;&amp; !nav[25].activated" ng-hide="api_key==&#39;8f9c1a2b3044f02b4a04d1bfbcdbb18f&#39;" aria-hidden="false">N/A</td><!-- end ngIf: !order.BulkPrice && !nav[25].activated -->
+                                <!-- ngIf: order.BulkPrice && !nav[25].activated -->
+
+                                <!--<td class="text-center" ng-if="nav[25].activated" ng-hide="api_key=='8f9c1a2b3044f02b4a04d1bfbcdbb18f'">{{(order.netPrice ? ((order.netPrice) | currency : currency) : 'N/A')}}</td>-->
+                                <!-- ngIf: nav[25].activated -->
+
+                                <!-- ngIf: !nav[25].activated --><td class="text-center ng-binding ng-scope" ng-if="!nav[25].activated">0%</td><!-- end ngIf: !nav[25].activated -->
+                                <!-- ngIf: nav[25].activated -->
+
+                                <!--<td class="text-center">{{(order.Special || getItemsDiscount(order.itemcode)) + "%"}}</td>-->
+                                <!-- ngIf: !nav[25].activated --><td class="text-center ng-binding ng-scope" ng-if="!nav[25].activated" ng-hide="api_key==&#39;8f9c1a2b3044f02b4a04d1bfbcdbb18f&#39;" aria-hidden="false">N/A</td><!-- end ngIf: !nav[25].activated -->
+                                <!-- ngIf: nav[25].activated -->
+                                <td class="text-center ng-binding ng-hide" ng-show="api_key==&#39;8f9c1a2b3044f02b4a04d1bfbcdbb18f&#39;" aria-hidden="true">N/A</td>
+
+                                <!-- ngIf: !settings.invoice --><td class="text-left ng-binding ng-scope" ng-hide="api_key==&#39;8f9c1a2b3044f02b4a04d1bfbcdbb18f&#39;" ng-if="!settings.invoice" aria-hidden="false">N/A</td><!-- end ngIf: !settings.invoice -->
+                                <!-- ngIf: !settings.invoice --><td ng-hide="user.role==&#39;Dealer&#39; || user.role==&#39;Portal Access&#39;" ng-if="!settings.invoice" class="ng-scope" aria-hidden="false">
+                                    <!-- ngIf: !order.fulfiller --><select id="orderLine_fulfiller" ng-if="!order.fulfiller" class="form-control info ng-pristine ng-untouched ng-valid ng-scope" ng-change="updateFulfiller(order,order.fulfiller, 0)" ng-model="order.fulfiller" ng-options="opt.sellerphone as (opt.sellername | camelCase) for opt in roleFulfiller track by opt.sellerphone" style="height: 20px;" tabindex="0" aria-invalid="false"><option value="" class="" selected="selected">--Select--</option></select><!-- end ngIf: !order.fulfiller -->
+                                    <!-- ngIf: order.fulfiller -->
+                                </td><!-- end ngIf: !settings.invoice -->
+                                <!-- ngIf: !settings.invoice --><td ng-show="user.role==&#39;Dealer&#39;|| user.role==&#39;Portal Access&#39;" ng-if="!settings.invoice" class="ng-binding ng-scope ng-hide" aria-hidden="true"> </td><!-- end ngIf: !settings.invoice -->
+                                <!-- ngIf: !settings.invoice --><td width="10%" class="p-1 ng-scope" ng-hide="user.role==&#39;Dealer&#39; || user.role==&#39;Portal Access&#39;" ng-if="!settings.invoice" aria-hidden="false">
+                                    <md-datepicker ng-model="order.deliveryDate" md-hide-icons="calendar" ng-change="updateDeliveryDate(order, order.deliveryDate, 0)" class="ng-pristine ng-untouched ng-valid _md-datepicker-has-triangle-icon ng-isolate-scope ng-valid-mindate ng-valid-maxdate ng-valid-filtered ng-valid-valid" tabindex="-1" aria-owns="md-date-pane-18" type="date" aria-invalid="false"><div class="md-datepicker-input-container" ng-class="{&#39;md-datepicker-focused&#39;: ctrl.isFocused}"><input class="md-datepicker-input" aria-haspopup="true" aria-expanded="false" ng-focus="ctrl.setFocused(true)" ng-blur="ctrl.setFocused(false)" size="3"> <button class="md-datepicker-triangle-button md-icon-button md-button" type="button" ng-transclude="" md-no-ink="" ng-click="ctrl.openCalendarPane($event)" aria-label="Open calendar" tabindex="0"><div class="md-datepicker-expand-triangle ng-scope"></div></button></div><div class="md-datepicker-calendar-pane md-whiteframe-z1" id="md-date-pane-18"><div class="md-datepicker-input-mask"><div class="md-datepicker-input-mask-opaque"></div></div><div class="md-datepicker-calendar"><!-- ngIf: ctrl.isCalendarOpen --></div></div></md-datepicker>
+                                </td><!-- end ngIf: !settings.invoice -->
+                                <td width="10%" ng-show="user.role==&#39;Dealer&#39; || user.role==&#39;Portal Access&#39;" class="ng-binding ng-hide" aria-hidden="true">
+
+                                </td>
+
+                                <!-- ngIf: !nav[25].activated --><td ng-if="!nav[25].activated" ng-class="(order.lineStatus==&#39;new&#39; || order.lineStatus==&#39;New&#39;)?&#39;success!&#39;:&#39;&#39;" ng-show="settings.lineStatusChange" class="ng-scope ng-hide" aria-hidden="true">
+                                    <select ng-model="order.lineStatus" ng-show="(!user.role || (user.role != &#39;Dealer&#39; &amp;&amp; user.role != &#39;Portal Access&#39;))" ng-options="(status | camelCase) for status in orderLineStatus" ng-change="updateOrderStatus(order, order.lineStatus, 0)" class="form-control info ng-pristine ng-untouched ng-valid" placeholder="all" style="height:20px; padding: 0px;" tabindex="0" aria-hidden="false" aria-invalid="false"><option value="?" selected="selected"></option></select>
+                                    <span ng-show="(user.role == &#39;Dealer&#39;) || (user.role == &#39;Portal Access&#39;)" class="new ng-hide" aria-hidden="true">New</span>
+                                </td><!-- end ngIf: !nav[25].activated -->
+                                <!-- ngIf: nav[25].activated -->
+
+                                <!-- ngIf: !nav[25].activated --><td ng-if="!nav[25].activated" ng-show="!settings.lineStatusChange" class="ng-scope" aria-hidden="false"><span class="confirm">Confirm</span></td><!-- end ngIf: !nav[25].activated -->
+                                <!-- ngIf: nav[25].activated -->
+
+                            </tr><!-- ngIf: order.product_description -->
+
+
+                            </tbody><!-- end ngIf: (settings.invoice && (order.transaction_id || order.receive_id)) || (!settings.invoice) --><!-- end ngRepeat: order in orderDetails -->
+
+                            <!-- ngIf: nav[25].activated -->
+                            <!-- ngRepeat: order in orderDetails --><!-- ngIf: (settings.invoice && (order.transaction_id || order.receive_id)) || (!settings.invoice) --><tbody ng-show="nav[25].activated" class="text-right ng-scope ng-hide" ng-repeat="order in orderDetails" ng-if="(settings.invoice &amp;&amp; (order.transaction_id || order.receive_id)) || (!settings.invoice)" aria-hidden="true" style="">
+                            <tr>
+                                <td class="text-center ng-binding">1</td>
+                                <td class="text-center ng-binding">GLGAYC21001800125023D</td>
+                                <td class="text-left ng-binding">023D GLG AYUSH CUSHIONS
+                                    <br> <div><!-- ngIf: order.hsn_code --></div>
+                                    <div><!-- ngIf: order.size --><small ng-if="order.size" class="ng-scope">(<!-- ngIf: order.size.leng --><span ng-if="order.size.leng" class="ng-binding ng-scope">Length - 21</span><!-- end ngIf: order.size.leng --><!-- ngIf: order.size.width --><span ng-if="order.size.width" class="ng-binding ng-scope"> Width - 18</span><!-- end ngIf: order.size.width --><!-- ngIf: order.size.thickness --><span ng-if="order.size.thickness" class="ng-binding ng-scope"> Thickness - 125</span><!-- end ngIf: order.size.thickness -->)</small><!-- end ngIf: order.size --></div>
+                                    <div><!-- ngIf: order.LDPE --><small ng-if="order.LDPE" class="ng-binding ng-scope">(LDPE - YES)</small><!-- end ngIf: order.LDPE --></div>
+                                    <br> <!-- ngIf: order.itemDetails[0] && order.itemDetails[0].Pack -->
+                                    <!--<div ng-if="order.itemDetails[0] && order.itemDetails[0].itemCode" style="font-size:11px; color:darkgrey;"><span style="color:#000000;">Model Code  :</span>{{order.itemDetails[0].itemCode ? order.itemDetails[0].itemCode : 'N/A'}}</div>-->
+                                    <!--<div ng-if="order.itemDetails[0] && order.itemDetails[0].Product" style="font-size:11px; color:darkgrey;"><span style="color:#000000;">Model Name  :</span>{{order.itemDetails[0].Product ? order.itemDetails[0].Product : 'N/A'}}</div>-->
+                                    <!--<div ng-if="order.itemDetails[0] && order.itemDetails[0].Pack" style="font-size:11px; color:darkgrey;"><span style="color:#000000;">Pack  : </span>{{order.itemDetails[0].Pack ? order.itemDetails[0].Pack : 'N/A'}}</div>-->
+                                    <!-- ngRepeat: line in order.lineComment -->
+                                </td>
+                                <!--..... B&B related columns ... -->
+                                <!-- ngIf: settings.invoice -->
+                                <!-- ngIf: settings.invoice -->
+                                <!-- ngIf: settings.invoice -->
+                                <!-- ngIf: settings.invoice -->
+                                <!-- ngIf: settings.invoice -->
+                                <!-- ngIf: settings.invoice -->
+                                <td class="text-center ng-binding">1</td>
+
+                                <td class="text-left ng-binding">N/A</td>
+                                <!-- ngIf: orderDetails[0].GST.cgst && orderDetails[0].country != 'ghana' -->
+                                <!-- ngIf: orderDetails[0].GST.sgst && orderDetails[0].country != 'ghana' -->
+                                <!-- ngIf: orderDetails[0].GST.igst && orderDetails[0].country != 'ghana' -->
+
+
+                                <!-- ngIf: !nav[25].activated --><td class="text-center ng-binding ng-scope" ng-if="!nav[25].activated">N/A</td><!-- end ngIf: !nav[25].activated -->
+                                <!-- ngIf: nav[25].activated -->
+
+
+                                <!--<td class="text-center" ng-if="nav[25].activated" ng-hide="api_key=='8f9c1a2b3044f02b4a04d1bfbcdbb18f'">{{(order.orderMRP ? ((order.orderMRP) | currency : currency) : 'N/A')}}</td>-->
+
+                                <!-- ngIf: nav[25].activated -->
+
+                                <td class="text-center ng-binding">%</td>
+                                <td class="text-center ng-binding"> %</td>
+
+                                <td class="text-center ng-binding">N/A</td>
+                                <!--<td class="text-center" ng-if="nav[25].activated" ng-hide="api_key=='8f9c1a2b3044f02b4a04d1bfbcdbb18f'" >{{((order.netPrice - (order.finalDiscount / 100))}}</td>-->
+
+                                <td class="text-center ng-binding">%</td>
+
+                                <!-- ngIf: !settings.invoice --><td class="text-left ng-binding ng-scope" ng-hide="api_key==&#39;8f9c1a2b3044f02b4a04d1bfbcdbb18f&#39;" ng-if="!settings.invoice" aria-hidden="false">N/A</td><!-- end ngIf: !settings.invoice -->
+                                <!--<td class="text-left" ng-hide="api_key=='8f9c1a2b3044f02b4a04d1bfbcdbb18f'" ng-if="!settings.invoice">{{order.finalPrice}}</td>-->
+
+
+
+                                <!-- ngIf: !settings.invoice --><td ng-hide="user.role==&#39;Dealer&#39; || user.role==&#39;Portal Access&#39;" ng-if="!settings.invoice" class="ng-scope" aria-hidden="false">
+                                    <!-- ngIf: !order.fulfiller --><select id="orderLine_fulfiller" ng-if="!order.fulfiller" class="form-control info ng-pristine ng-untouched ng-valid ng-scope" ng-change="updateFulfiller(order,order.fulfiller, 0)" ng-model="order.fulfiller" ng-options="opt.sellerphone as (opt.sellername | camelCase) for opt in roleFulfiller track by opt.sellerphone" style="height: 20px;" tabindex="0" aria-invalid="false"><option value="" class="" selected="selected">--Select--</option></select><!-- end ngIf: !order.fulfiller -->
+                                    <!-- ngIf: order.fulfiller -->
+                                </td><!-- end ngIf: !settings.invoice -->
+                                <!-- ngIf: !settings.invoice --><td ng-show="user.role==&#39;Dealer&#39;|| user.role==&#39;Portal Access&#39;" ng-if="!settings.invoice" class="ng-binding ng-scope ng-hide" aria-hidden="true"> </td><!-- end ngIf: !settings.invoice -->
+                                <!-- ngIf: !settings.invoice --><td width="10%" class="p-1 ng-scope" ng-hide="user.role==&#39;Dealer&#39; || user.role==&#39;Portal Access&#39;" ng-if="!settings.invoice" aria-hidden="false">
+                                    <md-datepicker ng-model="order.deliveryDate" md-hide-icons="calendar" ng-change="updateDeliveryDate(order, order.deliveryDate, 0)" class="ng-pristine ng-untouched ng-valid _md-datepicker-has-triangle-icon ng-isolate-scope ng-valid-mindate ng-valid-maxdate ng-valid-filtered ng-valid-valid" tabindex="-1" aria-owns="md-date-pane-19" type="date" aria-invalid="false"><div class="md-datepicker-input-container" ng-class="{&#39;md-datepicker-focused&#39;: ctrl.isFocused}"><input class="md-datepicker-input" aria-haspopup="true" aria-expanded="false" ng-focus="ctrl.setFocused(true)" ng-blur="ctrl.setFocused(false)" size="3"> <button class="md-datepicker-triangle-button md-icon-button md-button" type="button" ng-transclude="" md-no-ink="" ng-click="ctrl.openCalendarPane($event)" aria-label="Open calendar" tabindex="0"><div class="md-datepicker-expand-triangle ng-scope"></div></button></div><div class="md-datepicker-calendar-pane md-whiteframe-z1" id="md-date-pane-19"><div class="md-datepicker-input-mask"><div class="md-datepicker-input-mask-opaque"></div></div><div class="md-datepicker-calendar"><!-- ngIf: ctrl.isCalendarOpen --></div></div></md-datepicker>
+                                </td><!-- end ngIf: !settings.invoice -->
+                                <td width="10%" ng-show="user.role==&#39;Dealer&#39; || user.role==&#39;Portal Access&#39;" class="ng-binding ng-hide" aria-hidden="true">
+
+                                </td>
+
+
+                                <!-- ngIf: nav[25].activated -->
+
+                                <!-- ngIf: !nav[25].activated --><td ng-if="!nav[25].activated" ng-show="!settings.lineStatusChange" class="ng-scope" aria-hidden="false"><span class="confirm">Confirm</span></td><!-- end ngIf: !nav[25].activated -->
+                                <!-- ngIf: nav[25].activated -->
+
+                            </tr><!-- ngIf: order.product_description -->
+
+
+                            </tbody><!-- end ngIf: (settings.invoice && (order.transaction_id || order.receive_id)) || (!settings.invoice) --><!-- end ngRepeat: order in orderDetails -->
+
+                        </table>
+                    </div><!-- end ngIf: instance_details.coID != 'GLGR' -->
+                    <!-- ngIf: instance_details.coID == 'GLGR' -->
+                </div>
+                <hr>
+                <div class="container-fluid mt-3 w-100">
+                    <div class="row">
+                        <div class="col-lg-6 pl-0">
+                            <p class="text-left mb-2">
+                                <!-- ngIf: !settings.invoice --><span ng-if="!settings.invoice" class="ng-binding ng-scope"><strong>Total Quantity : </strong>1 </span><!-- end ngIf: !settings.invoice -->
+
+                            </p><p class="text-left mb-2">
+                                <!-- ngIf: orderDetails[0].taxExclusive -->
+                            </p>
+                            <!-- ngIf: !orderDetails[0].taxExclusive --><small ng-if="!orderDetails[0].taxExclusive" class="ng-binding ng-scope"> <strong> * Note : </strong>Catalog price is inclusive of tax </small><!-- end ngIf: !orderDetails[0].taxExclusive -->
+                            <p></p>
+                            <p class="text-left mb-2">
+                                <!-- ngIf: orderDetails[0].deliveryDistance -->
+                            </p>
+                            <p class="text-left mb-2">
+                                <!-- ngIf: orderDetails[0].walletAmount -->
+                            </p>
+                            <p class="text-left mb-2">
+                                <!-- ngIf: orderDetails[0].razorpayAmount -->
+                            </p>
+                        </div>
+
+                        <div class="col-lg-6 pl-0">
+                            <!-- ngRepeat: otherTotalTax in orderDetails[0].otherTaxes_Total -->
+                            <!-- ngIf: !settings.invoice && orderDetails[0].country != 'ghana' --><p class="text-right mb-2 ng-binding ng-scope" ng-if="!settings.invoice &amp;&amp; orderDetails[0].country != &#39;ghana&#39;"><strong>Taxable Amount : </strong>N/A</p><!-- end ngIf: !settings.invoice && orderDetails[0].country != 'ghana' -->
+                            <!-- ngIf: orderDetails[0].GST_Total.cgst && !settings.invoice && orderDetails[0].country != 'ghana' -->
+                            <!-- ngIf: orderDetails[0].GST_Total.sgst && !settings.invoice && orderDetails[0].country != 'ghana' -->
+                            <!-- ngIf: orderDetails[0].GST_Total.igst && !settings.invoice && orderDetails[0].country != 'ghana' -->
+
+                            <!--<p class="text-right mb-2" ng-if="!settings.invoice"><strong>List Total Amount : </strong>{{(orderDetails[0].total==0||!orderDetails[0].total)?('0'|currency:currency): (orderDetails[0].total | currency : currency)}}</p>-->
+
+                            <!-- ngIf: orderDetails[0].country == 'ghana' && orderDetails[0].ghana_Tax -->
+                            <!-- ngIf: orderDetails[0].country == 'ghana' && orderDetails[0].ghana_Tax -->
+                            <!-- ngIf: orderDetails[0].country == 'ghana' && orderDetails[0].ghana_Tax -->
+                            <!-- ngIf: orderDetails[0].country == 'ghana' && orderDetails[0].ghana_Tax -->
+                            <!-- ngIf: orderDetails[0].country == 'ghana' && orderDetails[0].ghana_Tax && orderDetails[0].ghana_Tax.VAT == 13.25 -->
+                            <!-- ngIf: orderDetails[0].country == 'ghana' && orderDetails[0].ghana_Tax && orderDetails[0].ghana_Tax.VAT == 15.9 -->
+
+
+                            <!-- ngIf: coID != 'SAPS' --><p ng-if="coID != &#39;SAPS&#39;" class="text-right mb-2 ng-binding ng-scope" ng-hide="nav[25].activated" aria-hidden="false"><strong>Sub Total Amount<!-- ngIf: orderDetails[0].country == 'ghana' --> : </strong>N/A</p><!-- end ngIf: coID != 'SAPS' -->
+                            <!-- ngIf: coID == 'SAPS' -->
+
+                            <!-- ngIf: !settings.invoice && !nav[25].tab && user.role != 'Dealer' --><p class="text-right mb-2 ng-scope" ng-if="!settings.invoice &amp;&amp; !nav[25].tab &amp;&amp; user.role != &#39;Dealer&#39;"><strong>Freight Charges : </strong>
+                                <span ng-hide="freight.display" class="ng-binding" aria-hidden="false">N/A</span>
+                                <!-- ngIf: totalShipQty != orderDetails.qty && settings.invoice!='recurring' && shipmentEnable --><span ng-if="totalShipQty != orderDetails.qty &amp;&amp; settings.invoice!=&#39;recurring&#39; &amp;&amp; shipmentEnable" class="ng-scope"><i class="fa fa-pencil-square-o" ng-hide="freight.display" style="font-size:12px;padding-left: 1%" ng-click="freight.display = true" role="button" tabindex="0" aria-hidden="false"></i></span><!-- end ngIf: totalShipQty != orderDetails.qty && settings.invoice!='recurring' && shipmentEnable -->
+                                <span ng-show="freight.display" ng-click="saveFreightCharge(freight.edit,orderDetails[0].orderId)" class="save_freight ng-hide" role="button" tabindex="0" aria-hidden="true">Save</span>
+                                <span ng-show="freight.display" ng-click="freight.display = false;" class="cancelsave_freight  ng-hide" role="button" tabindex="0" aria-hidden="true">Cancel</span>
+                                <span ng-show="freight.display" style="display: inline-flex;padding-top: 2%" aria-hidden="true" class="ng-hide"><input type="number" ng-model="freight.edit" style="width: 75px;" class="ng-pristine ng-untouched ng-valid" tabindex="0" aria-invalid="false"><span style="padding-left: 10%"><!-- ngIf: freight.length --></span></span>
+                            </p><!-- end ngIf: !settings.invoice && !nav[25].tab && user.role != 'Dealer' -->
+
+                            <!-- ngIf: orderDetails[0].freightChargeType.length -->
+
+                            <!-- ngIf: orderDetails[0].extraCharges -->
+                            <!-- ngIf: orderDetails[0].miscellaneous -->
+                            <!-- ngIf: orderDetails[0].discount -->
+
+                            <!-- ngIf: !settings.invoice --><p class="text-right mb-2 ng-scope" ng-if="!settings.invoice"></p><!-- end ngIf: !settings.invoice --><h4 class="text-right ng-binding"> <strong>Total Amount : </strong>₹0.00</h4><p></p>
+                        </div>
+                    </div>
+
+                    <!-- ngIf: orderDetails[0].images -->
+
+                    <hr>
+                </div>
+
+                </div>
+            </div>
+        </div>
+            </div>
+            </div>
+
+
+<style class="ng-scope">
+    table.print_table tr td{
+        font-size: 10px;
+    }
+</style>

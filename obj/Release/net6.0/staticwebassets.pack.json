@@ -1,0 +1,973 @@
+{
+  "Files": [
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\obj\\Release\\net6.0\\scopedcss\\projectbundle\\DFXOrderJini.bundle.scp.css",
+      "PackagePath": "staticwebassets\\DFXOrderJini.bundle.scp.css"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\ExportCSVFile\\Mbj_dd278a.csv",
+      "PackagePath": "staticwebassets\\ExportCSVFile\\Mbj_dd278a.csv"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\Thumbs.db",
+      "PackagePath": "staticwebassets\\Thumbs.db"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\css\\DropDownStyle.css",
+      "PackagePath": "staticwebassets\\css\\DropDownStyle.css"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\css\\OneSignalSDKStyles.css",
+      "PackagePath": "staticwebassets\\css\\OneSignalSDKStyles.css"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\css\\all.css",
+      "PackagePath": "staticwebassets\\css\\all.css"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\css\\angular-material.min.css",
+      "PackagePath": "staticwebassets\\css\\angular-material.min.css"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\css\\bootstrap-datepicker.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-datepicker.min.css"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\css\\bootstrap-select.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-select.min.css"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\css\\checkout.css",
+      "PackagePath": "staticwebassets\\css\\checkout.css"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\css\\collapsible - Copy.min.css",
+      "PackagePath": "staticwebassets\\css\\collapsible - Copy.min.css"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\css\\collapsible.min.css",
+      "PackagePath": "staticwebassets\\css\\collapsible.min.css"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\css\\ddlselect.css",
+      "PackagePath": "staticwebassets\\css\\ddlselect.css"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\css\\flag-icon.min.css",
+      "PackagePath": "staticwebassets\\css\\flag-icon.min.css"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\css\\font-awesome.min.css",
+      "PackagePath": "staticwebassets\\css\\font-awesome.min.css"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\css\\ionicons.min.css",
+      "PackagePath": "staticwebassets\\css\\ionicons.min.css"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\css\\jquery-ui.css",
+      "PackagePath": "staticwebassets\\css\\jquery-ui.css"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\css\\jquery.toast.min.css",
+      "PackagePath": "staticwebassets\\css\\jquery.toast.min.css"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\css\\main.css",
+      "PackagePath": "staticwebassets\\css\\main.css"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\css\\materialdesignicons.min.css",
+      "PackagePath": "staticwebassets\\css\\materialdesignicons.min.css"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\css\\ng-tags-input.min.css",
+      "PackagePath": "staticwebassets\\css\\ng-tags-input.min.css"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\css\\owl.carousel.min.css",
+      "PackagePath": "staticwebassets\\css\\owl.carousel.min.css"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\css\\owl.theme.default.min.css",
+      "PackagePath": "staticwebassets\\css\\owl.theme.default.min.css"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\css\\select2-bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\select2-bootstrap.min.css"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\css\\select2.min.css",
+      "PackagePath": "staticwebassets\\css\\select2.min.css"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\css\\style(1).css",
+      "PackagePath": "staticwebassets\\css\\style(1).css"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\css\\toastr.min.css",
+      "PackagePath": "staticwebassets\\css\\toastr.min.css"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\css\\typicons.css",
+      "PackagePath": "staticwebassets\\css\\typicons.css"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\css\\vendor.bundle.addons.css",
+      "PackagePath": "staticwebassets\\css\\vendor.bundle.addons.css"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\css\\vendor.bundle.base.css",
+      "PackagePath": "staticwebassets\\css\\vendor.bundle.base.css"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\img\\avatars\\avatar-2.jpg",
+      "PackagePath": "staticwebassets\\img\\avatars\\avatar-2.jpg"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\img\\avatars\\avatar-3.jpg",
+      "PackagePath": "staticwebassets\\img\\avatars\\avatar-3.jpg"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\img\\avatars\\avatar-4.jpg",
+      "PackagePath": "staticwebassets\\img\\avatars\\avatar-4.jpg"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\img\\avatars\\avatar-5.jpg",
+      "PackagePath": "staticwebassets\\img\\avatars\\avatar-5.jpg"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\img\\avatars\\avatar.jpg",
+      "PackagePath": "staticwebassets\\img\\avatars\\avatar.jpg"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\img\\dd278ab3155f0ff2576fc19a90449c64.png",
+      "PackagePath": "staticwebassets\\img\\dd278ab3155f0ff2576fc19a90449c64.png"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\img\\face9.png",
+      "PackagePath": "staticwebassets\\img\\face9.png"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\img\\favicon1.svg",
+      "PackagePath": "staticwebassets\\img\\favicon1.svg"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\img\\flags\\de.png",
+      "PackagePath": "staticwebassets\\img\\flags\\de.png"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\img\\flags\\es.png",
+      "PackagePath": "staticwebassets\\img\\flags\\es.png"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\img\\flags\\ru.png",
+      "PackagePath": "staticwebassets\\img\\flags\\ru.png"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\img\\flags\\us.png",
+      "PackagePath": "staticwebassets\\img\\flags\\us.png"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\img\\icons\\brand-1.svg",
+      "PackagePath": "staticwebassets\\img\\icons\\brand-1.svg"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\img\\icons\\brand-2.svg",
+      "PackagePath": "staticwebassets\\img\\icons\\brand-2.svg"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\img\\icons\\brand-3.svg",
+      "PackagePath": "staticwebassets\\img\\icons\\brand-3.svg"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\img\\icons\\brand-4.svg",
+      "PackagePath": "staticwebassets\\img\\icons\\brand-4.svg"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\img\\icons\\brand-5.svg",
+      "PackagePath": "staticwebassets\\img\\icons\\brand-5.svg"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\img\\icons\\icon-48x48.png",
+      "PackagePath": "staticwebassets\\img\\icons\\icon-48x48.png"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\img\\photos\\image_not_available.jpg",
+      "PackagePath": "staticwebassets\\img\\photos\\image_not_available.jpg"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\img\\photos\\unsplash-1.jpg",
+      "PackagePath": "staticwebassets\\img\\photos\\unsplash-1.jpg"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\img\\photos\\unsplash-2.jpg",
+      "PackagePath": "staticwebassets\\img\\photos\\unsplash-2.jpg"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\img\\photos\\unsplash-3.jpg",
+      "PackagePath": "staticwebassets\\img\\photos\\unsplash-3.jpg"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\AddBeat.js",
+      "PackagePath": "staticwebassets\\js\\AddBeat.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\AdminLoginCtrl.js",
+      "PackagePath": "staticwebassets\\js\\AdminLoginCtrl.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\Chart.min.js",
+      "PackagePath": "staticwebassets\\js\\Chart.min.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\CloudinaryCtrl.js",
+      "PackagePath": "staticwebassets\\js\\CloudinaryCtrl.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\Controller.js",
+      "PackagePath": "staticwebassets\\js\\Controller.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\Datepicker.js",
+      "PackagePath": "staticwebassets\\js\\Datepicker.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\Datepicker.js.map",
+      "PackagePath": "staticwebassets\\js\\Datepicker.js.map"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\DuroNewOrdersCtrl.js",
+      "PackagePath": "staticwebassets\\js\\DuroNewOrdersCtrl.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\FTPCtrl.js",
+      "PackagePath": "staticwebassets\\js\\FTPCtrl.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\FileSaver.js",
+      "PackagePath": "staticwebassets\\js\\FileSaver.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\FileSaver.min.js",
+      "PackagePath": "staticwebassets\\js\\FileSaver.min.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\Filters.js",
+      "PackagePath": "staticwebassets\\js\\Filters.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\LeaveCtrl.js",
+      "PackagePath": "staticwebassets\\js\\LeaveCtrl.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\ManageCloudinaryCtrl.js",
+      "PackagePath": "staticwebassets\\js\\ManageCloudinaryCtrl.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\MapsCtrl.js",
+      "PackagePath": "staticwebassets\\js\\MapsCtrl.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\MeetingsReportCtrl.js",
+      "PackagePath": "staticwebassets\\js\\MeetingsReportCtrl.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\MessageBox_Images\\Thumbs.db",
+      "PackagePath": "staticwebassets\\js\\MessageBox_Images\\Thumbs.db"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\MessageBox_Images\\help.gif",
+      "PackagePath": "staticwebassets\\js\\MessageBox_Images\\help.gif"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\MessageBox_Images\\important.gif",
+      "PackagePath": "staticwebassets\\js\\MessageBox_Images\\important.gif"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\MessageBox_Images\\info.gif",
+      "PackagePath": "staticwebassets\\js\\MessageBox_Images\\info.gif"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\MessageBox_Images\\title.gif",
+      "PackagePath": "staticwebassets\\js\\MessageBox_Images\\title.gif"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\MessageBox_Images\\vssver.scc",
+      "PackagePath": "staticwebassets\\js\\MessageBox_Images\\vssver.scc"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\MessageBox_js\\jquery.alerts.css",
+      "PackagePath": "staticwebassets\\js\\MessageBox_js\\jquery.alerts.css"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\MessageBox_js\\jquery.alerts.js",
+      "PackagePath": "staticwebassets\\js\\MessageBox_js\\jquery.alerts.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\MessageBox_js\\jquery.js",
+      "PackagePath": "staticwebassets\\js\\MessageBox_js\\jquery.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\MessagesCtrl.js",
+      "PackagePath": "staticwebassets\\js\\MessagesCtrl.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\ModelpopupScript.js",
+      "PackagePath": "staticwebassets\\js\\ModelpopupScript.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\ModuleAdminCtrl.js",
+      "PackagePath": "staticwebassets\\js\\ModuleAdminCtrl.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\NavCtrl.js",
+      "PackagePath": "staticwebassets\\js\\NavCtrl.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\NotificationsAdminCtrl.js",
+      "PackagePath": "staticwebassets\\js\\NotificationsAdminCtrl.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\OrderDetailsCtrl - Copy.js",
+      "PackagePath": "staticwebassets\\js\\OrderDetailsCtrl - Copy.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\OrderDetailsCtrl.js",
+      "PackagePath": "staticwebassets\\js\\OrderDetailsCtrl.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\OrderRoutePlanCtrl.js",
+      "PackagePath": "staticwebassets\\js\\OrderRoutePlanCtrl.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\OrdersCtrl.js",
+      "PackagePath": "staticwebassets\\js\\OrdersCtrl.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\PosCtrl.js",
+      "PackagePath": "staticwebassets\\js\\PosCtrl.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\ProfileDetailsCtrl.js",
+      "PackagePath": "staticwebassets\\js\\ProfileDetailsCtrl.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\RegalRexNewOrdersCtrl.js",
+      "PackagePath": "staticwebassets\\js\\RegalRexNewOrdersCtrl.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\Router.js",
+      "PackagePath": "staticwebassets\\js\\Router.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\SMS_SMTP.js",
+      "PackagePath": "staticwebassets\\js\\SMS_SMTP.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\ServiceComplaintsCtrl.js",
+      "PackagePath": "staticwebassets\\js\\ServiceComplaintsCtrl.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\Services.js",
+      "PackagePath": "staticwebassets\\js\\Services.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\SettingsCtrl.js",
+      "PackagePath": "staticwebassets\\js\\SettingsCtrl.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\ShopifyCtrl.js",
+      "PackagePath": "staticwebassets\\js\\ShopifyCtrl.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\SideMenuCtrl.js",
+      "PackagePath": "staticwebassets\\js\\SideMenuCtrl.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\TableFixedHeader.js",
+      "PackagePath": "staticwebassets\\js\\TableFixedHeader.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\TicketDetailsCtrl.js",
+      "PackagePath": "staticwebassets\\js\\TicketDetailsCtrl.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\UserDetailsCtrl.js",
+      "PackagePath": "staticwebassets\\js\\UserDetailsCtrl.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\UsersCtrl.js",
+      "PackagePath": "staticwebassets\\js\\UsersCtrl.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\a076d05399.js",
+      "PackagePath": "staticwebassets\\js\\a076d05399.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\angular-animate.min.js",
+      "PackagePath": "staticwebassets\\js\\angular-animate.min.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\angular-aria.min.js",
+      "PackagePath": "staticwebassets\\js\\angular-aria.min.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\angular-filter.min.js",
+      "PackagePath": "staticwebassets\\js\\angular-filter.min.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\angular-material.min.js",
+      "PackagePath": "staticwebassets\\js\\angular-material.min.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\angular-messages.min.js",
+      "PackagePath": "staticwebassets\\js\\angular-messages.min.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\angular-route.min.js",
+      "PackagePath": "staticwebassets\\js\\angular-route.min.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\angular.min.js",
+      "PackagePath": "staticwebassets\\js\\angular.min.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\angularfire.min.js",
+      "PackagePath": "staticwebassets\\js\\angularfire.min.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\app.js",
+      "PackagePath": "staticwebassets\\js\\app.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\bootbox.min.js",
+      "PackagePath": "staticwebassets\\js\\bootbox.min.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\bootstrap-datepicker.min.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap-datepicker.min.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\bundle.min.js",
+      "PackagePath": "staticwebassets\\js\\bundle.min.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\c3.js",
+      "PackagePath": "staticwebassets\\js\\c3.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\collapsible.min.js",
+      "PackagePath": "staticwebassets\\js\\collapsible.min.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\collapsibleDirective.min.js",
+      "PackagePath": "staticwebassets\\js\\collapsibleDirective.min.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\datatables.js",
+      "PackagePath": "staticwebassets\\js\\datatables.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\ddlsearch.js",
+      "PackagePath": "staticwebassets\\js\\ddlsearch.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\desktop-notification.js",
+      "PackagePath": "staticwebassets\\js\\desktop-notification.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\fancyTable.js",
+      "PackagePath": "staticwebassets\\js\\fancyTable.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\firebase.js",
+      "PackagePath": "staticwebassets\\js\\firebase.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\fullcalendar.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\hoverable-collapse.js",
+      "PackagePath": "staticwebassets\\js\\hoverable-collapse.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\icheck.min.js",
+      "PackagePath": "staticwebassets\\js\\icheck.min.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\jquery-1.10.2.intellisense.js",
+      "PackagePath": "staticwebassets\\js\\jquery-1.10.2.intellisense.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\jquery-1.10.2.js",
+      "PackagePath": "staticwebassets\\js\\jquery-1.10.2.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\jquery-1.10.2.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery-1.10.2.min.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\jquery-1.10.2.min.map",
+      "PackagePath": "staticwebassets\\js\\jquery-1.10.2.min.map"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\jquery-3.5.1.slim.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery-3.5.1.slim.min.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\jquery-3.6.0.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery-3.6.0.min.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\jquery-git.js",
+      "PackagePath": "staticwebassets\\js\\jquery-git.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\jquery-jvectormap-world-mill-en.js",
+      "PackagePath": "staticwebassets\\js\\jquery-jvectormap-world-mill-en.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\jquery-jvectormap.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery-jvectormap.min.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\jquery-ui.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery-ui.min.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\jquery.avgrund.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.avgrund.min.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\jquery.dataTables.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.dataTables.min.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\jquery.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.min.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\jquery.table2excel.js",
+      "PackagePath": "staticwebassets\\js\\jquery.table2excel.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\jquery.table2excel.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.table2excel.min.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\jquery.toast.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.toast.min.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\jquery.validate-vsdoc.js",
+      "PackagePath": "staticwebassets\\js\\jquery.validate-vsdoc.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\js\\jquery.validate.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.validate.min.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\js\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\jsBarcode.all.min.js",
+      "PackagePath": "staticwebassets\\js\\jsBarcode.all.min.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\json2.min.js",
+      "PackagePath": "staticwebassets\\js\\json2.min.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\json2.min\\json2.min.js",
+      "PackagePath": "staticwebassets\\js\\json2.min\\json2.min.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\jspdf.min.js",
+      "PackagePath": "staticwebassets\\js\\jspdf.min.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\justgage.js",
+      "PackagePath": "staticwebassets\\js\\justgage.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\loader.js",
+      "PackagePath": "staticwebassets\\js\\loader.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\markerclusterer.js",
+      "PackagePath": "staticwebassets\\js\\markerclusterer.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\misc.js",
+      "PackagePath": "staticwebassets\\js\\misc.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\moment.min.js",
+      "PackagePath": "staticwebassets\\js\\moment.min.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\ng-google-chart.min.js",
+      "PackagePath": "staticwebassets\\js\\ng-google-chart.min.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\ng-infinite-scroll.min.js",
+      "PackagePath": "staticwebassets\\js\\ng-infinite-scroll.min.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\ng-tags-input.min.js",
+      "PackagePath": "staticwebassets\\js\\ng-tags-input.min.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\off-canvas.js",
+      "PackagePath": "staticwebassets\\js\\off-canvas.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\owl.carousel.min.js",
+      "PackagePath": "staticwebassets\\js\\owl.carousel.min.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\popper.min.js",
+      "PackagePath": "staticwebassets\\js\\popper.min.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\raphael-2.1.4.min.js",
+      "PackagePath": "staticwebassets\\js\\raphael-2.1.4.min.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\roundProgress.min.js",
+      "PackagePath": "staticwebassets\\js\\roundProgress.min.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\select2.min.js",
+      "PackagePath": "staticwebassets\\js\\select2.min.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\settings.js",
+      "PackagePath": "staticwebassets\\js\\settings.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\sortable.js",
+      "PackagePath": "staticwebassets\\js\\sortable.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\svg-assets-cache.js",
+      "PackagePath": "staticwebassets\\js\\svg-assets-cache.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\sweetalert.min.js",
+      "PackagePath": "staticwebassets\\js\\sweetalert.min.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\toastDemo.js",
+      "PackagePath": "staticwebassets\\js\\toastDemo.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\toastr.min.js",
+      "PackagePath": "staticwebassets\\js\\toastr.min.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\todolist.js",
+      "PackagePath": "staticwebassets\\js\\todolist.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\typeahead.bundle.min.js",
+      "PackagePath": "staticwebassets\\js\\typeahead.bundle.min.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\ui-bootstrap-tpls.min.js",
+      "PackagePath": "staticwebassets\\js\\ui-bootstrap-tpls.min.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\js\\xlsx.full.min.js",
+      "PackagePath": "staticwebassets\\js\\xlsx.full.min.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "E:\\Duroflex\\OrderB2B\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Release\\net6.0\\staticwebassets\\msbuild.DFXOrderJini.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\net6.0\\staticwebassets\\msbuild.build.DFXOrderJini.props",
+      "PackagePath": "build\\DFXOrderJini.props"
+    },
+    {
+      "Id": "obj\\Release\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.DFXOrderJini.props",
+      "PackagePath": "buildMultiTargeting\\DFXOrderJini.props"
+    },
+    {
+      "Id": "obj\\Release\\net6.0\\staticwebassets\\msbuild.buildTransitive.DFXOrderJini.props",
+      "PackagePath": "buildTransitive\\DFXOrderJini.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

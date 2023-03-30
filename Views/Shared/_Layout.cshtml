@@ -1,0 +1,573 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - DFXB2BOMS</title>
+
+    <script type="application/javascript" src="~/js/jquery.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    @* <script type="application/javascript" src="../js/jquery-ui.min.js" ></script>*@
+    <script type="text/javascript" src="../js/popper.min.js"></script>
+    <!-- plugins:css -->
+    <link href="~/css/font-awesome.min.css" rel="stylesheet" />
+
+    <link href="~/css/materialdesignicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/ionicons.min.css">
+    <link rel="stylesheet" href="~/css/typicons.css">
+    <link rel="stylesheet" href="~/css/flag-icon.min.css">
+    <link rel="stylesheet" href="~/css/vendor.bundle.base.css">
+    <link rel="stylesheet" href="~/css/vendor.bundle.addons.css">
+    <link type="text/css" rel="stylesheet" href="~/css/toastr.min.css">
+    <link rel="stylesheet" href="~/css/bootstrap-datepicker.min.css">
+    <!-- <link rel="stylesheet" href="./assets/vendors/x-editable/bootstrap-editable.css"> -->
+    <link rel="stylesheet" href="~/css/jquery.toast.min.css">
+    <!-- jQuery -->
+    <script src="~/js/MessageBox_js/jquery.js" type="text/javascript"></script>
+    <link href="~/js/MessageBox_js/jquery.alerts.css" rel="stylesheet" type="text/css" />
+    <script src="~/js/MessageBox_js/jquery.alerts.js" type="text/javascript"></script>
+
+
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+          crossorigin="anonymous">
+    <script src="~/js/jquery-3.5.1.slim.min.js"></script>
+    <script src="~/js/bundle.min.js"></script>
+
+    <script src="~/js/moment.min.js"></script>
+
+
+    <script type="text/javascript" src="~/js/json2.min.js"></script>
+    <!-- endinject -->
+    <!-- plugin css for this page -->
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="~/css/style.css">
+    <link rel="stylesheet" href="~/css/select2.min.css">
+    <link rel="stylesheet" href="~/css/select2-bootstrap.min.css">
+
+    <link rel="stylesheet" href="~/css/all.css">
+    <link rel="stylesheet" href="~/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/css/owl.theme.default.min.css">
+    <!-- endinject -->
+    <!-- Layout styles -->
+    <link rel="stylesheet" href="~/css/style(1).css">
+    <link rel="stylesheet" href="~/css/main.css">
+    <!-- End Layout styles -->
+    <link rel="shortcut icon" href="assets/images/favicon.png">
+    <!-- basic styles -->
+    <!-- Orders Controllers -->
+    <script src="~/js/angular.min.js"></script>
+    <script src="~/js/angular-material.min.js"></script>
+
+    <script src="~/js/sidemenuctrl.js"></script>
+
+    <script type="text/javascript" src="../js/OrderDetailsCtrl.js"></script>
+    <script type="text/javascript" src="../js/OrdersCtrl.js"></script>
+    <script src="~/js/customselect.js"></script>
+
+    <!-- Router -->
+    <style>
+        #main {
+            display: none;
+        }
+    </style>
+    <script>
+        var myVar;
+        //function myFunction() {
+        //    myVar = setTimeout(showPage, 750);
+        //}
+        function showPage() {
+            document.getElementById("loader").style.display = "none";
+            document.getElementById("main").style.display = "block";
+        }
+
+
+        function LogOut() {
+            //alert("Good Bye...")
+            this.authToken = null;
+            this.user = null;
+            localStorage.removeItem('token');
+            localStorage.removeItem('user');
+            window.localStorage.clear();
+            window.location.replace("https://www.dfxtest.com/Home/Navigation");
+        }
+
+
+
+        function closeNav() {
+
+            if (document.getElementById("sidebar").offsetWidth != "200") {
+
+                $("#sidebar").width('200px');
+                $("#sidebar").marginRight('0px');
+                $("#main-panel").width('calc(100% - 250px)');
+            }
+            else {
+
+                $("#sidebar").width('0');
+                $("#main-panel").width('100%');
+            }
+        }
+
+    </script>
+    <script src='~/js/a076d05399.js' crossorigin='anonymous'></script>
+    <script>
+        // $(document).ready(function () {
+        //$('.sticky-table-demo').stickyTableHeader();
+        //});
+    </script>
+    <script src="~/js/SMS_SMTP.js"></script>
+
+    <script type="text/javascript">
+        //function sendEmail() {
+        //    Email.send({
+        //        SecureToken: "security token of your smtp",
+        //        To: "balaji71187@gmail.com",
+        //        From: "balaji71187@gmail.com",
+        //        Subject: "Subject...",
+        //        Body: ""
+        //    }).then(
+        //        message => alert("mail sent successfully")
+        //    );
+        //}
+    </script>
+
+    <script async="" src="~/js/FileSaver.min.js"></script>
+    <script src="~/js/filesaver.js"></script>
+
+    <script type="text/javascript" src="~/js/xlsx.full.min.js"></script>
+    <script src="~/js/jquery-git.js"></script>
+</head>
+<body data-theme="default" data-layout="fluid" data-sidebar-position="left" data-sidebar-layout="default">
+
+    <div id="loader" style="display: none;">
+        <div class="square-box-loader">
+            <div class="square-box-loader-container">
+                <div class="square-box-loader-corner-top"></div>
+                <div class="square-box-loader-corner-bottom"></div>
+            </div>
+            <div class="square-box-loader-square"></div>
+        </div>
+        <!--<h1 class="text-primary text-center square-box-loader-text">Initializing ...</h1>-->
+    </div>
+
+    <div id="main" class="container-scroller ng-scope" style="display: block;">
+        >
+        <!-- partial:partials/_navbar.html -->
+        <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex flex-row" style="display: block;">
+            <div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center">
+                <a class="navbar-brand brand-logo" href="dashboard#/overview">
+                    <img ng-src="~img/dd278ab3155f0ff2576fc19a90449c64.png" alt="logo" src="~/img/dd278ab3155f0ff2576fc19a90449c64.png">
+                </a>
+                <a class="navbar-brand brand-logo-mini" href="dashboard#/overview">
+                    <!--  <img src="~/img/favicon1.svg" alt="logo">-->
+                    <img ng-src="~img/dd278ab3155f0ff2576fc19a90449c64.png" style="width:100%" alt="logo" src="~/img/dd278ab3155f0ff2576fc19a90449c64.png">
+
+                </a>
+            </div>
+            <div class="navbar-menu-wrapper d-flex align-items-center">
+                <button class="navbar-toggler navbar-toggler align-self-center" onclick="closeNav()" type="button" data-toggle="minimize">
+                    <span class="mdi mdi-menu"></span>
+                </button>
+                <ul class="navbar-nav" style="display:none">
+                    <li class="nav-item font-weight-semibold d-none d-lg-block">Help : <a ng-href="mailto:support@B2BOMS.com" class="ng-binding" href="mailto:support@B2BOMS.com">support@B2BOMS.com</a></li>
+                    <li class="nav-item dropdown language-dropdown">
+                        <a class="nav-link dropdown-toggle px-2 d-flex align-items-center" id="LanguageDropdown" data-target="#" data-toggle="dropdown" aria-expanded="false">
+                            <div class="d-inline-flex mr-0 mr-md-3">
+                                <div class="flag-icon-holder">
+                                    <i class="flag-icon flag-icon-us"></i>
+                                </div>
+                            </div>
+                            <span class="profile-text font-weight-medium d-none d-md-block">English</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-left navbar-dropdown py-2" aria-labelledby="LanguageDropdown">
+                            <a class="dropdown-item">
+                                <div class="flag-icon-holder">
+                                    <i class="flag-icon flag-icon-us"></i>
+                                </div>
+                                English
+                            </a>
+                            <a class="dropdown-item">
+                                <div class="flag-icon-holder">
+                                    <i class="flag-icon flag-icon-th"></i>
+                                </div>
+                                Thailand
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+                <!--<form class="ml-auto search-form d-none d-md-block" action="#">
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search Here">
+                    </div>
+                </form>-->
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link count-indicator" id="messageDropdown" data-target="#" data-toggle="dropdown" aria-expanded="false">
+                            <i class="mdi mdi-bell-outline"></i>
+                            <span class="count ng-binding">0</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list pb-0" aria-labelledby="messageDropdown">
+                            <a class="dropdown-item py-3">
+                                <p class="mb-0 font-weight-medium float-left ng-binding">You have 0 unread notifications </p>
+                                <!-- ngIf: notifications.length -->
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <!-- ngRepeat: notification in notifications -->
+                            <!-- ngIf: !notifications.length --><h6 class="text-center p-3 ng-scope" ng-if="!notifications.length">You are all caught up!</h6><!-- end ngIf: !notifications.length -->
+                        </div>
+                    </li>
+                    <!--<li class="nav-item dropdown">
+                        <a class="nav-link count-indicator" id="notificationDropdown" data-toggle="dropdown">
+                            <i class="mdi mdi-email-outline"></i>
+                            <span class="count bg-success">3</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list pb-0"
+                             aria-labelledby="notificationDropdown">
+                            <a class="dropdown-item py-3 border-bottom">
+                                <p class="mb-0 font-weight-medium float-left">You have 4 new notifications </p>
+                                <span class="badge badge-pill badge-primary float-right">View all</span>
+                            </a>
+                            <a class="dropdown-item preview-item py-3">
+                                <div class="preview-thumbnail">
+                                    <i class="mdi mdi-alert m-auto text-primary"></i>
+                                </div>
+                                <div class="preview-item-content">
+                                    <h6 class="preview-subject font-weight-normal text-dark mb-1">Application Error</h6>
+                                    <p class="font-weight-light small-text mb-0"> Just now </p>
+                                </div>
+                            </a>
+                            <a class="dropdown-item preview-item py-3">
+                                <div class="preview-thumbnail">
+                                    <i class="mdi mdi-settings m-auto text-primary"></i>
+                                </div>
+                                <div class="preview-item-content">
+                                    <h6 class="preview-subject font-weight-normal text-dark mb-1">Settings</h6>
+                                    <p class="font-weight-light small-text mb-0"> Private message </p>
+                                </div>
+                            </a>
+                            <a class="dropdown-item preview-item py-3">
+                                <div class="preview-thumbnail">
+                                    <i class="mdi mdi-airballoon m-auto text-primary"></i>
+                                </div>
+                                <div class="preview-item-content">
+                                    <h6 class="preview-subject font-weight-normal text-dark mb-1">New user registration</h6>
+                                    <p class="font-weight-light small-text mb-0"> 2 days ago </p>
+                                </div>
+                            </a>
+                        </div>
+                    </li>-->
+                    <li class="nav-item dropdown d-none d-xl-inline-block user-dropdown">
+                        <a class="nav-link dropdown-toggle" id="UserDropdown" data-toggle="dropdown" aria-expanded="false">
+                            <img class="img-xs rounded-circle" ng-src="" alt="Profile image" src="~/img/face9.png">
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
+                            <div class="dropdown-header text-center">
+                                <img class="img-md rounded-circle" ng-src="~/assets/images/faces/face9.png" alt="Profile image" src="~/img/face9.png">
+                                <p class="mb-1 mt-3 font-weight-semibold ng-binding" id="usersignoutid"></p>
+                                @* <p class="font-weight-light text-muted ng-binding"></p>
+                                <p class="font-weight-light text-muted ng-binding">dd278ab3155f0ff2576fc19a90449c64</p>
+                                <p class="font-weight-light text-muted mb-0 ng-binding">DRFX</p>*@
+                            </div>
+                            <!--<a class="dropdown-item">My Profile <span class="badge badge-pill badge-danger">1</span><i
+                                    class="dropdown-item-icon ti-dashboard"></i></a>-->
+                            <a class="dropdown-item" href="dashboard#/messages">Messages<i class="dropdown-item-icon ti-comment-alt"></i></a>
+                            <!--<a class="dropdown-item">Activity<i class="dropdown-item-icon ti-location-arrow"></i></a>-->
+                            @* <a class="dropdown-item" id="faq_dropdown">FAQ<i class="dropdown-item-icon ti-help-alt"></i></a>
+                            <a class="dropdown-item" href="switch_account">Switch Account<i class="dropdown-item-icon ti-power-off"></i></a>*@
+                            <a class="dropdown-item" onclick="LogOut()">Sign Out <i class="dropdown-item-icon ti-power-off"></i></a>
+                        </div>
+                    </li>
+                </ul>
+                <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+                    <span class="mdi mdi-menu"></span>
+                </button>
+            </div>
+        </nav>
+        <!-- partial -->
+        <div class="container-fluid page-body-wrapper" id="sideid">
+            <!-- partial:partials/_sidebar.html -->
+            <div class="right-sidebar-toggler-wrapper" ng-hide="instance_details.coID==&#39;ATMS&#39;" aria-hidden="false">
+                <div class="sidebar-toggler" title="Home"><a href="dashboard#/overview"><i class="mdi mdi-home"></i></a></div>
+                <div class="sidebar-toggler" title="Settings" id="layout-toggler"><a href="dashboard#/settings"><i class="mdi mdi-settings"></i></a></div>
+                <div class="sidebar-toggler" title="FAQ" id="chat-toggler"><i class="mdi mdi-chat-processing"></i></div>
+                <div class="sidebar-toggler" title="Order History"><a href="dashboard#/ui-orders"><i class="mdi mdi-file-document-outline"></i></a></div>
+                <div class="sidebar-toggler"><i class="mdi mdi-cart"></i></div>
+            </div>
+            <div id="right-sidebar" class="settings-panel" style="overflow-y: scroll">
+                <i class="settings-close mdi mdi-close"></i>
+                <div class="d-flex align-items-center justify-content-between border-bottom">
+                    <p class="settings-heading font-weight-bold border-top-0 mb-3 pl-3 pt-0 border-bottom-0 pb-0">FAQ's &amp; What's New</p>
+                </div>
+                <ul class="chat-list">
+                    <li class="list active">
+                        <div class="card-body bg-green-gradient">
+                            <h4 class="card-title">B2BOMS Version - 2.0</h4>
+                            <p class="card-description">Welcome to the new refreshed B2BOMS Portal. </p>
+                        </div>
+                    </li>
+                    <li class="list active">
+                        <div class="card-body">
+                            <h4 class="card-title">Manufacturers &amp; Distributors</h4>
+                            <p class="card-description">Optimize Sales Efforts &amp; Collect Orders directly from B2B Customers.</p>
+                            <a href="https://www.B2BOMS.com/platform-for-b2b-selling" target="_blank">Learn More?</a>
+                        </div>
+                    </li>
+                    <li class="list active">
+                        <div class="card-body">
+                            <h4 class="card-title">Connect with QuickBooks?</h4>
+                            <p class="card-description">Digitize your Sales with B2BOMS and QuickBooks </p>
+                            <a href="https://www.B2BOMS.com/quickbooks" target="_blank">Learn More?</a>
+                        </div>
+                    </li>
+                    <li class="list active">
+                        <div class="card-body">
+                            <h4 class="card-title">Have any questions on the new B2BOMS Portal?</h4>
+                            <p class="card-description">Please write to us at <a href="mailto:support@B2BOMS.com">support@B2BOMS.com</a></p>
+                            <!--<a href="https://www.B2BOMS.com/quickbooks" target="_blank">Cont</a>-->
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <nav class="sidebar sidebar-offcanvas" id="sidebar">
+                <ul class="nav ps">
+                    <li class="nav-item nav-profile">
+                        <a href="@Url.Action("UserProfile", "Home")" class="nav-link">
+                            <div class="profile-image">
+                                <img class="img-xs rounded-circle" ng-src="" alt="profile image" src="~/img/face9.png">
+                                <div class="dot-indicator bg-success"></div>
+                            </div>
+                            <div class="text-wrapper">
+                                <p class="profile-name ng-binding" id="userid"></p>
+                                <p class="designation ng-binding" id="profileid"></p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item nav-category">Main Menu</li>
+                    <!-- Dashboard --->
+                    @*   <li ng-show="nav[0].activated" class="nav-item" aria-hidden="false" style="">
+                    <a class="nav-link" href="dashboard#/overview">
+                    <i class="menu-icon typcn typcn-chart-pie"></i>
+                    <span class="menu-title ng-binding">Overview</span>
+                    </a>
+                    </li>*@
+                    <!-- <li ng-show = "nav[43].activated" class="nav-item">-->
+                    <!--    <a class="nav-link" href="#/storeDiscount">-->
+                    <!--        <i class="menu-icon typcn typcn-business-card"></i>-->
+                    <!--        <span class="menu-title">{{nav[43].tab || 'Store Discount'}}</span>-->
+                    <!--    </a>-->
+                    <!-- </li>-->
+                    <!-- Orders --->
+                    <li ng-show="nav[1].activated" class="nav-item" aria-hidden="false">
+                        <a class="nav-link" data-toggle="collapse" data-target="#ui-orders" aria-expanded="true" aria-controls="ui-orders">
+                            <i class="menu-icon typcn typcn-document-text"></i>
+                            <span class="menu-title ng-binding">Sales &amp; Orders</span>
+                            <i class="menu-arrow"></i>
+                        </a>
+                        <div class="collapse show" id="ui-orders" style="">
+                            <ul class="nav flex-column sub-menu">
+                                <li class="nav-item">
+                                    <a class="nav-link ng-binding" href="@Url.Action("OrderHistory", "SalesOrder")">Orders History</a>
+                                    <br />
+                                    @Html.Hidden("RedirectToOrderCreation", Url.Action("OrderCreation", "SalesOrder"))
+                                    @Html.Hidden("RedirectToCustomelist", Url.Action("CustomersList", "Home"))
+                                    @Html.Hidden("RedirectToInvoicelist", Url.Action("Invoice", "SalesOrder"))
+                                    @Html.Hidden("RedirectTologin", Url.Action("AccessDenied", "Home"))
+                                    @* <a class="nav-link ng-binding" href="@Url.Action("CustomersList", "Home")">FOAM  Order</a>*@
+                                    <div id="MenuFoamId">
+                                        <a class="nav-link ng-binding" href="#" id="FoamOrder_Menuid">FOAM  Order</a>
+                                        @*<span class="nav-link ng-binding" id="FoamOrder_Menuid">FOAM  Order </span>*@
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <!-- Dealers / Customers --->
+                    @*  <li ng-show="nav[2].activated" class="nav-item" aria-hidden="false" id="CustomerMenu" style="display:none">
+                    <a class="nav-link" href="@Url.Action("CustomersList", "Home")">
+                    <i class="menu-icon typcn typcn-business-card"></i>
+
+                    </a>
+                    </li>*@
+
+                    <!--- Invoices --->
+                    <li ng-show="nav[21].activated" class="nav-item" aria-hidden="false">
+                        <a class="nav-link collapsed" data-toggle="collapse" data-target="#ui-invoices" aria-expanded="false" aria-controls="ui-invoices">
+                            <i class="menu-icon typcn typcn-credit-card"></i>
+                            <span class="menu-title ng-binding">Manage Invoices</span>
+                            <i class="menu-arrow"></i>
+                        </a>
+                        <div class="collapse" id="ui-invoices" style="">
+                            <ul class="nav flex-column sub-menu">
+                                <li class="nav-item">
+                                    <a class="nav-link ng-binding" id="Invoice_Menuid">Invoice History</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </li>
+                    @* <li ng-show="nav[20].activated || nav[7].activated || nav[17].activated" class="nav-item nav-category " aria-hidden="true">Others</li>
+                    <li ng-show="nav[8].activated" class="nav-item nav-category ng-binding" aria-hidden="false">Reports</li>*@
+                    <!--- Reports --->
+                    <li ng-show="nav[8].activated" class="nav-item" aria-hidden="false">
+                        <a class="nav-link" href="dashboard#/reports/0">
+                            <i class="menu-icon typcn typcn-chart-line"></i>
+                            <span class="menu-title ng-binding">Reports</span>
+                        </a>
+                    </li>
+                    <!--- Users --->
+                    @* <li ng-show="nav[4].activated" class="nav-item" aria-hidden="false">
+                    <a class="nav-link" href="dashboard#/users">
+                    <i class="menu-icon typcn typcn-user-add"></i>
+                    <span class="menu-title ng-binding">Users</span>
+                    </a>
+                    </li>
+                    <!--- Settings --->
+                    <li ng-show="nav[5].activated" class="nav-item" aria-hidden="false">
+                    <a class="nav-link" href="dashboard#/settings">
+                    <i class="menu-icon typcn typcn-cog"></i>
+                    <span class="menu-title ng-binding">Settings</span>
+                    </a>
+                    </li>*@
+                </ul>
+            </nav>
+
+            <!-- partial -->
+            <div class="main-panel" id="main-panel">
+
+                <div class="content-wrapper">
+                    @RenderBody()
+                    <!-- ngView:  --><div ng-view="" class="ng-scope" style="">
+                        <div class="wrapper ng-scope">
+                            <div class="refresh" style="display: none;"></div>
+                            <script class="ng-scope">
+                                $('#order-history-filter').click(function (event) {
+                                    $(".dealerDropdown").css('display', 'none');
+                                });
+                            </script>
+                            <style class="ng-scope">
+                                #just-line-break {
+                                    white-space: pre-line;
+                                    text-align: center;
+                                    padding: 15px 25px;
+                                }
+
+                                .partially {
+                                    background: rgba(255, 191, 0, 0.3);
+                                    color: #ff8000;
+                                    border: none
+                                }
+
+                                .unpaid {
+                                    background: rgba(33,150,243, 0.3);
+                                    color: darkblue;
+                                    border: none
+                                }
+
+                                .open {
+                                    background: rgba(94, 243, 35, 0.3);
+                                    color: darkgreen;
+                                    border: none
+                                }
+
+                                .paid {
+                                    background: rgba(0, 151, 19, 0.3);
+                                    color: darkgreen;
+                                    border: none
+                                }
+
+                                .cancelled {
+                                    background: rgba(255, 0, 0, 0.25);
+                                    color: rgba(255, 0, 0, 0.92);
+                                    border: none
+                                }
+
+                                .others {
+                                    background: rgba(128, 128, 128, 0.3);
+                                    color: black;
+                                    border: none
+                                }
+
+                                .user > div {
+                                    text-align: center;
+                                    padding: 1%;
+                                    cursor: pointer;
+                                    transition: all .1s ease-in;
+                                }
+
+                                .userGrid > div:hover {
+                                    background-color: #f0f2f5;
+                                    transform: scale(1.02);
+                                    cursor: pointer;
+                                }
+
+                                .userGrid-card {
+                                    text-align: center;
+                                    background-color: white;
+                                    padding: 10px;
+                                    box-shadow: 1px 1px 8px lightgrey;
+                                    border-radius: 5px;
+                                }
+
+                                .userGrid-card-details h4 {
+                                    color: #003366;
+                                    text-align: center;
+                                    font-weight: 400;
+                                    white-space: nowrap;
+                                    padding: 0 15px;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                }
+
+                                .userGrid-card-details p {
+                                    text-overflow: ellipsis;
+                                    white-space: nowrap;
+                                    padding: 0 10px;
+                                    overflow: hidden;
+                                    font-size: 12px;
+                                    color: #003366;
+                                }
+
+                                .userGrid-card-details img {
+                                    border-radius: 50%;
+                                    width: 75px;
+                                    height: 75px;
+                                }
+
+                                .swal-title {
+                                    color: rgba(0,0,0,.65);
+                                    font-weight: 600;
+                                    text-transform: none;
+                                    position: relative;
+                                    display: block;
+                                    padding: 13px 16px;
+                                    font-size: 20px;
+                                    line-height: normal;
+                                    text-align: center;
+                                    margin-bottom: 0;
+                                }
+                            </style>
+                        </div>
+                    </div>
+                </div>
+                <footer class="footer">
+                    <div class="container-fluid clearfix" id="footer">
+                        <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © 2023 <a href="https:////www.B2BOMS.com/" target="_blank">B2BOMS</a>. All rights reserved.</span>
+                        <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">
+                            Made in India with <i class="mdi mdi-heart text-danger"></i>
+                        </span>
+                    </div>
+                </footer>
+                <!-- main-panel ends -->
+            </div>
+            <!-- page-body-wrapper ends -->
+        </div>
+    </div>
+
+    @* <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/site.js" asp-append-version="true"></script>*@
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

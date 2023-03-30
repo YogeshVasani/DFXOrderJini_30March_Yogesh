@@ -1,0 +1,644 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<div ng-view="" class="ng-scope" style="" ng-app="MyApp2" ng-controller="MyController2" ng-init="AdminProfileEnable();"></div>
+  @Html.Hidden("RedirectToOrderDetails", Url.Action("Index", "Home"))
+<div ng-view="" class="ng-scope" style="display:none" ><div class="wrapper ng-scope" >
+    <!-- Page Dashboard-->
+        <h4 class="ng-binding">👋  <span><p class="profile-name ng-binding" id="userid"></p></span></h4>
+    <p>Quick glance at your transactions</p>
+    <!-- ngIf: instance_details.setupCheck == 4 --><div class="row ng-scope" ng-if="instance_details.setupCheck == 4">
+        <div class="col-md-12 grid-margin">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <p><b>Sales and Orders</b></p>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6">
+                            <div class="d-flex">
+                                <div class="wrapper">
+                                    <!-- ngIf: !nav[24].activated -->
+                                    <!-- ngIf: nav[24].activated --><h3 class="mb-0 font-weight-semibold ng-binding ng-scope" ng-if="nav[24].activated">6 <span class="font-size-18">Bundles</span> <i ng-class="prevWeekDashboardOrderQty &gt; weeklyDashboardOrderQuantity ? &#39;fa fa-arrow-circle-down text-danger&#39; : &#39;fa fa-arrow-circle-up text-success&#39;" class="fa fa-arrow-circle-up text-success"></i></h3><!-- end ngIf: nav[24].activated -->
+                                    <h5 class="mb-0 font-weight-medium text-primary ng-binding">Orders Last 7 Days</h5>
+                                    <p class="mb-0 text-muted ng-binding">3 Orders</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mt-md-0 mt-4">
+                            <div class="d-flex">
+                                <div class="wrapper">
+                                    <!-- ngIf: !nav[24].activated -->
+                                    <!-- ngIf: nav[24].activated --><h3 class="mb-0 font-weight-semibold ng-binding ng-scope" ng-if="nav[24].activated">6 <span class="font-size-18">Bundles</span> <i ng-class="lastWeeklyDashboardOrderQty &gt; weeklyDashboardOrderQtyMonth ? &#39;fa fa-arrow-circle-down text-danger&#39; : &#39;fa fa-arrow-circle-up text-success&#39;" class="fa fa-arrow-circle-down text-danger" style=""></i></h3><!-- end ngIf: nav[24].activated -->
+                                    <h5 class="mb-0 font-weight-medium text-primary ng-binding">February Orders</h5>
+                                    <p class="mb-0 text-muted ng-binding">3 Orders</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mt-md-0 mt-4">
+                            <div class="d-flex">
+                                <div class="wrapper">
+                                    <!-- ngIf: !nav[24].activated -->
+                                    <!-- ngIf: nav[24].activated --><h3 class="mb-0 font-weight-semibold ng-binding ng-scope" ng-if="nav[24].activated">9 <span class="font-size-18">Bundles</span> <i ng-class="twoMonthsOrdersQty &gt; lastWeeklyDashboardOrderQty ? &#39;fa fa-arrow-circle-down text-danger&#39; : &#39;fa fa-arrow-circle-up text-success&#39;" class="fa fa-arrow-circle-down text-danger" style=""></i></h3><!-- end ngIf: nav[24].activated -->
+                                    <h5 class="mb-0 font-weight-medium text-primary ng-binding">January Orders</h5>
+                                    <p class="mb-0 text-muted ng-binding">4 Orders</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!--<div class="col-lg-3 col-md-6 mt-md-0 mt-4">
+                            <div class="d-flex">
+                                <div class="wrapper">
+                                    <h3 class="mb-0 font-weight-semibold">1,553</h3>
+                                    <h5 class="mb-0 font-weight-medium text-primary">Sales</h5>
+                                    <p class="mb-0 text-muted">+138.97(+0.54%)</p>
+                                </div>
+
+                            </div>
+                        </div>-->
+                    </div>
+                    <!-- <hr>
+                    <div class="row">
+                        <div class="d-flex col-2" ng-if="nav[1].status.length" ng-repeat="status in orderStatus track by $index">
+                            <div class="badge badge-pill badge-primary margin-5" ng-if="status == 'new'">{{status | camelCase}}<span> ({{OrderStausCount[status] ? OrderStausCount[status] : 0}})</span> </div>
+                            <div class="badge badge-pill badge-success margin-5" ng-if="status == 'open'">{{status | camelCase}} ({{OrderStausCount[status] ? OrderStausCount[status] : 0}})</div>
+                            <div class="badge badge-pill badge-danger margin-5" ng-if="status == 'closed'">{{status | camelCase}} ({{OrderStausCount[status] ? OrderStausCount[status] : 0}})</div>
+                            <div class="badge badge-pill badge-warning margin-5" ng-if="status && status != 'closed' && status != 'new' && status != 'open'">{{status | camelCase}} ({{OrderStausCount[status] ? OrderStausCount[status] : 0}})</div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+
+        <!-- ngIf: validLeadStatus.length -->
+    </div><!-- end ngIf: instance_details.setupCheck == 4 -->
+    <!-- ngIf: instance_details.setupCheck == 4 --><div class="row ng-scope" ng-if="instance_details.setupCheck == 4">
+        <!--<div class="col-md-5 grid-margin">-->
+            <!--<iframe style="background: #FFFFFF;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);" width="100%" height="100%"-->
+                    <!--src="https://charts.mongodb.com/charts-epson-wbqox/embed/charts?id=630dbd2d-bed1-45fb-809f-e8e5c0a2f3aa&maxDataAge=3600&theme=light&autoRefresh=true"></iframe>-->
+        <!--</div>-->
+        <div class="col-md-7 grid-margin">
+            <div class="row">
+                <div class="col-md-12 grid-margin">
+                    <div class="card">
+                        <div class="p-4 border-bottom bg-light">
+                            <h4 class="card-title mb-0 ng-binding">Order Summary <span class="float-right text-primary"><i class="fa fa-list-ul" ng-click="toggleDashboard(0)" role="button" tabindex="0"></i> &nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-bar-chart-o" ng-click="toggleDashboard(1)" role="button" tabindex="0"></i></span></h4>
+                        </div>
+                        <div class="card-body" ng-show="summaryTab" aria-hidden="false"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+                            <canvas id="summary-chart" height="376" style="display: block; height: 282px; width: 848px;" width="1130" class="chartjs-render-monitor"></canvas>
+                            <div class="mr-5" id="summary-chart-legend"></div>
+                        </div>
+                        <div class="card-body table-responsive ng-hide" ng-show="!summaryTab" aria-hidden="true">
+                            <table cellspacing="0" class="table" width="100%">
+                                <thead>
+                                <tr>
+                                    <th>DATE</th>
+                                    <!-- ngIf: nav[24].activated --><th ng-if="nav[24].activated" class="ng-scope">BUNDLES</th><!-- end ngIf: nav[24].activated -->
+                                    <th class="ng-binding">ORDERS</th>
+                                    <th>SALES</th>
+                                    <th>AMOUNT</th>
+                                </tr>
+                                </thead>
+
+                                <tbody>
+                                <!-- ngRepeat: order in dashboardorderreport | limitTo : 15 --><tr ng-repeat="order in dashboardorderreport | limitTo : 15" class="ng-scope" style="">
+                                    <td class="ng-binding">20 - Feb - 2023</td>
+                                    <!-- ngIf: nav[24].activated --><td ng-if="nav[24].activated" class="ng-binding ng-scope">1</td><!-- end ngIf: nav[24].activated -->
+                                    <td class="ng-binding">₹0.00</td>
+                                    <td class="ng-binding">₹0.00</td>
+                                    <td class="ng-binding">₹0.00</td>
+                                </tr><!-- end ngRepeat: order in dashboardorderreport | limitTo : 15 --><tr ng-repeat="order in dashboardorderreport | limitTo : 15" class="ng-scope">
+                                    <td class="ng-binding">16 - Feb - 2023</td>
+                                    <!-- ngIf: nav[24].activated --><td ng-if="nav[24].activated" class="ng-binding ng-scope">5</td><!-- end ngIf: nav[24].activated -->
+                                    <td class="ng-binding">₹0.00</td>
+                                    <td class="ng-binding">₹0.00</td>
+                                    <td class="ng-binding">₹0.00</td>
+                                </tr><!-- end ngRepeat: order in dashboardorderreport | limitTo : 15 --><tr ng-repeat="order in dashboardorderreport | limitTo : 15" class="ng-scope">
+                                    <td class="ng-binding">24 - Jan - 2023</td>
+                                    <!-- ngIf: nav[24].activated --><td ng-if="nav[24].activated" class="ng-binding ng-scope">4</td><!-- end ngIf: nav[24].activated -->
+                                    <td class="ng-binding">₹0.00</td>
+                                    <td class="ng-binding">₹0.00</td>
+                                    <td class="ng-binding">₹0.00</td>
+                                </tr><!-- end ngRepeat: order in dashboardorderreport | limitTo : 15 --><tr ng-repeat="order in dashboardorderreport | limitTo : 15" class="ng-scope">
+                                    <td class="ng-binding">23 - Jan - 2023</td>
+                                    <!-- ngIf: nav[24].activated --><td ng-if="nav[24].activated" class="ng-binding ng-scope">1</td><!-- end ngIf: nav[24].activated -->
+                                    <td class="ng-binding">₹0.00</td>
+                                    <td class="ng-binding">₹0.00</td>
+                                    <td class="ng-binding">₹0.00</td>
+                                </tr><!-- end ngRepeat: order in dashboardorderreport | limitTo : 15 -->
+                                </tbody>
+
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 grid-margin">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title mb-0">Top 10 Performers This Week
+                                <span style="float:right" ng-click="sortTable(&#39;sellerreport&#39; , &#39;orderTotal_amount&#39;)" role="button" tabindex="0"> Sort  &nbsp;<span class="fa fa-sort" aria-hidden="true"> </span></span>
+                            </h4>
+
+                            <!-- ngRepeat: user in sellerreport | orderBy:'user.orderQuantity_count' : 'desc' --><div ng-show="nav[24].activated" class="d-flex mt-3 py-2 border-bottom ng-scope" ng-repeat="user in sellerreport | orderBy:&#39;user.orderQuantity_count&#39; : &#39;desc&#39;" aria-hidden="false" style="">
+                                <img class="img-sm rounded-circle" src="./B2BOMS Console3dashboard_files/face9.png" alt="profile image">
+                                <div class="wrapper ml-2">
+                                    <p class="mb-n1 font-weight-semibold ng-binding"></p>
+                                    <small class="ng-binding">Total <b class="ng-binding">3</b> Orders and <b class="ng-binding">6</b> Lines and <b class="ng-binding">6</b> Quantity</small>
+                                </div>
+                                <!--<big class="text-muted ml-auto">{{user.orderQuantity_count }}</big>-->
+                                <!--<big class="text-muted ml-auto">{{user.orderTotal_amount | currency : currency}}</big>-->
+                            </div><!-- end ngRepeat: user in sellerreport | orderBy:'user.orderQuantity_count' : 'desc' -->
+
+                            <!-- ngRepeat: user in sellerreport --><div ng-show="!nav[24].activated" class="d-flex mt-3 py-2 border-bottom ng-scope ng-hide" ng-repeat="user in sellerreport" aria-hidden="true" style="">
+                                <img class="img-sm rounded-circle" src="./B2BOMS Console3dashboard_files/face9.png" alt="profile image">
+                                <div class="wrapper ml-2">
+                                    <p class="mb-n1 font-weight-semibold ng-binding"></p>
+                                    <small class="ng-binding">Total <b class="ng-binding">3</b> Orders and <b class="ng-binding">6</b> Lines</small>
+                                </div>
+                                <big class="text-muted ml-auto ng-binding">₹0.00</big>
+                            </div><!-- end ngRepeat: user in sellerreport -->
+                            <!-- ngIf: !sellerreport.length -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5 grid-margin">
+            <div class="row">
+                <div class="col-md-12 grid-margin stretch-card">
+                    <div class="card">
+                        <div class="card-body">
+                            <button id="refreshRecentTransaction" class="btn btn-sm btn-primary btn-rounded " style="float: right;position: relative;top: -5px" ng-click="filterUser=&#39;&#39;; fetchRecentTranasctions(&#39;refresh&#39;);" tabindex="0"><i class="mdi mdi-refresh"></i> Refresh</button>
+                            <h4 class="card-title">Recent Transactions (Last 7 days)</h4>
+                            <div class="row">
+                                <br>
+                                <div class="col-md-5">
+                                    <p style="color: grey">Filter by Salesperson</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <select class="selectpicker form-control ng-pristine ng-untouched ng-valid" id="selectPickerRecentTransaction" data-live-search="true" data-style="selectpicker-color" style="background-color:white !important; display:block !important;" ng-model="filterUser" ng-change="filterTransactionBySeller(filterUser)" ng-options="location as location.sellername for location in roleSalesrep" tabindex="0" aria-invalid="false"><option value="" class="" selected="selected">--All Salesperson--</option><option value="object:2894" label="ABDHUL WAHEED">ABDHUL WAHEED</option><option value="object:2895" label="ADITYA GOYAL">ADITYA GOYAL</option><option value="object:2896" label="AMIT BHARGAVA">AMIT BHARGAVA</option><option value="object:2897" label="Amol L">Amol L</option><option value="object:2898" label="ASHISH RANPARIYA">ASHISH RANPARIYA</option><option value="object:2899" label="BIJESH SANKHALA">BIJESH SANKHALA</option><option value="object:2900" label="DEBADATTA MOHANTY">DEBADATTA MOHANTY</option><option value="object:2901" label="DHARMENDRA KUSHWAHA">DHARMENDRA KUSHWAHA</option><option value="object:2902" label="Ganesan A">Ganesan A</option><option value="object:2903" label="GAURAV SHIVHARE">GAURAV SHIVHARE</option><option value="object:2904" label="JAYAN">JAYAN</option><option value="object:2905" label="JITENDRA">JITENDRA</option><option value="object:2906" label="Jyoti">Jyoti</option><option value="object:2907" label="KANISHKA SINGH">KANISHKA SINGH</option><option value="object:2908" label="KARTIK CONTRACTOR">KARTIK CONTRACTOR</option><option value="object:2909" label="KRUNAL DANKAR">KRUNAL DANKAR</option><option value="object:2910" label="MANEESH SHARMA">MANEESH SHARMA</option><option value="object:2911" label="MANISH SHARMA">MANISH SHARMA</option><option value="object:2912" label="Martin Duroflex">Martin Duroflex</option><option value="object:2913" label="MITHUN DATTA">MITHUN DATTA</option><option value="object:2914" label="NARENDRA KUMAR">NARENDRA KUMAR</option><option value="object:2915" label="NARENDRA KUMAR">NARENDRA KUMAR</option><option value="object:2916" label="NIDHIN.M">NIDHIN.M</option><option value="object:2917" label="OM PRAKASH NAMDEV">OM PRAKASH NAMDEV</option><option value="object:2918" label="PAVAN KUMAR">PAVAN KUMAR</option><option value="object:2919" label="Pooja Duroflex">Pooja Duroflex</option><option value="object:2920" label="PRAFULLA CHIMOTE">PRAFULLA CHIMOTE</option><option value="object:2921" label="Sales test">Sales test</option><option value="object:2922" label="SANTHOSH P MALALI">SANTHOSH P MALALI</option><option value="object:2923" label="Sasikala">Sasikala</option><option value="object:2924" label="SATHYARAJ">SATHYARAJ</option><option value="object:2925" label="SAURABH">SAURABH</option><option value="object:2926" label="SRINIVAS">SRINIVAS</option><option value="object:2927" label="SURESH KUMAR">SURESH KUMAR</option><option value="object:2928" label="SURYA PRATAP THAKUR">SURYA PRATAP THAKUR</option><option value="object:2929" label="Vasan Gowda">Vasan Gowda</option><option value="object:2930" label="VIKASH KUMAR">VIKASH KUMAR</option><option value="object:2931" label="VINAYAK">VINAYAK</option><option value="object:2932" label="VISHNU SALIM S">VISHNU SALIM S</option></select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <ul class="nav nav-tabs tab-basic" role="tablist">
+                                        <li class="nav-item recentTransaction">
+                                            <a class="nav-link active" ng-class="(transaction.type == 0 || !transaction.type) ? &#39;active&#39; : &#39;&#39;" id="overall-tab" data-toggle="tab" data-target="#overall" role="tab" aria-controls="overall" ng-click="filterRecentTransaction(0);" aria-selected="true" tabindex="0">All</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link ng-binding" ng-class="(transaction.type == 1) ? &#39;active&#39; : &#39;&#39;" id="orders-tab" data-toggle="tab" data-target="#orders" role="tab" aria-controls="orders" ng-click="filterRecentTransaction(1);" aria-selected="false" tabindex="0">Orders</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" ng-class="(transaction.type == 5) ? &#39;active&#39; : &#39;&#39;" id="sales-tab" data-toggle="tab" data-target="#sales" role="tab" aria-controls="sales" ng-click="filterRecentTransaction(5);" aria-selected="false" tabindex="0">Sales</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" ng-class="(transaction.type == 2) ? &#39;active&#39; : &#39;&#39;" id="payments-tab" data-toggle="tab" data-target="#payments" role="tab" aria-controls="payments" ng-click="filterRecentTransaction(2);" aria-selected="false" tabindex="0">Payments</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" ng-class="(transaction.type == 3) ? &#39;active&#39; : &#39;&#39;" id="check-ins-tab" data-toggle="tab" data-target="#check-ins" role="tab" aria-controls="check-ins" ng-click="filterRecentTransaction(3);" aria-selected="false" tabindex="0">Check Ins</a>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content tab-content-basic">
+                                        <div class="tab-pane fade show active" ng-class="(transaction.type == 0) ? &#39;show active&#39; : &#39;&#39;" id="overall" role="tabpanel" aria-labelledby="overall-tab">
+                                            <div class="accordion basic-accordion" id="accordion" role="tablist">
+                                                <!-- ngRepeat: day in allRecent --><!-- ngIf: allRecent.length --><div ng-repeat="day in allRecent" ng-if="allRecent.length" class="ng-scope">
+                                                    <div role="tab" id="heading0">
+                                                        <a class="text-gray ng-binding" data-toggle="collapse" data-target="#collapse0" aria-expanded="true" aria-controls="collapse0">
+                                                            20 - Feb - 2023<span class="float-right ng-binding">1 transaction</span>
+                                                        </a>
+                                                    </div>
+                                                    <div id="collapse0" class="collapse show" role="tabpanel" aria-labelledby="heading0" data-parent="#accordion">
+                                                        <ul class="bullet-line-list pb-3" style="max-height: 40vh;overflow-y: auto">
+                                                            <!-- ngRepeat: order in day.transaction --><li ng-repeat="order in day.transaction" class="ng-scope">
+                                                                <!--ORDER-->
+                                                                <!-- ngIf: order.type[0] == 'Order' && order.order_type == 'Order' --><div class="d-flex align-items-center justify-content-between ng-scope" ng-if="order.type[0] == &#39;Order&#39; &amp;&amp; order.order_type == &#39;Order&#39;">
+                                                                    <div class="d-flex">
+                                                                        <img class="img-xs rounded-circle" src="./B2BOMS Console3dashboard_files/face9.png" alt="profile image">
+                                                                        <div class="ml-3">
+                                                                            <h6 class="mb-0 ng-binding">A A BEDDING COMPANY</h6>
+                                                                            <small class="text-muted ng-binding"> entered &nbsp;Order of ₹0.00</small>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div>
+                                                                        <small class="d-block mb-0 ng-binding">1:57 PM</small>
+                                                                    </div>
+                                                                </div><!-- end ngIf: order.type[0] == 'Order' && order.order_type == 'Order' -->
+
+                                                                <!--SALE-->
+                                                                <!-- ngIf: order.type[0] == 'Order' && order.order_type == 'Sale' -->
+
+                                                                <!--PAYMENT-->
+                                                                <!-- ngIf: order.type[0] == 'Payment' -->
+
+                                                                <!--CHECKIN-->
+                                                                <!-- ngIf: order.itemcode[0] == 'ZZZ' || order.type[0] == 'Check_In' -->
+
+                                                                <!--ATTENDANCE-->
+                                                                <!--<div class="d-flex align-items-center justify-content-between" ng-if="order.itemcode[0] == 'ATD'">
+                                                                    <div class="d-flex">
+                                                                        <img class="img-xs rounded-circle" src="../../../assets/images/faces/face9.png" alt="profile image">
+                                                                        <div class="ml-3">
+                                                                            <h6 class="mb-0">{{order.sellername[0]}}</h6>
+                                                                            <small class="text-muted" ng-if="!order.outtime[0]">{{order.sellername[0]}} punched in at {{getTimeFrom24Hour(order.intime[0])}}</small>
+                                                                            <small class="text-muted" ng-if="order.outtime[0]">{{order.sellername[0]}} punched in at {{getTimeFrom24Hour(order.intime[0])}} and punched out at {{getTimeFrom24Hour(order.outtime[0])}}</small>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div>
+                                                                        <small class="d-block mb-0">{{formatdate(order.date_added[0])|date: 'h:mm a'}}</small>
+                                                                    </div>
+                                                                </div>-->
+                                                            </li><!-- end ngRepeat: order in day.transaction -->
+                                                        </ul>
+                                                    </div>
+
+                                                </div><!-- end ngIf: allRecent.length --><!-- end ngRepeat: day in allRecent --><!-- ngIf: allRecent.length --><div ng-repeat="day in allRecent" ng-if="allRecent.length" class="ng-scope">
+                                                    <div role="tab" id="heading1">
+                                                        <a class="text-gray ng-binding" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                                                            16 - Feb - 2023<span class="float-right ng-binding">2 transactions</span>
+                                                        </a>
+                                                    </div>
+                                                    <div id="collapse1" class="collapse " role="tabpanel" aria-labelledby="heading1" data-parent="#accordion">
+                                                        <ul class="bullet-line-list pb-3" style="max-height: 40vh;overflow-y: auto">
+                                                            <!-- ngRepeat: order in day.transaction --><li ng-repeat="order in day.transaction" class="ng-scope">
+                                                                <!--ORDER-->
+                                                                <!-- ngIf: order.type[0] == 'Order' && order.order_type == 'Order' --><div class="d-flex align-items-center justify-content-between ng-scope" ng-if="order.type[0] == &#39;Order&#39; &amp;&amp; order.order_type == &#39;Order&#39;">
+                                                                    <div class="d-flex">
+                                                                        <img class="img-xs rounded-circle" src="./B2BOMS Console3dashboard_files/face9.png" alt="profile image">
+                                                                        <div class="ml-3">
+                                                                            <h6 class="mb-0 ng-binding">A A BEDDING COMPANY</h6>
+                                                                            <small class="text-muted ng-binding"> entered &nbsp;Order of ₹0.00</small>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div>
+                                                                        <small class="d-block mb-0 ng-binding">6:44 AM</small>
+                                                                    </div>
+                                                                </div><!-- end ngIf: order.type[0] == 'Order' && order.order_type == 'Order' -->
+
+                                                                <!--SALE-->
+                                                                <!-- ngIf: order.type[0] == 'Order' && order.order_type == 'Sale' -->
+
+                                                                <!--PAYMENT-->
+                                                                <!-- ngIf: order.type[0] == 'Payment' -->
+
+                                                                <!--CHECKIN-->
+                                                                <!-- ngIf: order.itemcode[0] == 'ZZZ' || order.type[0] == 'Check_In' -->
+
+                                                                <!--ATTENDANCE-->
+                                                                <!--<div class="d-flex align-items-center justify-content-between" ng-if="order.itemcode[0] == 'ATD'">
+                                                                    <div class="d-flex">
+                                                                        <img class="img-xs rounded-circle" src="../../../assets/images/faces/face9.png" alt="profile image">
+                                                                        <div class="ml-3">
+                                                                            <h6 class="mb-0">{{order.sellername[0]}}</h6>
+                                                                            <small class="text-muted" ng-if="!order.outtime[0]">{{order.sellername[0]}} punched in at {{getTimeFrom24Hour(order.intime[0])}}</small>
+                                                                            <small class="text-muted" ng-if="order.outtime[0]">{{order.sellername[0]}} punched in at {{getTimeFrom24Hour(order.intime[0])}} and punched out at {{getTimeFrom24Hour(order.outtime[0])}}</small>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div>
+                                                                        <small class="d-block mb-0">{{formatdate(order.date_added[0])|date: 'h:mm a'}}</small>
+                                                                    </div>
+                                                                </div>-->
+                                                            </li><!-- end ngRepeat: order in day.transaction --><li ng-repeat="order in day.transaction" class="ng-scope">
+                                                                <!--ORDER-->
+                                                                <!-- ngIf: order.type[0] == 'Order' && order.order_type == 'Order' --><div class="d-flex align-items-center justify-content-between ng-scope" ng-if="order.type[0] == &#39;Order&#39; &amp;&amp; order.order_type == &#39;Order&#39;">
+                                                                    <div class="d-flex">
+                                                                        <img class="img-xs rounded-circle" src="./B2BOMS Console3dashboard_files/face9.png" alt="profile image">
+                                                                        <div class="ml-3">
+                                                                            <h6 class="mb-0 ng-binding">A A BEDDING COMPANY</h6>
+                                                                            <small class="text-muted ng-binding"> entered &nbsp;Order of ₹0.00</small>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div>
+                                                                        <small class="d-block mb-0 ng-binding">6:42 AM</small>
+                                                                    </div>
+                                                                </div><!-- end ngIf: order.type[0] == 'Order' && order.order_type == 'Order' -->
+
+                                                                <!--SALE-->
+                                                                <!-- ngIf: order.type[0] == 'Order' && order.order_type == 'Sale' -->
+
+                                                                <!--PAYMENT-->
+                                                                <!-- ngIf: order.type[0] == 'Payment' -->
+
+                                                                <!--CHECKIN-->
+                                                                <!-- ngIf: order.itemcode[0] == 'ZZZ' || order.type[0] == 'Check_In' -->
+
+                                                                <!--ATTENDANCE-->
+                                                                <!--<div class="d-flex align-items-center justify-content-between" ng-if="order.itemcode[0] == 'ATD'">
+                                                                    <div class="d-flex">
+                                                                        <img class="img-xs rounded-circle" src="../../../assets/images/faces/face9.png" alt="profile image">
+                                                                        <div class="ml-3">
+                                                                            <h6 class="mb-0">{{order.sellername[0]}}</h6>
+                                                                            <small class="text-muted" ng-if="!order.outtime[0]">{{order.sellername[0]}} punched in at {{getTimeFrom24Hour(order.intime[0])}}</small>
+                                                                            <small class="text-muted" ng-if="order.outtime[0]">{{order.sellername[0]}} punched in at {{getTimeFrom24Hour(order.intime[0])}} and punched out at {{getTimeFrom24Hour(order.outtime[0])}}</small>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div>
+                                                                        <small class="d-block mb-0">{{formatdate(order.date_added[0])|date: 'h:mm a'}}</small>
+                                                                    </div>
+                                                                </div>-->
+                                                            </li><!-- end ngRepeat: order in day.transaction -->
+                                                        </ul>
+                                                    </div>
+
+                                                </div><!-- end ngIf: allRecent.length --><!-- end ngRepeat: day in allRecent -->
+                                                <!-- ngIf: !allRecent.length -->
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="orders" ng-class="(transaction.type == 1) ? &#39;show active&#39; : &#39;&#39;" role="tabpanel" aria-labelledby="orders-tab">
+                                            <div class="accordion basic-accordion" id="accordion1" role="tablist">
+                                                <!-- ngRepeat: day in allRecent --><!-- ngIf: allRecent.length --><div ng-repeat="day in allRecent" ng-if="allRecent.length" class="ng-scope">
+                                                    <div role="tab" id="heading0">
+                                                        <a class="text-gray ng-binding" data-toggle="collapse" data-target="#collapse0" aria-expanded="true" aria-controls="collapse0">
+                                                            20 - Feb - 2023<span class="float-right ng-binding">1 transaction</span>
+                                                        </a>
+                                                    </div>
+                                                    <div id="collapse0" class="collapse show" role="tabpanel" aria-labelledby="heading0" data-parent="#accordion1">
+                                                        <ul class="bullet-line-list pb-3">
+                                                            <!-- ngRepeat: order in day.transaction --><li ng-repeat="order in day.transaction" class="ng-scope">
+                                                                <!--ORDER-->
+                                                                <!-- ngIf: order.type[0] == 'Order' --><div class="d-flex align-items-center justify-content-between ng-scope" ng-if="order.type[0] == &#39;Order&#39;">
+                                                                    <div class="d-flex">
+                                                                        <img class="img-xs rounded-circle" src="./B2BOMS Console3dashboard_files/face9.png" alt="profile image">
+                                                                        <div class="ml-3">
+                                                                            <h6 class="mb-0 ng-binding">A A BEDDING COMPANY</h6>
+                                                                            <small class="text-muted ng-binding"> entered &nbsp;Order of ₹0.00 </small>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div>
+                                                                        <small class="d-block mb-0 ng-binding">1:57 PM</small>
+                                                                    </div>
+                                                                </div><!-- end ngIf: order.type[0] == 'Order' -->
+                                                            </li><!-- end ngRepeat: order in day.transaction -->
+                                                        </ul>
+                                                    </div>
+                                                </div><!-- end ngIf: allRecent.length --><!-- end ngRepeat: day in allRecent --><!-- ngIf: allRecent.length --><div ng-repeat="day in allRecent" ng-if="allRecent.length" class="ng-scope">
+                                                    <div role="tab" id="heading1">
+                                                        <a class="text-gray ng-binding" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                                                            16 - Feb - 2023<span class="float-right ng-binding">2 transactions</span>
+                                                        </a>
+                                                    </div>
+                                                    <div id="collapse1" class="collapse " role="tabpanel" aria-labelledby="heading1" data-parent="#accordion1">
+                                                        <ul class="bullet-line-list pb-3">
+                                                            <!-- ngRepeat: order in day.transaction --><li ng-repeat="order in day.transaction" class="ng-scope">
+                                                                <!--ORDER-->
+                                                                <!-- ngIf: order.type[0] == 'Order' --><div class="d-flex align-items-center justify-content-between ng-scope" ng-if="order.type[0] == &#39;Order&#39;">
+                                                                    <div class="d-flex">
+                                                                        <img class="img-xs rounded-circle" src="./B2BOMS Console3dashboard_files/face9.png" alt="profile image">
+                                                                        <div class="ml-3">
+                                                                            <h6 class="mb-0 ng-binding">A A BEDDING COMPANY</h6>
+                                                                            <small class="text-muted ng-binding"> entered &nbsp;Order of ₹0.00 </small>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div>
+                                                                        <small class="d-block mb-0 ng-binding">6:44 AM</small>
+                                                                    </div>
+                                                                </div><!-- end ngIf: order.type[0] == 'Order' -->
+                                                            </li><!-- end ngRepeat: order in day.transaction --><li ng-repeat="order in day.transaction" class="ng-scope">
+                                                                <!--ORDER-->
+                                                                <!-- ngIf: order.type[0] == 'Order' --><div class="d-flex align-items-center justify-content-between ng-scope" ng-if="order.type[0] == &#39;Order&#39;">
+                                                                    <div class="d-flex">
+                                                                        <img class="img-xs rounded-circle" src="./B2BOMS Console3dashboard_files/face9.png" alt="profile image">
+                                                                        <div class="ml-3">
+                                                                            <h6 class="mb-0 ng-binding">A A BEDDING COMPANY</h6>
+                                                                            <small class="text-muted ng-binding"> entered &nbsp;Order of ₹0.00 </small>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div>
+                                                                        <small class="d-block mb-0 ng-binding">6:42 AM</small>
+                                                                    </div>
+                                                                </div><!-- end ngIf: order.type[0] == 'Order' -->
+                                                            </li><!-- end ngRepeat: order in day.transaction -->
+                                                        </ul>
+                                                    </div>
+                                                </div><!-- end ngIf: allRecent.length --><!-- end ngRepeat: day in allRecent -->
+                                                <!-- ngIf: !allRecent.length -->
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="sales" ng-class="(transaction.type == 5) ? &#39;show active&#39; : &#39;&#39;" role="tabpanel" aria-labelledby="sales-tab">
+                                            <div class="accordion basic-accordion" id="accordion1" role="tablist">
+                                                <!-- ngRepeat: day in allRecent --><!-- ngIf: allRecent.length --><div ng-repeat="day in allRecent" ng-if="allRecent.length" class="ng-scope">
+                                                    <div role="tab" id="heading0">
+                                                        <a class="text-gray ng-binding" data-toggle="collapse" data-target="#collapse0" aria-expanded="true" aria-controls="collapse0">
+                                                            20 - Feb - 2023<span class="float-right ng-binding">1 transaction</span>
+                                                        </a>
+                                                    </div>
+                                                    <div id="collapse0" class="collapse show" role="tabpanel" aria-labelledby="heading0" data-parent="#accordion1">
+                                                        <ul class="bullet-line-list pb-3">
+                                                            <!-- ngRepeat: order in day.transaction --><li ng-repeat="order in day.transaction" class="ng-scope">
+                                                                <!--ORDER-->
+                                                                <!-- ngIf: order.type[0] == 'Order' --><div class="d-flex align-items-center justify-content-between ng-scope" ng-if="order.type[0] == &#39;Order&#39;">
+                                                                    <div class="d-flex">
+                                                                        <img class="img-xs rounded-circle" src="./B2BOMS Console3dashboard_files/face9.png" alt="profile image">
+                                                                        <div class="ml-3">
+                                                                            <h6 class="mb-0 ng-binding">A A BEDDING COMPANY</h6>
+                                                                            <small class="text-muted ng-binding"> recorded a sale of ₹0.00</small>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div>
+                                                                        <small class="d-block mb-0 ng-binding">1:57 PM</small>
+                                                                    </div>
+                                                                </div><!-- end ngIf: order.type[0] == 'Order' -->
+                                                            </li><!-- end ngRepeat: order in day.transaction -->
+                                                        </ul>
+                                                    </div>
+                                                </div><!-- end ngIf: allRecent.length --><!-- end ngRepeat: day in allRecent --><!-- ngIf: allRecent.length --><div ng-repeat="day in allRecent" ng-if="allRecent.length" class="ng-scope">
+                                                    <div role="tab" id="heading1">
+                                                        <a class="text-gray ng-binding" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                                                            16 - Feb - 2023<span class="float-right ng-binding">2 transactions</span>
+                                                        </a>
+                                                    </div>
+                                                    <div id="collapse1" class="collapse " role="tabpanel" aria-labelledby="heading1" data-parent="#accordion1">
+                                                        <ul class="bullet-line-list pb-3">
+                                                            <!-- ngRepeat: order in day.transaction --><li ng-repeat="order in day.transaction" class="ng-scope">
+                                                                <!--ORDER-->
+                                                                <!-- ngIf: order.type[0] == 'Order' --><div class="d-flex align-items-center justify-content-between ng-scope" ng-if="order.type[0] == &#39;Order&#39;">
+                                                                    <div class="d-flex">
+                                                                        <img class="img-xs rounded-circle" src="./B2BOMS Console3dashboard_files/face9.png" alt="profile image">
+                                                                        <div class="ml-3">
+                                                                            <h6 class="mb-0 ng-binding">A A BEDDING COMPANY</h6>
+                                                                            <small class="text-muted ng-binding"> recorded a sale of ₹0.00</small>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div>
+                                                                        <small class="d-block mb-0 ng-binding">6:44 AM</small>
+                                                                    </div>
+                                                                </div><!-- end ngIf: order.type[0] == 'Order' -->
+                                                            </li><!-- end ngRepeat: order in day.transaction --><li ng-repeat="order in day.transaction" class="ng-scope">
+                                                                <!--ORDER-->
+                                                                <!-- ngIf: order.type[0] == 'Order' --><div class="d-flex align-items-center justify-content-between ng-scope" ng-if="order.type[0] == &#39;Order&#39;">
+                                                                    <div class="d-flex">
+                                                                        <img class="img-xs rounded-circle" src="./B2BOMS Console3dashboard_files/face9.png" alt="profile image">
+                                                                        <div class="ml-3">
+                                                                            <h6 class="mb-0 ng-binding">A A BEDDING COMPANY</h6>
+                                                                            <small class="text-muted ng-binding"> recorded a sale of ₹0.00</small>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div>
+                                                                        <small class="d-block mb-0 ng-binding">6:42 AM</small>
+                                                                    </div>
+                                                                </div><!-- end ngIf: order.type[0] == 'Order' -->
+                                                            </li><!-- end ngRepeat: order in day.transaction -->
+                                                        </ul>
+                                                    </div>
+                                                </div><!-- end ngIf: allRecent.length --><!-- end ngRepeat: day in allRecent -->
+                                                <!-- ngIf: !allRecent.length -->
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="payments" ng-class="(transaction.type == 2) ? &#39;show active&#39; : &#39;&#39;" role="tabpanel" aria-labelledby="payments-tab">
+                                            <div class="accordion basic-accordion" id="accordion2" role="tablist">
+                                                <!-- ngRepeat: day in allRecent --><!-- ngIf: allRecent.length --><div ng-repeat="day in allRecent" ng-if="allRecent.length" class="ng-scope">
+                                                    <div role="tab" id="heading0">
+                                                        <a class="text-gray ng-binding" data-toggle="collapse" data-target="#collapse0" aria-expanded="true" aria-controls="collapse0">
+                                                            20 - Feb - 2023<span class="float-right ng-binding">1 transaction</span>
+                                                        </a>
+                                                    </div>
+                                                    <div id="collapse0" class="collapse show" role="tabpanel" aria-labelledby="heading0" data-parent="#accordion2">
+                                                        <ul class="bullet-line-list pb-3">
+                                                            <!-- ngRepeat: order in day.transaction --><li ng-repeat="order in day.transaction" class="ng-scope">
+                                                                <!--PAYMENT-->
+                                                                <!-- ngIf: order.type[0] == 'Payment' -->
+
+                                                            </li><!-- end ngRepeat: order in day.transaction -->
+                                                        </ul>
+                                                    </div>
+                                                </div><!-- end ngIf: allRecent.length --><!-- end ngRepeat: day in allRecent --><!-- ngIf: allRecent.length --><div ng-repeat="day in allRecent" ng-if="allRecent.length" class="ng-scope">
+                                                    <div role="tab" id="heading1">
+                                                        <a class="text-gray ng-binding" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                                                            16 - Feb - 2023<span class="float-right ng-binding">2 transactions</span>
+                                                        </a>
+                                                    </div>
+                                                    <div id="collapse1" class="collapse " role="tabpanel" aria-labelledby="heading1" data-parent="#accordion2">
+                                                        <ul class="bullet-line-list pb-3">
+                                                            <!-- ngRepeat: order in day.transaction --><li ng-repeat="order in day.transaction" class="ng-scope">
+                                                                <!--PAYMENT-->
+                                                                <!-- ngIf: order.type[0] == 'Payment' -->
+
+                                                            </li><!-- end ngRepeat: order in day.transaction --><li ng-repeat="order in day.transaction" class="ng-scope">
+                                                                <!--PAYMENT-->
+                                                                <!-- ngIf: order.type[0] == 'Payment' -->
+
+                                                            </li><!-- end ngRepeat: order in day.transaction -->
+                                                        </ul>
+                                                    </div>
+                                                </div><!-- end ngIf: allRecent.length --><!-- end ngRepeat: day in allRecent -->
+                                                <!-- ngIf: !allRecent.length -->
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="check-ins" ng-class="(transaction.type == 3) ? &#39;show active&#39; : &#39;&#39;" role="tabpanel" aria-labelledby="check-ins-tab">
+                                            <div class="accordion basic-accordion" id="accordion3" role="tablist">
+                                                <!-- ngRepeat: day in allRecent --><!-- ngIf: allRecent.length --><div ng-repeat="day in allRecent" ng-if="allRecent.length" class="ng-scope">
+                                                    <div role="tab" id="heading0">
+                                                        <a class="text-gray ng-binding" data-toggle="collapse" data-target="#collapse0" aria-expanded="true" aria-controls="collapse0">
+                                                            20 - Feb - 2023<span class="float-right ng-binding">1 transaction</span>
+                                                        </a>
+                                                    </div>
+                                                    <div id="collapse0" class="collapse show" role="tabpanel" aria-labelledby="heading0" data-parent="#accordion">
+                                                        <ul class="bullet-line-list pb-3">
+                                                            <!-- ngRepeat: order in day.transaction --><li ng-repeat="order in day.transaction" class="ng-scope">
+
+                                                                <!--CHECKIN-->
+                                                                <!-- ngIf: order.itemcode[0] == 'ZZZ' || order.type[0] == 'Check_In' -->
+                                                            </li><!-- end ngRepeat: order in day.transaction -->
+                                                        </ul>
+                                                    </div>
+                                                </div><!-- end ngIf: allRecent.length --><!-- end ngRepeat: day in allRecent --><!-- ngIf: allRecent.length --><div ng-repeat="day in allRecent" ng-if="allRecent.length" class="ng-scope">
+                                                    <div role="tab" id="heading1">
+                                                        <a class="text-gray ng-binding" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                                                            16 - Feb - 2023<span class="float-right ng-binding">2 transactions</span>
+                                                        </a>
+                                                    </div>
+                                                    <div id="collapse1" class="collapse " role="tabpanel" aria-labelledby="heading1" data-parent="#accordion">
+                                                        <ul class="bullet-line-list pb-3">
+                                                            <!-- ngRepeat: order in day.transaction --><li ng-repeat="order in day.transaction" class="ng-scope">
+
+                                                                <!--CHECKIN-->
+                                                                <!-- ngIf: order.itemcode[0] == 'ZZZ' || order.type[0] == 'Check_In' -->
+                                                            </li><!-- end ngRepeat: order in day.transaction --><li ng-repeat="order in day.transaction" class="ng-scope">
+
+                                                                <!--CHECKIN-->
+                                                                <!-- ngIf: order.itemcode[0] == 'ZZZ' || order.type[0] == 'Check_In' -->
+                                                            </li><!-- end ngRepeat: order in day.transaction -->
+                                                        </ul>
+                                                    </div>
+                                                </div><!-- end ngIf: allRecent.length --><!-- end ngRepeat: day in allRecent -->
+                                                <!-- ngIf: !allRecent.length -->
+                                            </div>
+                                        </div>
+                                        <!--<div class="tab-pane fade" id="attendance" role="tabpanel" aria-labelledby="attendance-tab">
+                                            <div class="accordion basic-accordion" id="accordion4" role="tablist">
+                                                <div ng-repeat="day in allRecent" ng-if="allRecent.length">
+                                                    <div role="tab" id="heading{{$index}}">
+                                                        <a class="text-gray" data-toggle="collapse" data-target="#collapse{{$index}}" aria-expanded="{{$index === 0}}" aria-controls="collapse{{$index}}">
+                                                            {{day.date}}<span class="float-right">{{day.transaction.length > 1 ? day.transaction.length+" transactions" : (day.transaction.length == 1 ? day.transaction.length+" transaction" : "No transactions")}}</span>
+                                                        </a>
+                                                    </div>
+                                                    <div id="collapse{{$index}}" class="collapse {{$index === 0 ? 'show' : ''}}" role="tabpanel" aria-labelledby="heading{{$index}}" data-parent="#accordion4">
+                                                        <ul class="bullet-line-list pb-3">
+                                                            <li ng-repeat="order in day.transaction">
+
+                                                                &lt;!&ndash;ATTENDANCE&ndash;&gt;
+                                                                <div class="d-flex align-items-center justify-content-between" ng-if="order.itemcode[0] == 'ATD'">
+                                                                    <div class="d-flex">
+                                                                        <img class="img-xs rounded-circle" src="../../../assets/images/faces/face9.png" alt="profile image">
+                                                                        <div class="ml-3">
+                                                                            <h6 class="mb-0">{{order.sellername[0]}}</h6>
+                                                                            <small class="text-muted" ng-if="!order.outtime[0]">{{order.sellername[0]}} punched in at {{getTimeFrom24Hour(order.intime[0])}}</small>
+                                                                            <small class="text-muted" ng-if="order.outtime[0]">{{order.sellername[0]}} punched in at {{getTimeFrom24Hour(order.intime[0])}} and punched out at {{getTimeFrom24Hour(order.outtime[0])}}</small>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div>
+                                                                        <small class="d-block mb-0">{{formatdate(order.date_added[0])|date: 'h:mm a'}}</small>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="row text-center width-100" ng-if="!allRecent.length">
+                                                    <div class="col-lg-12">
+                                                        <img src="../../assets/images/pages/nodata_grey.png" alt="No Data" class="width_30">
+                                                        <h4>No data to display!</h4>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- end ngIf: instance_details.setupCheck == 4 -->
+    <!-- Page Dashboard Ends-->
+
+    <!-- Page Wizard Starts-->
+    <!-- ngIf: !instance_details.setupCheck || instance_details.setupCheck < 4 -->
+    <!-- Page Wizard Ends-->
+
+   
+            </div>
+        </div>
+    
+<!-- content-wrapper ends -->
+<!-- partial:partials/_footer.html -->
+
+<!-- partial -->
+
+<script type="application/javascript" src="./B2BOMS Console3dashboard_files/DashboardCharts.js.download" class="ng-scope"></script>
+<script type="text/javascript" class="ng-scope">
+    function preview_image(event) {
+        var reader = new FileReader();
+        reader.onload = function() {
+            var output = document.getElementById('output_image');
+            output.src = reader.result;
+        }
+        reader.readAsDataURL(event.target.files[0]);
+    }
+</script>

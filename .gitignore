@@ -1,0 +1,10 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/DFXOrderJini/FileContentIndex/read.lock
+/.vs/slnx.sqlite
+/.vs/VSWorkspaceState.json
+/.vs/DFXOrderJini/FileContentIndex/f729de91-3d45-4ee1-a947-b671164edcd8.vsidx
+/.vs/DFXOrderJini/v16/.suo
+/obj/Debug/net6.0/DFXOrderJini.csproj.AssemblyReference.cache

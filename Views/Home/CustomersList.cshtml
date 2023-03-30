@@ -1,0 +1,150 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<div ng-app="MyApp2" ng-controller="MyController2">
+    <div class="content-wrapper">
+        <!-- ngView:  -->
+        <div ng-view="" class="ng-scope" style="">
+            <div class="wrapper ng-scope">
+                <div class="refresh"></div>
+                <!-- ngIf: orderViewTab.tab == 1 -->
+                <!-- ngIf: orderViewTab.tab == 0 -->
+                <div class="row page-header ng-scope" ng-if="orderViewTab.tab == 0">
+                    <div class="col-5">
+                        <div class="backtoOrder">
+                            <a href="dashboard#ui-orders">
+                                <p><i class="fa fa-arrow-left pl-4" aria-hidden="true"></i> Go Back</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="">
+                            <h4 class="">Select Customer</h4>
+                            <!--<h4></h4>-->
+                        </div>
+                    </div>
+                </div><!-- end ngIf: orderViewTab.tab == 0 -->
+                <!-- ngIf: orderViewTab.tab == 0 && user.role != 'dealer' -->
+                <div class="ng-scope">
+                    <div class="row">
+                        <!-- ngIf: customers.length --><div class="col-md-12 ng-scope" style="">
+                            <div class="card">
+                                <div class="card-body">
+                                    <form class="form-horizontal ng-pristine ng-valid">
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <input type="text" id="myInput" onkeyup="myFunction()" class="form-control ng-pristine ng-untouched ng-valid" placeholder="Search" aria-label="CustomerSearch" aria-describedby="basic-search" tabindex="0" aria-invalid="false">
+                                                <div class="input-group-prepend">
+                                                    <button class="btn btn-secondary " type="submit" aria-haspopup="true" id="btnsearch"> Search</button>
+                                                </div>
+                                            </div>
+                                            <div class="row" style="overflow-y: scroll;min-height: 100px;height: 2px;height: 450px;">
+                                                <div class="col-xs-12 col-md-12 col-lg-12">
+                                                    <div class="tab-content">
+                                                        @Html.Hidden("RedirectTo", Url.Action("OrderCreation", "SalesOrder"))
+                                                        <div class="tab-pane container active p-4" id="customer">
+                                                            <div class="table-responsive" ng-show="IsVisible" ng-init="GetAllCustomers();">
+                                                                <table class="table table-hover" id="myTable">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>  </th>
+                                                                            <th> Customer  </th>
+                                                                            <th> Phone </th>
+                                                                            <th> City </th>
+                                                                            <th> Area </th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <!-- ngRepeat: dealer in customers  | filter : config.filter -->
+                                                                        <tr ng-repeat="Cus in CustomerDetails" class="ng-scope" tabindex="0">
+                                                                            <td class="table-image">
+                                                                                <img src="~/img/photos/image_not_available.jpg" />
+                                                                            </td>
+                                                                            <td class="ng-binding">
+                                                                                {{Cus.dealerName}}
+                                                                            </td>
+                                                                            <td class="ng-binding">
+                                                                                {{Cus.phone}}
+                                                                            </td>
+                                                                            <td class="ng-binding">
+                                                                                {{Cus.city}}
+                                                                            </td>
+                                                                            <td class="ng-binding">
+                                                                                Not Available
+                                                                            </td>
+                                                                            <td class="dcode" style="display:none">
+                                                                                {{Cus.dealercode}}
+                                                                            </td>
+                                                                        </tr><!-- end ngRepeat: dealer in customers  | filter : config.filter -->
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div><!-- end ngIf: customers.length -->
+                        <!-- ngIf: !customers.length -->
+                    </div>
+                </div><!-- end ngIf: orderViewTab.tab == 0 && user.role != 'dealer' -->
+                <!-- ngIf: orderViewTab.tab == 1 && customer.Dealercode -->
+                <!-- ngIf: (orderViewTab.tab == 1 || user.role == 'dealer') && !customer.Dealercode -->
+                <!-- ngIf: orderViewTab.tab == 3 && newOrder.length -->
+                <!-- ngIf: orderViewTab.tab == 3 && !newOrder.length -->
+            </div>
+            <div class="modal fade ng-scope" id="shipping_address">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5>Change Shipping Address</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                        </div>
+                        <div class="modal-body">
+                            <!-- ngIf: !config.add_new_address --><div class="row full-width ng-scope" ng-if="!config.add_new_address">
+                                <!-- ngRepeat: address in shipping_addresses -->
+                                <!-- <div class="col-md-3 m-2 card grid-margin stretch-card add-new-card" ng-click="config.add_new_address = true">
+                                    <div class="card-body text-center text-primary">
+                                        <i class="mdi mdi-plus-circle-outline font-size-50"></i>
+                                        <h3>Add Address</h3>
+                                    </div>
+                                </div> -->
+                            </div><!-- end ngIf: !config.add_new_address -->
+                            <!-- ngIf: config.add_new_address -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <style class="ng-scope">
+                .dropdown .dropdown-toggle:after {
+                    border: none;
+                    content: "\F140";
+                    font-family: "Material Design Icons";
+                    font-size: 20px;
+                    color: black;
+                    text-rendering: auto;
+                    line-height: inherit;
+                    vertical-align: 0;
+                }
+
+                .btn-secondary, .editable-container.editable-inline .editableform .control-group .editable-buttons .editable-cancel {
+                    color: #212529;
+                    background-color: transparent;
+                    border-color: #dde4eb;
+                }
+
+                    .btn-secondary:not(:disabled):not(.disabled):active, .editable-container.editable-inline .editableform .control-group .editable-buttons .editable-cancel:not(:disabled):not(.disabled):active, .btn-secondary:not(:disabled):not(.disabled).active, .editable-container.editable-inline .editableform .control-group .editable-buttons .editable-cancel:not(:disabled):not(.disabled).active, .show > .btn-secondary.dropdown-toggle, .editable-container.editable-inline .editableform .control-group .editable-buttons .show > .dropdown-toggle.editable-cancel {
+                        color: transparent;
+                        background-color: transparent;
+                        border-color: transparent;
+                    }
+            </style>
+        </div>
+    </div>
+</div>      

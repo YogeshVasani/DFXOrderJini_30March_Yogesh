@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <History>True|2023-03-28T16:00:31.0429578Z;False|2023-03-28T21:29:24.8282140+05:30;True|2023-03-27T17:44:15.6536109+05:30;True|2023-03-27T15:34:16.0988525+05:30;False|2023-03-27T15:31:11.3596263+05:30;False|2023-03-27T15:30:40.6138071+05:30;</History>
+    <LastFailureDetails />
+    <_PublishTargetUrl>E:\Duroflex\OrderB2B\bin\Release\net6.0\publish\27_1</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DFXB2BOMS">
+      <Value>Data Source=172.16.0.149%3b  Initial Catalog=DFXOrderjini%3bUser ID=canopus%3bPassword=India%40123%3bPersist Security Info=True%3bMultipleActiveResultSets=True%3b</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>

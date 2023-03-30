@@ -1,0 +1,356 @@
+﻿@{
+    ViewData["Title"] = "New Order";
+}
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" />
+<link rel="stylesheet" href="https://resources/demos/style.css" />
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+
+
+<div ng-view="" class="ng-scope" style="" >
+    <div class="wrapper ng-scope">
+        <div class="refresh" style="display: none;"></div>
+
+        <!-- ngIf: orderViewTab.tab == 3 && newOrder.length --><div ng-if="orderViewTab.tab == 3 &amp;&amp; newOrder.length" class="ng-scope" style="">
+@*            <p ng-click="changeOrderView(1)" role="button" tabindex="0"><i class="fa fa-arrow-left pl-4" aria-hidden="true"></i> Add more items</p>
+*@
+            <div class="card">
+                <div class="card-body" style="padding: 15px">
+                    <h4 class="card-title text-center ng-binding"> Order : Preview</h4>
+                    <hr>
+                    <div class="row p-2" >
+                        <div class="col-md-9" ng-repeat="item in ItemDetails">
+                            <p class="mb-0 ng-binding"><strong class="ng-binding">Order ID</strong> : <span id="ordid"></span></p>
+                            <!---- Order Date  -->
+                            <p class="mb-0 ng-binding"><strong class="ng-binding">Order Date</strong> : <span id="orddate"></span></p>
+                            <!---- Order Placed BY Name  -->
+                            <p class="mb-0 ng-binding"><strong>Order Placed by</strong> : <span id="ordplacedby"></span></p>
+                            <!---- Salesperson Name  -->
+                            <p class="mb-0 ng-binding"><strong class="ng-binding">Salesperson</strong> : <span id="ordsalesperson"></span></p>
+                            <!--<p class="mb-0 " ><strong>{{getRoleName('Salesperson')}}</strong> : {{getUserName(orderDetails[0].salesperson)}}</p>-->
+                            <!---- Stockist Name -->
+                            <!-- ngIf: orderDetails[0].stockistname -->
+                            <!---- Customer Group / Class -->
+                            <p class="mb-0 ng-binding ng-hide" ng-show="orderDetails[0].class" aria-hidden="true">
+                                <strong>Group</strong> :
+                            </p>
+                            <!---- Customer Plant Code (Duroflex) -->
+                            
+                            <!-- Customer request date-->
+                            <p class="mb-0 ng-binding ng-hide" ng-show="orderDetails[0].customerRequestDate" aria-hidden="true">
+                                <strong>&#xFEFF;Customer Request Date </strong> :
+                            </p>
+                            <p class="ng-binding"><span style="color: grey;margin: 0px"><strong>Name</strong> : </span> <span id="CustomeraName"></span></p>
+                            <p class="ng-binding"><span style="color: grey;margin: 0px"><strong>Billing Address</strong> : </span> <span id="BillingAdd"></span></p>
+                            <p class="ng-binding">
+                                <span style="color: grey;margin: 0px"><strong>Shipping Address</strong> : </span> <span id="ShippingAdd"></span>&nbsp;&nbsp;&nbsp;
+                                <span class="badge badge-primary" id="Changeaddress_id"
+                                      data-toggle="modal" data-target="#shipping_address"
+                                      ng-click="changeShippingAddress()" role="button" tabindex="0">Change</span>
+                            </p>
+                        </div>
+                        <!-- <div class="col-md-3"></div> -->
+                        <!-- ngIf: user.role != 'dealer' -->
+                        <div class="col-md-3 ng-scope" ng-if="user.role != &#39;dealer&#39;">
+                            <label style="color: grey;margin: 0px" for="plant_code">Plant Code</label>
+                            <select id="PlantSel" class="form-control ng-pristine ng-untouched ng-valid" 
+                                    ng-change="ChangePlant()" tabindex="0" aria-invalid="false"  ng-controller="MyController2"
+                                    ng-options="name.plant for name in LoadPlant" ng-model="selplant">
+                                
+                                <option value="">Select Plant Code</option>
+                            </select>
+                                <hr>
+                                 <label style="color: grey;margin: 0px" >Vehicle Code</label>
+                            <select id="VehicleSel" class="form-control ng-pristine ng-untouched ng-valid" ng-change="ChangePlant()" tabindex="0" aria-invalid="false" ng-controller="MyController2"
+                                    ng-options="name.vehicleCode for name in LoadVehicle" ng-model="selplant">
+
+                                @*<option value="">Select Vehicle Code</option>*@
+                               </select>
+                                <!--<option ng-repeat="code in plant_codes track by $index" ng-value="code.code">{{code.code}}</option>-->
+                                <!-- ngRepeat: code in plant_codes track by $index -->
+                               @* <option ng-repeat="code in plant_codes track by $index" ng-value="code.supplier" class="ng-binding ng-scope" value="P056">P056</option><!-- end ngRepeat: code in plant_codes track by $index -->
+                                <option ng-repeat="code in plant_codes track by $index" ng-value="code.supplier" class="ng-binding ng-scope" value="P055">P055</option><!-- end ngRepeat: code in plant_codes track by $index -->
+                                <option ng-repeat="code in plant_codes track by $index" ng-value="code.supplier" class="ng-binding ng-scope" value="P001">P001</option><!-- end ngRepeat: code in plant_codes track by $index -->
+                                <option ng-repeat="code in plant_codes track by $index" ng-value="code.supplier" class="ng-binding ng-scope" value="P014">P014</option><!-- end ngRepeat: code in plant_codes track by $index -->
+                          *@  
+                        </div>
+                       
+                        
+                        
+                        <!-- end ngIf: user.role != 'dealer' -->
+                        <!-- ngIf: user.role == 'dealer' -->
+                        <div class="col-md-9"></div>
+                        <!-- ngIf: nav[24].activated --><div class="col-md-3 ng-scope" ng-if="nav[24].activated">
+                            <label style="color: grey;margin: 0px" for="plant_code">Cust Ref No </label>
+                            <input type="text" id="Cus_refId" maxlength="30" class="form-control ng-pristine ng-untouched ng-valid" id="cust_ref_number" ng-model="customer.cust_order_reference_number" placeholder="Reference Number" tabindex="0" aria-invalid="false">
+                        </div><!-- end ngIf: nav[24].activated -->
+                    </div>
+                    <input type="hidden" id="hdnstatus" />
+                    <input type="hidden" id="hdnordstatus" />
+                    <input type="hidden" id="hdnprofile" />
+                    <br><button class="btn btn-md btn-primary" onclick="Homeurl()" 
+                                id="addNewItemBtn" type="button">
+                        Add More Items
+                    </button>
+                    <br>
+                    <div class="table-responsive sticky-table-demo" ng-app="MyApp2" ng-controller="MyController2" style="overflow: scroll;height: 220px;" ng-init="AdminProfileEnable();Validate_ChangeAddress();Loadshipping_addresses();GetItemsDetails();LoadVehicle();">
+                    <table class="table table-bordered table-striped table-hover table-condensed  text-center Itemstblss" id="Itemstbl">
+                       
+                            <thead>
+                                <tr class="bg-dark text-white">
+                                    <th class="text-white ng-binding">S.No</th>
+                                    <th class="text-white ng-binding">Item</th>
+                                    <th class="text-white ng-binding">Material ID</th>
+                                    <th class="text-white ng-binding">Size</t>
+                                    <th class="text-white ng-binding">Qty</th>
+                                    <th class="text-white ng-binding">Pieces / KGs</th>
+                                    <th class="text-white ng-binding">Volume(CBM)</th>
+                                    <th class="text-white ng-binding">LDPE</th>
+                                    <th class="text-white ng-binding" ng-hide="item.flag != 'Admin'"></th>
+
+                                    <th class="text-white ng-binding" id="ftlchk" style="display:none">
+
+                                        <label for="FTL_chk">FTL</label>
+                                        <input type="checkbox" id="FTL_chk" class="checkRow ng-pristine ng-valid ng-touched"
+                                               value="1" name="FTL"
+                                               tabindex="0" aria-checked="false" aria-invalid="false" style="">
+                                    </th>
+                                    <th class="text-white ng-binding"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- ngRepeat: item in newOrder track by $index -->
+                                <tr ng-repeat="item in ItemDetails" class="ng-scope">
+                                    
+                                    <td class="text-center ng-binding">{{$index +1}}</td>
+                                    <td class="text-center ng-binding">{{item.itemName}}</td>
+
+                                    <td class="text-center ng-binding">{{item.materialID}}</td>
+                                    <td>
+                                        <span class="text-center ng-binding">L - {{item.lmax}}</span><!-- end ngIf: item.leng --> <!-- ngIf: item.width -->
+
+                                        <span class="text-center ng-binding ng-scope">W - {{item.wmax}}</span><!-- end ngIf: item.width --> <!-- ngIf: item.thickness -->
+
+                                        <span  class="text-center ng-binding ng-scope">T - {{item.tmax}}</span><!-- end ngIf: item.thickness -->
+                                    </td>
+                                    <!-- <td>{{item.leng + ' - ' + item.width + ' - ' + item.thickness}}</td> -->
+                                    @*<td class="ng-binding totalqty" id="totalqtydd" >
+                                        
+                                        <input type="text" id="ttlqty" disabled="disabled" border="0" class="form-control" value={{item.qty}}>
+                                        </td>*@
+                                <td> <span class="editable" id="qtyid">{{item.qty}}</span></td>
+                                
+                              
+
+                                    <td class="text-center ng-binding TotalPieces" id="TotalPiecesd">{{item.pieces}}</td>
+                                    <td class="text-center ng-binding TotalVolume">{{item.volume}}</td>
+                                    <td class="text-center ng-binding">{{item.ldpe}}</td>
+                                    <td class="ng-binding" style="display:none">{{item.id}}</td>
+
+                                    <td class="ng-binding" style="display:none">{{item.item_Name}}</td>
+                                    <td class="ng-binding" style="display:none">{{item.lmax}}</td>
+                                    <td class="ng-binding" style="display:none">{{item.wmax}}</td>
+                                    <td class="ng-binding" style="display:none">{{item.tmax}}</td>
+                                    <td class="ng-binding" style="display:none">{{item.density}}</td>
+                                    <td class="ng-binding" style="display:none">{{item.grade}}</td>
+
+
+
+
+
+                                   
+
+                                    <td class="editd" id="edithide" ng-hide="EditBy_Role(item.flag,item.status)">
+                                        <button class="edit btn btn-danger" id="editbtn" ng-hide="EditBy_Role(item.flag,item.status)">Edit</button>
+                                   @* <button class="cancel btn btn-danger" style="display:none">cancel</button>*@
+                                    </td>
+@*                                    <td><button style="display:none" id="Saveid" type="button" class="save btn btn-danger" tabindex="0" ng-click="UpdateItem(item.id)">Save</button> </td>
+                                    *@
+                                    <td ng-hide="EditBy_Role(item.flag,item.status)">
+                                        <button type="button" class="btn btn-danger" ng-click="RemoveItem(item.id)" tabindex="0" ng-hide="EditBy_Role(item.flag,item.status)">Delete</button>
+                                    </td>
+                                </tr><!-- end ngRepeat: item in newOrder track by $index -->
+
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="ng-binding"><span style="color: grey;margin: 0px">Total Qty</span><br><span id="TQtysum"></span></td>
+                                    <td class="ng-binding"><span style="color: grey;margin: 0px">Total Pieces</span><br><span id="TPiecesum"></span></td>
+                                    <td class="ng-binding"><span style="color: grey;margin: 0px">Total Volume(CBM)</span><br><span id="TVolumesum"></span></td>
+
+                                    <td></td>
+                                    <!-- <td><span style="color: grey;margin: 0px">Total Volume</span><br>{{getTotals('volume')}}</td> -->
+                                    <td></td>
+                                </tr>
+                               
+                             
+                            </tbody>
+                        </table>
+                    
+                  @*  <span id="TQtysum" style="color: grey;margin: 0px">Vehicle Type</span>
+                       
+                            <p style="margin: 0px" class="ng-binding" ng-repeat="vehi in VehiDetails" style="text-align: center;" class="ng-scope"
+                                   role="button" tabindex="0" id="VehicleDetails">
+                                    {{vehi.vehiTypedesc}}
+                                </p>*@
+
+                        <div class="modal fade ng-scope" id="shipping_address" aria-hidden="true" style="display: none;">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5>Change Shipping Address</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <!-- ngIf: !config.add_new_address -->
+                                        <div class="row full-width ng-scope" ng-if="!config.add_new_address">
+                                            <!-- ngRepeat: address in shipping_addresses -->
+                                            <div class="col-md-3 m-2 card grid-margin stretch-card ng-scope" ng-repeat="address in shipping_addresses" ng-click="selectAddress(address.dealerCode,address.address,address.deliveryLocation);" role="button" tabindex="0" style="">
+                                                <div class="card-body ng-binding">
+                                                    <h4 class="card-title ng-binding">{{address.addressName}} <!-- ngIf: address.selected -->
+                                                        <span class="pull-right text-success ng-scope" ng-if="address.selected" style=""><i class="mdi mdi-check-circle"></i> Selected</span>
+                                                     </h4>
+                                                    <hr>{{address.address}}
+                                                    <hr>Delivery Location : {{address.deliveryLocation}}
+                                                </div>
+                                            </div>
+                                        </div><!-- end ngIf: !config.add_new_address -->
+                                        <!-- ngIf: config.add_new_address -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h6>Enter Comments</h6>
+                            <textarea id="CommentsId" maxlength="200" class="form-control ng-pristine ng-untouched ng-valid" placeholder="Enter some comments (Optional)" ng-model="custOrder.comment" aria-multiline="true" tabindex="0" aria-invalid="false"></textarea>
+                        </div>
+                        <div class="col col-md-3">
+                            <div class="form-group">
+                                <label class="col-form-label">Customer Requested Date (CRD)</label>
+                                <input type="text" maxlength="10" id="CRDDate" class="form-control ng-pristine ng-untouched ng-valid ng-isolate-scope ng-valid-date"  ng-model="custOrder.customer_req_date" placeholder="dd/mm/yyyy" ng-init="calender[1] = false" ng-click="calender[1] = true;" uib-datepicker-popup="" datepicker-options="config" date-disabled="disabled(date, mode)" is-open="calender[1]" show-button-bar="false" todayhighlight="true" tabindex="0" aria-invalid="false"><!-- ngIf: isOpen -->
+                            
+
+
+                            </div>
+                        </div>
+                        <div class="col-md-3 text-right">
+                            <div class="btn btn-light" type="button" ng-click="changeOrderView(0)" role="button" tabindex="0"> <a class="nav-link ng-binding" href="@Url.Action("CustomersList", "Home")">Cancel</a></div>
+                            <!-- <div class="btn btn-primary" type="button">Print</div> -->
+                            <div class="btn btn-primary" id="ItemUpdateSave" type="button" role="button" tabindex="0" >Save</div>
+                            <div class="btn btn-primary" id="ItemUpdateConfirm" type="button" role="button" tabindex="0" >Order Confirm</div>
+                            <input id="DealerCodeForItemUpdate" name="StudentId" type="hidden" />
+                            <input id="OrderIDForItemUpdate" name="StudentIdh" type="hidden" />
+                        </div>
+                    </div>
+            </div>@Html.Hidden("RedirectTo", Url.Action("OrderHistory", "SalesOrder"))
+                @Html.Hidden("RedirectToNewOrder", Url.Action("OrderCreation", "SalesOrder"))
+            </div>
+        </div><!-- end ngIf: orderViewTab.tab == 3 && newOrder.length -->
+        <!-- ngIf: orderViewTab.tab == 3 && !newOrder.length -->
+    </div>
+  
+    <div class="modal fade ng-scope" id="shipping_address">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Change Shipping Address</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body">
+                    <!-- ngIf: !config.add_new_address --><div class="row full-width ng-scope" ng-if="!config.add_new_address">
+                        <!-- ngRepeat: address in shipping_addresses -->
+                        <!-- <div class="col-md-3 m-2 card grid-margin stretch-card add-new-card" ng-click="config.add_new_address = true">
+                            <div class="card-body text-center text-primary">
+                                <i class="mdi mdi-plus-circle-outline font-size-50"></i>
+                                <h3>Add Address</h3>
+                            </div>
+                        </div> -->
+                    </div><!-- end ngIf: !config.add_new_address -->
+                    <!-- ngIf: config.add_new_address -->
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div style="visibility:hidden" >
+
+         <p class="ng-binding ng-scope" style="display:none" id="pieces"></p>
+                            <p class="ng-binding ng-scope" style="display:none" id="bundleheight"></p>
+                            <p class="ng-binding ng-scope" style="display:none" id="Weightid"></p>
+                            <p class="ng-binding ng-scope" style="display:none" id="volumecal"></p>
+                           <p class="ng-binding ng-scope" style="" id="piecescal"></p>
+                          <p class="ng-binding ng-scope" id="Volume"></p>
+    <input type="hidden" id="hdnprimary" />
+    </div>
+
+    <script >
+ 
+
+    $(function () {
+
+        var dt = moment(localStorage["CRDDATE"]).format('MM/DD/YYYY');
+       // dt = dt.replace('01/01/1900,'');
+        $("#CRDDate").val(dt);
+        var dateToday = new Date($("#CRDDate").val());
+        $("#CRDDate").datepicker({
+            dateFormat: 'dd/mm/yy', //check change
+            changeMonth: true,
+            minDate: dateToday
+        });
+
+       // $("#CRDDate").on("click", function () {
+          //  ('#CRDDate').datepicker('option', 'minDate', dateToday);
+        //});
+       
+    });
+
+
+   
+
+    </script>
+
+    <style class="ng-scope">
+       
+        .dropdown .dropdown-toggle:after {
+            border: none;
+            content: "\F140";
+            font-family: "Material Design Icons";
+            font-size: 20px;
+            color: black;
+            text-rendering: auto;
+            line-height: inherit;
+            vertical-align: 0;
+        }
+        input[type="date"]::-webkit-calendar-picker-indicator {
+    background: transparent;
+    bottom: 0;
+    color: transparent;
+    cursor: pointer;
+    height: auto;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+}
+        .btn-secondary, .editable-container.editable-inline .editableform .control-group .editable-buttons .editable-cancel {
+            color: #212529;
+            background-color: transparent;
+            border-color: #dde4eb;
+        }
+
+            .btn-secondary:not(:disabled):not(.disabled):active, .editable-container.editable-inline .editableform .control-group .editable-buttons .editable-cancel:not(:disabled):not(.disabled):active, .btn-secondary:not(:disabled):not(.disabled).active, .editable-container.editable-inline .editableform .control-group .editable-buttons .editable-cancel:not(:disabled):not(.disabled).active, .show > .btn-secondary.dropdown-toggle, .editable-container.editable-inline .editableform .control-group .editable-buttons .show > .dropdown-toggle.editable-cancel {
+                color: transparent;
+                background-color: transparent;
+                border-color: transparent;
+            }
+    </style>
+
+
+

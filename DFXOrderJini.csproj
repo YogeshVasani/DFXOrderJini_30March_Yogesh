@@ -1,0 +1,75 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Remove="C:\Users\Balaji Ramu\.nuget\packages\bootstrap\5.2.3\contentFiles\any\any\wwwroot\js\bootstrap.min.js" />
+    <Content Remove="C:\Users\Balaji Ramu\.nuget\packages\bootstrap\5.2.3\contentFiles\any\any\wwwroot\js\bootstrap.min.js.map" />
+    <Content Remove="wwwroot\js\Datepicker.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Angular.Material" Version="1.1.12" />
+    <PackageReference Include="Angular.UI.Bootstrap" Version="2.5.0" />
+    <PackageReference Include="angularjs" Version="1.8.2" />
+    <PackageReference Include="AngularJS.Core" Version="1.8.2" />
+    <PackageReference Include="ClosedXML" Version="0.95.4" />
+    <PackageReference Include="Microsoft.ApplicationBlocks.Data" Version="2.0.0" />
+    <PackageReference Include="Microsoft.TypeScript.MSBuild" Version="4.9.5">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.12" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="6.5.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.5.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.5.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ApiController\" />
+    <Folder Include="Controllers\AjaxapiController\" />
+    <Folder Include="wwwroot\fonts\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="wwwroot\ExportCSVFile\Mbj_dd278a.csv" />
+    <None Include="wwwroot\js\MessageBox_Images\vssver.scc" />
+    <None Include="wwwroot\js\MessageBox_js\jquery.alerts.js" />
+    <None Include="wwwroot\js\MessageBox_js\jquery.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ApplicationBlocks.Data">
+      <HintPath>C:\Users\Balaji Ramu\Downloads\ERoyalImpex_Final_New_New\Bin\Microsoft.ApplicationBlocks.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>C:\Users\Balaji Ramu\Downloads\WebGrid_DataTable_MVC\WebGrid_DataTable_MVC\bin\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http">
+      <HintPath>bin\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>bin\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>bin\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor">
+      <HintPath>bin\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages">
+      <HintPath>bin\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment">
+      <HintPath>bin\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor">
+      <HintPath>bin\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrid_DataTable_MVC">
+      <HintPath>C:\Users\Balaji Ramu\Downloads\WebGrid_DataTable_MVC\WebGrid_DataTable_MVC\bin\WebGrid_DataTable_MVC.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="wwwroot\js\Datepicker.ts" />
+  </ItemGroup>
+</Project>

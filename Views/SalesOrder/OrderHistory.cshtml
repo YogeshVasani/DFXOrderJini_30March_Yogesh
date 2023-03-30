@@ -1,0 +1,485 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="/resources/demos/style.css">
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+<script async="" src="~/js/FileSaver.min.js"></script>
+
+<script type="text/javascript">
+    function fnOrderStatusFilter() {
+        var input, filter, table, tr, td, i;
+        input = document.getElementById("OrderStatusFilter");
+        filter = input.value.toUpperCase();
+
+        table = document.getElementById("OrdrHistoryTbl");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[2];
+            if (td) {
+                if (tr[i].style.display != "none") {
+                if ((td.innerHTML.toUpperCase().indexOf(filter) > -1) || (input.value == '--select--')) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+                }
+            }
+        }
+    }
+
+    $(document).ready(function () {
+        var today = new Date().toISOString().split('T')[0];
+        $("#orderstartdate").attr("max", today);
+        $("#orderenddate").attr("max", today);
+    });
+
+    function FromDateSelect() {
+
+
+        $("#orderenddate").attr("min", $("#orderstartdate").val());
+        $("#orderenddate").val("");
+    }
+    function filterRows() {
+
+        var from = $('#orderstartdate').val();
+        var to = $('#orderenddate').val();
+
+        if (!from && !to) { // no value for from and to
+           // return;
+        }
+
+        from = from || '1970-01-01'; // default from to a old date if it is not set
+        to = to || '2999-12-31';
+
+        var dateFrom = moment(from);
+        var dateTo = moment(to);
+
+        $('#OrdrHistoryTbl tr').each(function (i, tr) {
+            var val = $(tr).find("td:nth-child(2)").text();
+            var dateVal = moment(val, "DD/MM/YYYY");
+            var visible = (dateVal.isBetween(dateFrom, dateTo, null, [])) ? "" : "none"; // [] for inclusive
+            $(tr).css('display', visible);
+
+            var input = document.getElementById("OrderStatusFilter");
+            var filter = input.value.toUpperCase();
+            var val1 = $(tr).find("td:nth-child(3)").text();
+            if ($(tr).css('display') != 'none') {
+                if ((val1.toUpperCase().indexOf(filter) > -1) || (input.value == '--select--')) {
+                $(tr).css('display', "");
+            } else {
+                $(tr).css('display', "none");
+            }
+            }
+        });
+
+    }
+</script>
+<div ng-app="MyApp2" ng-controller="MyController2">
+    <div class="row page-title-header">
+        <div class="col-12">
+            <div class="page-header">
+                <h4 class="page-title ng-binding">Orders History</h4>
+            </div>
+        </div>
+    </div>
+    <div ng-show="displayloader" aria-hidden="true" class="ng-hide">
+        <div class="loader-demo-box" style="border: none !important;">
+            <div class="dot-opacity-loader">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <div ng-show="!displayloader" aria-hidden="false" class="">
+        <div class="row" style="margin-left:1px">
+            <!-- ngIf: !nav[24].activated -->
+        </div>
+        <div class="col-md-12">
+            <div class="page-header-toolbar mb-1">
+                <div class="filter-wrapper mb-1">
+                    <button type="button" class="btn btn-secondary mr-1" onClick="window.location.reload();" tabindex="0">
+                        <i class="fa fa-refresh" aria-hidden="true"></i>
+                    </button>
+                    <button type="button" class="btn btn-secondary mr-1" ng-click="export_Data('xlsx');"> <i class="mdi mdi-download"></i>Export</button>
+                    <a  tabindex="0" class="btn btn-secondary mr-1" ng-click="OrderFilterBy()">
+                        <button type="button" class="btn btn-secondary">
+                            <i class="mdi mdi-filter"></i>Filter
+                        </button>
+                    </a>
+                    <button type="button" class="btn btn-secondary mr-1" id="btnCustom_Export" ng-click="exportData('xlsx');"> <i class="mdi mdi-download"></i>Export Custom Orders</button>
+                    <!-- ngIf: coID != 'GLGR' -->
+                    @*    <a class="mr-1 ng-scope" ng-click="downloadCSV(1)" ng-if="coID != &#39;GLGR&#39;" tabindex="0">
+                    <button type="button" class="btn btn-secondary">
+                    <i class="mdi mdi-download"></i>Export</button>
+                    </a><!-- end ngIf: coID != 'GLGR' -->
+                    <a class="mr-1" ng-click="OrderFilterBy()" tabindex="0">
+                    <button type="button" class="btn btn-secondary">
+                    <i class="mdi mdi-filter"></i>Filter</button>
+                    </a>
+                    <!-- ngIf: coID == 'GLGR' -->
+                    <!-- ngIf: nav[24].activated -->
+                    <a class="mr-1 ng-scope" ng-if="nav[24].activated" href="dash/csv/reports/custom/orders/2023-01-24%2000:00:00/2023-01-31%2023:59:59/all">
+                    <button type="button" class="btn btn-secondary">
+                    <i class="mdi mdi-download"></i>Export Custom Orders</button>
+                    </a><!-- end ngIf: nav[24].activated -->
+                    </div>*@
+                    <!-- ngIf: shopify.api_key -->
+                    <div id="div_AG_Excel" style="display:none"></div>
+                    <div class="btn-group toolbar-item ml-auto" role="group" aria-label="Basic example" style="padding-left: 20px;">
+                        <button type="button" class="btn btn-secondary" ng-click="navPage(0)" tabindex="0"><i class="mdi mdi-chevron-left"></i></button>
+                        <button type="button" class="btn btn-secondary ng-binding">Showing 1 - 2 of 2</button>
+                        <button type="button" class="btn btn-secondary" ng-click="GetAllData()" tabindex="0"><i class="mdi mdi-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6">
+                <div class="form-group">
+                    <div class="input-group">
+                        <input type="text" ng-model="Prefix" class="form-control ng-pristine ng-untouched ng-valid" id="OrderHistory_Search" placeholder="Search" ng-model="orderSearch.filter" ng-change="clearFilterButton(orderSearch.filter)" aria-label="Username" aria-describedby="basic-addon1" tabindex="0" aria-invalid="false">
+                        <div class="input-group-prepend">
+                            <button class="btn btn-secondary" id="btnOrderHistory_Search" ng-click="GetAllData()" type="button" aria-haspopup="true" tabindex="0"> Search</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ngIf: !nav[25].activated && AssignedFulfiller.length && user.role == 'Admin' -->
+            <!--<br>-->
+            <br ng-show="orderfilterFlag" aria-hidden="true" class="ng-hide">
+            <div id="order-history-filter" class="row ng-hide" ng-hide="IsHidden" aria-hidden="true">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header p-3">
+                            Filter By
+                            <div class="badge badge-danger margin-5 float-right" ng-click="OrderFilterBy()" role="button" tabindex="0"> Close</div>
+                        </div>
+                        <div class="card-body" style="padding: 0.88rem 0.80.8rem;">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="form-group row">
+                                        <label class="col-sm-3 col-form-label" style="text-align:right">From:</label>
+                                        <div class="col-sm-9">
+
+                                            <input type="date" id="orderstartdate" onchange="FromDateSelect()" class="form-control ng-pristine ng-untouched ng-valid ng-isolate-scope ng-valid-date" placeholder="dd/mm/yyyy"><!-- ngIf: isOpen -->
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group row">
+                                        <label class="col-sm-3 col-form-label" style="text-align:right">To:</label>
+                                        <div class="col-sm-9">
+                                            <input type="date" id="orderenddate" onchange="filterRows()" class="form-control ng-pristine ng-untouched ng-valid ng-isolate-scope ng-valid-date" placeholder="dd/mm/yyyy"><!-- ngIf: isOpen -->
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="form-group row">
+                                        <label class="col-sm-5 col-form-label" style="text-align:right">Order Status:</label>
+                                        <div class="col-sm-7">
+                                            <select id="OrderStatusFilter" onchange="filterRows()" class='form-control'>
+                                                <option>--select--</option>
+                                                <option>Confirmed</option>
+                                                <option>Draft</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- ngIf: !nav[25].activated && user.role != 'Dealer' --><!-- end ngIf: !nav[25].activated && user.role != 'Dealer' -->
+                            </div>
+                            <!-- ngIf: !nav[25].activated && user.role != 'Dealer' --><div class="row ng-scope" ng-if="!nav[25].activated &amp;&amp; user.role != &#39;Dealer&#39;">
+                            </div><!-- end ngIf: !nav[25].activated && user.role != 'Dealer' -->
+                            <!-- ngIf: !nav[25].activated --><!-- end ngIf: !nav[25].activated -->
+                            <!-- ngIf: !nav[25].activated && percentageDiscountFlag -->
+                            <!-- ngIf: !nav[25].activated && percentageDiscountFlag -->
+                            <div class="row">
+                                <div class="col-md-12" style="display:none!important">
+                                    <button type="button" class="btn btn-primary toolbar-item float-right" ng-model="orderSearch.filter" ng-click="clearFilterButton(orderSearch.filter)" id="btnFilter" tabindex="0">&nbsp;Apply Filter</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br ng-show="showOrderFilter" aria-hidden="true" class="ng-hide">
+            <div class="row ng-hide" ng-show="showOrderFilter" style="padding-left:1%;" aria-hidden="true">
+                <p><strong>Filters applied :</strong></p>
+                <!-- ngIf: orderSearch.date_from --><span ng-if="orderSearch.date_from" class="font-size-14 ng-binding ng-scope">&nbsp;From date : 24-Jan-2023&nbsp;</span><!-- end ngIf: orderSearch.date_from -->
+                <!-- ngIf: orderSearch.date_to --><span ng-if="orderSearch.date_to" class="font-size-14 ng-binding ng-scope">&nbsp;To date : 31-Jan-2023&nbsp;</span><!-- end ngIf: orderSearch.date_to -->
+                &nbsp;<span class="clearFilter" ng-click="refreshTransactions()" role="button" tabindex="0">
+                    <div class="badge badge-danger float-right"> Clear filter</div>
+                </span>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col grid-margin stretch-card">
+                    <div class="card">
+                        <div class="card-body">
+                            <!-- ngIf: orders.length -->
+                            <div class="table-responsive ng-scope sticky-table-demo" style="max-height:300px" ng-show="IsVisible" ng-init="Check_UserLogin();GetAllData()">
+                                <table class="table" id="OrdrHistoryTbl">
+                                    <thead>
+                                        <tr>
+                                            <th>ORDER ID</th>
+                                            <th>ORDER DATE</th>
+                                            <th>ORDER STATUS</th>
+
+
+                                            <th>CUST ID</th>
+                                            <!-- ngIf: nav[24].activated -->
+                                            <th class="ng-scope">CUST REF NO</th><!-- end ngIf: nav[24].activated -->
+                                            <!-- ngIf: nav[24].activated -->
+                                            @*  <th  class="ng-scope">SALES ORDER NUMBER</th><!-- end ngIf: nav[24].activated -->*@
+                                            <th>CUSTOMER</th>
+                                            <th>ORDER PLACED BY</th>
+                                            <th>SALESPERSON</th>
+                                            <!-- ngIf: nav[24].activated -->
+
+                                            <th>ITEMS</th>
+
+                                            <th>CUSTOMER REQUEST DATE</th>
+                                            <th>STANDARD ORDER</th>
+                                            <th>DISPATCH DATE</th>
+                                            <th>REPEAT ORDER</th>
+                                            <th>APPROVE/REJECT</th>
+
+
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr ng-repeat="emps in OrderDetails" class="ng-scope">
+                                            <td>
+                                                @Html.Hidden("RedirectToOrderDetails", Url.Action("OrderDetails", "SalesOrder"))
+
+                                                <input type="hidden" id="hdnordid" />
+                                                @* <input type="checkbox" id="id_chk1" class="checkRow ng-pristine ng-untouched ng-valid" value="1"
+                                                tabindex="0"
+                                                aria-checked="false" aria-invalid="false">&nbsp;&nbsp;*@
+                                                <a style="text-decoration: none" ng-click="LoadOrder_History(emps.orderID)"
+                                                   class="ng-binding OrderId" tabindex="0">{{emps.orderID}}</a>
+                                            </td>
+                                            <td class="ng-binding">{{emps.orderDate}}</td>
+                                            <td style="margin:10px">
+                                                <!-- ngIf: !order.status || order.status == 'new' -->
+
+                                                <span ng-if="!order.status || order.status == &#39;new&#39;" class="badge badge-primary badge-pill unpaid ng-binding ng-scope">{{emps.status}}</span><!-- end ngIf: !order.status || order.status == 'new' -->
+                                                <!-- ngIf: order.status && (order.status == 'open' || order.status == 'approved' || order.status == 'packed' || order.status == 'delivered') -->
+                                                <!-- ngIf: order.status && order.status == 'closed' -->
+                                                <!-- ngIf: order.status && order.status != 'closed' && order.status != 'packed' && order.status != 'delivered' && order.status != 'approved' && order.status != 'new' && order.status != 'open' -->
+                                            </td>
+
+
+                                            <td class="ng-binding">{{emps.dealerCode}}</td>
+                                            <!-- ngIf: nav[24].activated -->
+                                            <td class="ng-binding ng-scope">{{emps.cust_Ref}}</td><!-- end ngIf: nav[24].activated -->
+                                            <!-- ngIf: nav[24].activated -->
+                                            @*  <td ng-if="nav[24].activated" class="ng-binding ng-scope">N/A</td><!-- end ngIf: nav[24].activated -->*@
+                                            <td class="ng-binding">{{emps.dealerName}}</td>
+                                            <td class="ng-binding">{{emps.orderPlacedBy}}</td>
+                                            <td class="ng-binding">{{emps.salesPerson}}</td>
+                                            <!-- ngIf: nav[24].activated -->
+
+                                            <td class="ng-binding"> {{emps.itemCount}}</td>
+
+                                            <td class="ng-binding">
+                                                {{emps.crdDate}}
+                                            </td>
+
+                                            <td class="ng-binding"> {{emps.standardOrder}} </td>
+                                            <td class="ng-binding">  </td>
+
+                                            <td>
+
+                                                <a style="text-decoration: none" ng-hide="RepeatOrder_Role('Admin',emps.status,emps.standardOrder)" ng-click="RepeatOrder_History(emps.orderID,emps.dealerCode)"
+                                                   class="ng-binding OrderId" tabindex="0">Repeat Order</a>
+                                            </td>
+                                            <td>
+                                                @*|| emps.standardOrder != 'Confirm'*@
+                                                <button ng-hide="UpdateApproveBy_Role('Admin',emps.status,emps.standardOrder)" ng-click="GetApprove_Reject('Approved',emps.orderID)" class="btn btn-danger" type="button" style="background-color:green">Approve</button>
+                                                <button ng-hide="UpdateApproveBy_Role('Admin',emps.status,emps.standardOrder)" ng-click="GetApprove_Reject('Rejected',emps.orderID)" class="btn btn-danger" type="button" style="background-color:red">Reject</button>
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div><!-- end ngIf: orders.length -->
+                            <!-- ngIf: !orders.length -->
+                            <div id="export" class="table-responsive ng-scope sticky-table-demo" style="max-height:300px;visibility:hidden" ng-show="IsVisible" ng-init="Custom_ExportCSV();">
+                                <table class="table" border="1" id="ExportOrdrHistoryTbl">
+                                    <thead>
+                                        <tr>
+                                            <th>	Order Type	</th>
+                                            <th>	Sold to Party	</th>
+                                            <th>	 Shipto Party	</th>
+                                            <th>	Delivery Location	</th>
+                                            <th>	Order Jini Date	</th>
+                                            <th>	 Order Jini Number	</th>
+                                            <th>	 Line Item No.	</th>
+                                            <th>	 Customer Reference Date	</th>
+                                            <th>	Material	</th>
+                                            <th>	Quantity	</th>
+                                            <th>	Plant	</th>
+                                            <th>	Covers	</th>
+                                            <th>	Remarks	</th>
+                                            <th>	Cust Ref No	</th>
+
+
+
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr ng-repeat="exp in ExportOrderDetails" class="ng-scope">
+                                            <td class="ng-binding">{{exp.orderType}}</td>
+                                            <td class="ng-binding">{{exp.soldtoParty}}</td>
+                                            <td class="ng-binding">{{exp.shiptoParty}}</td>
+                                            <td class="ng-binding">{{exp.deliveryLocation}}</td>
+                                            <td class="ng-binding">{{exp.orderJiniDate}}</td>
+                                            <td class="ng-binding">{{exp.orderJiniNumber}}</td>
+                                            <td class="ng-binding">{{exp.lineItemNo}}</td>
+                                            <td class="ng-binding">{{exp.customerReferenceDate}}</td>
+                                            <td class="ng-binding">{{exp.material}}</td>
+                                            <td class="ng-binding">{{exp.quantity}}</td>
+                                            <td class="ng-binding">{{exp.plant}}</td>
+                                            <td class="ng-binding">{{exp.covers}}</td>
+                                            <td class="ng-binding">{{exp.remarks}}</td>
+                                            <td class="ng-binding">{{exp.custRefNo}}</td>
+
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div id="export_1" class="table-responsive ng-scope sticky-table-demo" style="max-height:300px;visibility:hidden" ng-show="IsVisible" ng-init="ExportCSV()">
+                                <table class="table" id="Export_OrdrHistoryTbl" border="1">
+                                    <thead>
+                                        <tr>
+                                            <th>	ID	</th>
+                                            <th>	DATE_ADDED	</th>
+                                            <th>	ORDERID	</th>
+                                            <th>	DEALERCODE	</th>
+                                            <th>	DEALERNAME	</th>
+                                            <th>	DEALERPHONE	</th>
+                                            <th>	DEALER_ADDRESS	</th>
+                                            <th>	ITEMCODE	</th>
+                                            <th>	PRODUCT	</th>
+                                            <th>	QUANTITY	</th>
+                                            <th>	CGST	</th>
+                                            <th>	SGST	</th>
+                                            <th>	IGST	</th>
+                                            <th>	MRP	</th>
+                                            <th>	ORDERMRP	</th>
+                                            <th>	TOTAL	</th>
+                                            <th>	ORDERTOTAL	</th>
+                                            <th>	SALES ORDER NUMBER	</th>
+                                            <th>	INVOICE_NUMBER1	</th>
+                                            <th>	INVOICE_NUMBER2	</th>
+                                            <th>	INVOICE_NUMBER3	</th>
+                                            <th>	ADVANCE_AMOUNT	</th>
+                                            <th>	ADVANCE_PAID	</th>
+                                            <th>	SITE_CODE	</th>
+                                            <th>	SITE_NAME	</th>
+                                            <th>	PAYMENT_TYPE	</th>
+                                            <th>	COMMENT	</th>
+                                            <th>	ORDER_PLACED_BY	</th>
+                                            <th>	SALESPERSON	</th>
+                                            <th>	CREATED_BY_NAME	</th>
+                                            <th>	CREATED_BY_ROLE	</th>
+                                            <th>	STOCKIST_NAME1	</th>
+                                            <th>	STOCKIST_NAME2	</th>
+                                            <th>	STOCKIST_PHONE1	</th>
+                                            <th>	STOCKIST_PHONE2	</th>
+                                            <th>	STOCKIST_AREA	</th>
+                                            <th>	BILLING_ADDRESS	</th>
+                                            <th>	SHIPPING_ADDRESS	</th>
+                                            <th>	FULFILLER	</th>
+                                            <th>	AREA	</th>
+                                            <th>	STATUS	</th>
+                                            <th>	LATITUDE	</th>
+                                            <th>	LONGITUDE	</th>
+                                            <th>	FREIGHT_CHARGES	</th>
+                                            <th>	TYPE	</th>
+                                            <th>	SOURCE	</th>
+                                            <th>	WAREHOUSE	</th>
+                                            <th>	CLOUDINARYURL	</th>
+                                            <th>	ATTACHMENTS	</th>
+
+
+
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr ng-repeat="exp in Export_OrderDetails" class="ng-scope">
+
+                                            <td class="ng-binding">{{exp.id	}}</td>
+                                            <td class="ng-binding">{{exp.datE_ADDED	}}</td>
+                                            <td class="ng-binding">{{exp.orderid	}}</td>
+                                            <td class="ng-binding">{{exp.dealercode	}}</td>
+                                            <td class="ng-binding">{{exp.dealername	}}</td>
+                                            <td class="ng-binding">{{exp.dealerphone	}}</td>
+                                            <td class="ng-binding">{{exp.dealeR_ADDRESS	}}</td>
+                                            <td class="ng-binding">{{exp.itemcode	}}</td>
+                                            <td class="ng-binding">{{exp.product	}}</td>
+                                            <td class="ng-binding">{{exp.quantity	}}</td>
+                                            <td class="ng-binding">{{exp.cgst	}}</td>
+                                            <td class="ng-binding">{{exp.sgst	}}</td>
+                                            <td class="ng-binding">{{exp.igst	}}</td>
+                                            <td class="ng-binding">{{exp.mrp	}}</td>
+                                            <td class="ng-binding">{{exp.ordermrp	}}</td>
+                                            <td class="ng-binding">{{exp.total	}}</td>
+                                            <td class="ng-binding">{{exp.ordertotal	}}</td>
+                                            <td class="ng-binding">{{exp.salesordernumber	}}</td>
+                                            <td class="ng-binding">{{exp.invoicE_NUMBER1	}}</td>
+                                            <td class="ng-binding">{{exp.invoicE_NUMBER2	}}</td>
+                                            <td class="ng-binding">{{exp.invoicE_NUMBER3	}}</td>
+                                            <td class="ng-binding">{{exp.advancE_AMOUNT	}}</td>
+                                            <td class="ng-binding">{{exp.advancE_PAID	}}</td>
+                                            <td class="ng-binding">{{exp.sitE_CODE	}}</td>
+                                            <td class="ng-binding">{{exp.sitE_NAME	}}</td>
+                                            <td class="ng-binding">{{exp.paymenT_TYPE	}}</td>
+                                            <td class="ng-binding">{{exp.comment	}}</td>
+                                            <td class="ng-binding">{{exp.ordeR_PLACED_BY 	}}</td>
+                                            <td class="ng-binding">{{exp.salesperson	}}</td>
+                                            <td class="ng-binding">{{exp.createD_BY_NAME 	}}</td>
+                                            <td class="ng-binding">{{exp.createD_BY_ROLE	}}</td>
+                                            <td class="ng-binding">{{exp.stockisT_NAME1	}}</td>
+                                            <td class="ng-binding">{{exp.stockisT_NAME2	}}</td>
+                                            <td class="ng-binding">{{exp.stockisT_PHONE1	}}</td>
+                                            <td class="ng-binding">{{exp.stockisT_PHONE2	}}</td>
+                                            <td class="ng-binding">{{exp.stockisT_AREA	}}</td>
+                                            <td class="ng-binding">{{exp.billinG_ADDRESS	}}</td>
+                                            <td class="ng-binding">{{exp.shippinG_ADDRESS	}}</td>
+                                            <td class="ng-binding">{{exp.fulfiller	}}</td>
+                                            <td class="ng-binding">{{exp.area	}}</td>
+                                            <td class="ng-binding">{{exp.status                      	}}</td>
+                                            <td class="ng-binding">{{exp.latitude	}}</td>
+                                            <td class="ng-binding">{{exp.longitude	}}</td>
+                                            <td class="ng-binding">{{exp.freighT_CHARGES	}}</td>
+                                            <td class="ng-binding">{{exp.type	}}</td>
+                                            <td class="ng-binding">{{exp.source	}}</td>
+                                            <td class="ng-binding">{{exp.warehouse	}}</td>
+                                            <td class="ng-binding">{{exp.cloudinaryurl	}}</td>
+                                            <td class="ng-binding">{{exp.attachments 	}}</td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

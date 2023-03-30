@@ -1,0 +1,1001 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\DFXOrderJini.bundle.scp.css",
+      "PackagePath": "staticwebassets\\DFXOrderJini.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\ExportCSVFile\\Mbj_dd278a.csv",
+      "PackagePath": "staticwebassets\\ExportCSVFile\\Mbj_dd278a.csv"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\Thumbs.db",
+      "PackagePath": "staticwebassets\\Thumbs.db"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\css\\DropDownStyle.css",
+      "PackagePath": "staticwebassets\\css\\DropDownStyle.css"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\css\\OneSignalSDKStyles.css",
+      "PackagePath": "staticwebassets\\css\\OneSignalSDKStyles.css"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\css\\all.css",
+      "PackagePath": "staticwebassets\\css\\all.css"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\css\\angular-material.min.css",
+      "PackagePath": "staticwebassets\\css\\angular-material.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\css\\bootstrap-datepicker.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-datepicker.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\css\\bootstrap-select.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-select.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\css\\checkout.css",
+      "PackagePath": "staticwebassets\\css\\checkout.css"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\css\\collapsible - Copy.min.css",
+      "PackagePath": "staticwebassets\\css\\collapsible - Copy.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\css\\collapsible.min.css",
+      "PackagePath": "staticwebassets\\css\\collapsible.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\css\\ddlselect.css",
+      "PackagePath": "staticwebassets\\css\\ddlselect.css"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\css\\flag-icon.min.css",
+      "PackagePath": "staticwebassets\\css\\flag-icon.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\css\\font-awesome.min.css",
+      "PackagePath": "staticwebassets\\css\\font-awesome.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\css\\ionicons.min.css",
+      "PackagePath": "staticwebassets\\css\\ionicons.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\css\\jquery-ui.css",
+      "PackagePath": "staticwebassets\\css\\jquery-ui.css"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\css\\jquery.toast.min.css",
+      "PackagePath": "staticwebassets\\css\\jquery.toast.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\css\\main.css",
+      "PackagePath": "staticwebassets\\css\\main.css"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\css\\materialdesignicons.min.css",
+      "PackagePath": "staticwebassets\\css\\materialdesignicons.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\css\\ng-tags-input.min.css",
+      "PackagePath": "staticwebassets\\css\\ng-tags-input.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\css\\owl.carousel.min.css",
+      "PackagePath": "staticwebassets\\css\\owl.carousel.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\css\\owl.theme.default.min.css",
+      "PackagePath": "staticwebassets\\css\\owl.theme.default.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\css\\select2-bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\select2-bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\css\\select2.min.css",
+      "PackagePath": "staticwebassets\\css\\select2.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\css\\style(1).css",
+      "PackagePath": "staticwebassets\\css\\style(1).css"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\css\\toastr.min.css",
+      "PackagePath": "staticwebassets\\css\\toastr.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\css\\typicons.css",
+      "PackagePath": "staticwebassets\\css\\typicons.css"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\css\\vendor.bundle.addons.css",
+      "PackagePath": "staticwebassets\\css\\vendor.bundle.addons.css"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\css\\vendor.bundle.base.css",
+      "PackagePath": "staticwebassets\\css\\vendor.bundle.base.css"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\fonts\\fontawesome-webfont.eot",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.eot"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\fonts\\fontawesome-webfont.ttf",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\fonts\\fontawesome-webfont.woff",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.woff"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\fonts\\materialdesignicons-webfont.eot",
+      "PackagePath": "staticwebassets\\fonts\\materialdesignicons-webfont.eot"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\fonts\\materialdesignicons-webfont.ttf",
+      "PackagePath": "staticwebassets\\fonts\\materialdesignicons-webfont.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\fonts\\materialdesignicons-webfont.woff",
+      "PackagePath": "staticwebassets\\fonts\\materialdesignicons-webfont.woff"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\fonts\\materialdesignicons-webfont.woff2",
+      "PackagePath": "staticwebassets\\fonts\\materialdesignicons-webfont.woff2"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\img\\avatars\\avatar-2.jpg",
+      "PackagePath": "staticwebassets\\img\\avatars\\avatar-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\img\\avatars\\avatar-3.jpg",
+      "PackagePath": "staticwebassets\\img\\avatars\\avatar-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\img\\avatars\\avatar-4.jpg",
+      "PackagePath": "staticwebassets\\img\\avatars\\avatar-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\img\\avatars\\avatar-5.jpg",
+      "PackagePath": "staticwebassets\\img\\avatars\\avatar-5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\img\\avatars\\avatar.jpg",
+      "PackagePath": "staticwebassets\\img\\avatars\\avatar.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\img\\dd278ab3155f0ff2576fc19a90449c64.png",
+      "PackagePath": "staticwebassets\\img\\dd278ab3155f0ff2576fc19a90449c64.png"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\img\\face9.png",
+      "PackagePath": "staticwebassets\\img\\face9.png"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\img\\favicon1.svg",
+      "PackagePath": "staticwebassets\\img\\favicon1.svg"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\img\\flags\\de.png",
+      "PackagePath": "staticwebassets\\img\\flags\\de.png"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\img\\flags\\es.png",
+      "PackagePath": "staticwebassets\\img\\flags\\es.png"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\img\\flags\\ru.png",
+      "PackagePath": "staticwebassets\\img\\flags\\ru.png"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\img\\flags\\us.png",
+      "PackagePath": "staticwebassets\\img\\flags\\us.png"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\img\\icons\\brand-1.svg",
+      "PackagePath": "staticwebassets\\img\\icons\\brand-1.svg"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\img\\icons\\brand-2.svg",
+      "PackagePath": "staticwebassets\\img\\icons\\brand-2.svg"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\img\\icons\\brand-3.svg",
+      "PackagePath": "staticwebassets\\img\\icons\\brand-3.svg"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\img\\icons\\brand-4.svg",
+      "PackagePath": "staticwebassets\\img\\icons\\brand-4.svg"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\img\\icons\\brand-5.svg",
+      "PackagePath": "staticwebassets\\img\\icons\\brand-5.svg"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\img\\icons\\icon-48x48.png",
+      "PackagePath": "staticwebassets\\img\\icons\\icon-48x48.png"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\img\\photos\\image_not_available.jpg",
+      "PackagePath": "staticwebassets\\img\\photos\\image_not_available.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\img\\photos\\unsplash-1.jpg",
+      "PackagePath": "staticwebassets\\img\\photos\\unsplash-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\img\\photos\\unsplash-2.jpg",
+      "PackagePath": "staticwebassets\\img\\photos\\unsplash-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\img\\photos\\unsplash-3.jpg",
+      "PackagePath": "staticwebassets\\img\\photos\\unsplash-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\AddBeat.js",
+      "PackagePath": "staticwebassets\\js\\AddBeat.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\AdminLoginCtrl.js",
+      "PackagePath": "staticwebassets\\js\\AdminLoginCtrl.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\Chart.min.js",
+      "PackagePath": "staticwebassets\\js\\Chart.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\CloudinaryCtrl.js",
+      "PackagePath": "staticwebassets\\js\\CloudinaryCtrl.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\Controller.js",
+      "PackagePath": "staticwebassets\\js\\Controller.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\Datepicker.js",
+      "PackagePath": "staticwebassets\\js\\Datepicker.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\Datepicker.js.map",
+      "PackagePath": "staticwebassets\\js\\Datepicker.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\DuroNewOrdersCtrl.js",
+      "PackagePath": "staticwebassets\\js\\DuroNewOrdersCtrl.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\FTPCtrl.js",
+      "PackagePath": "staticwebassets\\js\\FTPCtrl.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\FileSaver.js",
+      "PackagePath": "staticwebassets\\js\\FileSaver.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\FileSaver.min.js",
+      "PackagePath": "staticwebassets\\js\\FileSaver.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\Filters.js",
+      "PackagePath": "staticwebassets\\js\\Filters.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\LeaveCtrl.js",
+      "PackagePath": "staticwebassets\\js\\LeaveCtrl.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\ManageCloudinaryCtrl.js",
+      "PackagePath": "staticwebassets\\js\\ManageCloudinaryCtrl.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\MapsCtrl.js",
+      "PackagePath": "staticwebassets\\js\\MapsCtrl.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\MeetingsReportCtrl.js",
+      "PackagePath": "staticwebassets\\js\\MeetingsReportCtrl.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\MessageBox_Images\\Thumbs.db",
+      "PackagePath": "staticwebassets\\js\\MessageBox_Images\\Thumbs.db"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\MessageBox_Images\\help.gif",
+      "PackagePath": "staticwebassets\\js\\MessageBox_Images\\help.gif"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\MessageBox_Images\\important.gif",
+      "PackagePath": "staticwebassets\\js\\MessageBox_Images\\important.gif"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\MessageBox_Images\\info.gif",
+      "PackagePath": "staticwebassets\\js\\MessageBox_Images\\info.gif"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\MessageBox_Images\\title.gif",
+      "PackagePath": "staticwebassets\\js\\MessageBox_Images\\title.gif"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\MessageBox_Images\\vssver.scc",
+      "PackagePath": "staticwebassets\\js\\MessageBox_Images\\vssver.scc"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\MessageBox_js\\jquery.alerts.css",
+      "PackagePath": "staticwebassets\\js\\MessageBox_js\\jquery.alerts.css"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\MessageBox_js\\jquery.alerts.js",
+      "PackagePath": "staticwebassets\\js\\MessageBox_js\\jquery.alerts.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\MessageBox_js\\jquery.js",
+      "PackagePath": "staticwebassets\\js\\MessageBox_js\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\MessagesCtrl.js",
+      "PackagePath": "staticwebassets\\js\\MessagesCtrl.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\ModelpopupScript.js",
+      "PackagePath": "staticwebassets\\js\\ModelpopupScript.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\ModuleAdminCtrl.js",
+      "PackagePath": "staticwebassets\\js\\ModuleAdminCtrl.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\NavCtrl.js",
+      "PackagePath": "staticwebassets\\js\\NavCtrl.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\NotificationsAdminCtrl.js",
+      "PackagePath": "staticwebassets\\js\\NotificationsAdminCtrl.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\OrderDetailsCtrl - Copy.js",
+      "PackagePath": "staticwebassets\\js\\OrderDetailsCtrl - Copy.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\OrderDetailsCtrl.js",
+      "PackagePath": "staticwebassets\\js\\OrderDetailsCtrl.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\OrderRoutePlanCtrl.js",
+      "PackagePath": "staticwebassets\\js\\OrderRoutePlanCtrl.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\OrdersCtrl.js",
+      "PackagePath": "staticwebassets\\js\\OrdersCtrl.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\PosCtrl.js",
+      "PackagePath": "staticwebassets\\js\\PosCtrl.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\ProfileDetailsCtrl.js",
+      "PackagePath": "staticwebassets\\js\\ProfileDetailsCtrl.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\RegalRexNewOrdersCtrl.js",
+      "PackagePath": "staticwebassets\\js\\RegalRexNewOrdersCtrl.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\Router.js",
+      "PackagePath": "staticwebassets\\js\\Router.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\SMS_SMTP.js",
+      "PackagePath": "staticwebassets\\js\\SMS_SMTP.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\ServiceComplaintsCtrl.js",
+      "PackagePath": "staticwebassets\\js\\ServiceComplaintsCtrl.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\Services.js",
+      "PackagePath": "staticwebassets\\js\\Services.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\SettingsCtrl.js",
+      "PackagePath": "staticwebassets\\js\\SettingsCtrl.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\ShopifyCtrl.js",
+      "PackagePath": "staticwebassets\\js\\ShopifyCtrl.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\SideMenuCtrl.js",
+      "PackagePath": "staticwebassets\\js\\SideMenuCtrl.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\TableFixedHeader.js",
+      "PackagePath": "staticwebassets\\js\\TableFixedHeader.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\TicketDetailsCtrl.js",
+      "PackagePath": "staticwebassets\\js\\TicketDetailsCtrl.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\UserDetailsCtrl.js",
+      "PackagePath": "staticwebassets\\js\\UserDetailsCtrl.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\UsersCtrl.js",
+      "PackagePath": "staticwebassets\\js\\UsersCtrl.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\a076d05399.js",
+      "PackagePath": "staticwebassets\\js\\a076d05399.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\angular-animate.min.js",
+      "PackagePath": "staticwebassets\\js\\angular-animate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\angular-aria.min.js",
+      "PackagePath": "staticwebassets\\js\\angular-aria.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\angular-filter.min.js",
+      "PackagePath": "staticwebassets\\js\\angular-filter.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\angular-material.min.js",
+      "PackagePath": "staticwebassets\\js\\angular-material.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\angular-messages.min.js",
+      "PackagePath": "staticwebassets\\js\\angular-messages.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\angular-route.min.js",
+      "PackagePath": "staticwebassets\\js\\angular-route.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\angular.min.js",
+      "PackagePath": "staticwebassets\\js\\angular.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\angularfire.min.js",
+      "PackagePath": "staticwebassets\\js\\angularfire.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\app.js",
+      "PackagePath": "staticwebassets\\js\\app.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\bootbox.min.js",
+      "PackagePath": "staticwebassets\\js\\bootbox.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\bootstrap-datepicker.min.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap-datepicker.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\bundle.min.js",
+      "PackagePath": "staticwebassets\\js\\bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\c3.js",
+      "PackagePath": "staticwebassets\\js\\c3.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\collapsible.min.js",
+      "PackagePath": "staticwebassets\\js\\collapsible.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\collapsibleDirective.min.js",
+      "PackagePath": "staticwebassets\\js\\collapsibleDirective.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\datatables.js",
+      "PackagePath": "staticwebassets\\js\\datatables.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\ddlsearch.js",
+      "PackagePath": "staticwebassets\\js\\ddlsearch.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\desktop-notification.js",
+      "PackagePath": "staticwebassets\\js\\desktop-notification.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\fancyTable.js",
+      "PackagePath": "staticwebassets\\js\\fancyTable.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\firebase.js",
+      "PackagePath": "staticwebassets\\js\\firebase.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\fullcalendar.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\hoverable-collapse.js",
+      "PackagePath": "staticwebassets\\js\\hoverable-collapse.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\icheck.min.js",
+      "PackagePath": "staticwebassets\\js\\icheck.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\jquery-1.10.2.intellisense.js",
+      "PackagePath": "staticwebassets\\js\\jquery-1.10.2.intellisense.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\jquery-1.10.2.js",
+      "PackagePath": "staticwebassets\\js\\jquery-1.10.2.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\jquery-1.10.2.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery-1.10.2.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\jquery-1.10.2.min.map",
+      "PackagePath": "staticwebassets\\js\\jquery-1.10.2.min.map"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\jquery-3.5.1.slim.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery-3.5.1.slim.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\jquery-3.6.0.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery-3.6.0.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\jquery-git.js",
+      "PackagePath": "staticwebassets\\js\\jquery-git.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\jquery-jvectormap-world-mill-en.js",
+      "PackagePath": "staticwebassets\\js\\jquery-jvectormap-world-mill-en.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\jquery-jvectormap.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery-jvectormap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\jquery-ui.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery-ui.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\jquery.avgrund.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.avgrund.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\jquery.dataTables.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.dataTables.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\jquery.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\jquery.table2excel.js",
+      "PackagePath": "staticwebassets\\js\\jquery.table2excel.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\jquery.table2excel.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.table2excel.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\jquery.toast.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.toast.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\jquery.validate-vsdoc.js",
+      "PackagePath": "staticwebassets\\js\\jquery.validate-vsdoc.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\js\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\js\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\jsBarcode.all.min.js",
+      "PackagePath": "staticwebassets\\js\\jsBarcode.all.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\json2.min.js",
+      "PackagePath": "staticwebassets\\js\\json2.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\json2.min\\json2.min.js",
+      "PackagePath": "staticwebassets\\js\\json2.min\\json2.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\jspdf.min.js",
+      "PackagePath": "staticwebassets\\js\\jspdf.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\justgage.js",
+      "PackagePath": "staticwebassets\\js\\justgage.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\loader.js",
+      "PackagePath": "staticwebassets\\js\\loader.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\markerclusterer.js",
+      "PackagePath": "staticwebassets\\js\\markerclusterer.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\misc.js",
+      "PackagePath": "staticwebassets\\js\\misc.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\moment.min.js",
+      "PackagePath": "staticwebassets\\js\\moment.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\ng-google-chart.min.js",
+      "PackagePath": "staticwebassets\\js\\ng-google-chart.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\ng-infinite-scroll.min.js",
+      "PackagePath": "staticwebassets\\js\\ng-infinite-scroll.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\ng-tags-input.min.js",
+      "PackagePath": "staticwebassets\\js\\ng-tags-input.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\off-canvas.js",
+      "PackagePath": "staticwebassets\\js\\off-canvas.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\owl.carousel.min.js",
+      "PackagePath": "staticwebassets\\js\\owl.carousel.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\popper.min.js",
+      "PackagePath": "staticwebassets\\js\\popper.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\raphael-2.1.4.min.js",
+      "PackagePath": "staticwebassets\\js\\raphael-2.1.4.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\roundProgress.min.js",
+      "PackagePath": "staticwebassets\\js\\roundProgress.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\select2.min.js",
+      "PackagePath": "staticwebassets\\js\\select2.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\settings.js",
+      "PackagePath": "staticwebassets\\js\\settings.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\sortable.js",
+      "PackagePath": "staticwebassets\\js\\sortable.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\svg-assets-cache.js",
+      "PackagePath": "staticwebassets\\js\\svg-assets-cache.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\sweetalert.min.js",
+      "PackagePath": "staticwebassets\\js\\sweetalert.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\toastDemo.js",
+      "PackagePath": "staticwebassets\\js\\toastDemo.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\toastr.min.js",
+      "PackagePath": "staticwebassets\\js\\toastr.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\todolist.js",
+      "PackagePath": "staticwebassets\\js\\todolist.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\typeahead.bundle.min.js",
+      "PackagePath": "staticwebassets\\js\\typeahead.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\ui-bootstrap-tpls.min.js",
+      "PackagePath": "staticwebassets\\js\\ui-bootstrap-tpls.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\js\\xlsx.full.min.js",
+      "PackagePath": "staticwebassets\\js\\xlsx.full.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Yogesh Vasani\\Downloads\\B2BOMS-main\\B2BOMS-main\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.DFXOrderJini.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.DFXOrderJini.props",
+      "PackagePath": "build\\DFXOrderJini.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.DFXOrderJini.props",
+      "PackagePath": "buildMultiTargeting\\DFXOrderJini.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.DFXOrderJini.props",
+      "PackagePath": "buildTransitive\\DFXOrderJini.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

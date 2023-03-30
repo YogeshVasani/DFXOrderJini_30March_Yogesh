@@ -1,0 +1,518 @@
+﻿@{
+    ViewData["Title"] = "Invoice Page";
+}
+
+        <!-- ngView:  --><div ng-view="" class="ng-scope" style="">
+            <style class="ng-scope">
+                .white_badge {
+                    background-color: #ffffff !important;
+                    /*color: #000000 !important;*/
+                }
+
+                .red_badge {
+                    background-color: #e89595 !important;
+                    color: #ffffff !important;
+                }
+
+            </style>
+
+           
+                <div class="refresh" style="display: none;"></div>
+                <div class="row page-title-header">
+                    <div class="col-lg-12">
+                        <div class="page-header">
+                            <h4 class="page-title ng-binding">Invoices</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12 pb-4" ng-hide="addInvoice1" aria-hidden="false">
+                    <div class="page-header-toolbar">
+                        <div class="btn-group toolbar-item" role="group" aria-label="Navigation">
+                            <button type="button" class="btn btn-secondary" ng-click="navPage(34, 0);" tabindex="0"><i class="mdi mdi-chevron-left"></i></button>
+                            <button type="button" class="btn btn-secondary ng-binding">Showing 1 - 10 of 68</button>
+                            <button type="button" class="btn btn-secondary" ng-click="navPage(34, 1);" tabindex="0"><i class="mdi mdi-chevron-right"></i></button>
+                        </div>
+                        <div class="filter-wrapper">
+                            <button type="button" class="btn btn-secondary" ng-click="clearFilter()" tabindex="0">
+                                <i class="fa fa-refresh" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <!--<div class="filter-wrapper">
+                            <div class="dropdown toolbar-item">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownsorting" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All Day</button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownsorting">
+                                    <a class="dropdown-item" href="#">Last Day</a>
+                                    <a class="dropdown-item" href="#">Last Month</a>
+                                    <a class="dropdown-item" href="#">Last Year</a>
+                                </div>
+                            </div>
+                            <a href="#" class="advanced-link toolbar-item">Advanced Options</a>
+                        </div>-->
+                        <div class="sort-wrapper">
+                            <!--<button type="button" class="btn btn-primary toolbar-item">New</button>-->
+                            <!--<div class="dropdown ml-lg-auto ml-3 toolbar-item">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownexport" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Export</button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownexport">
+                                    <a class="dropdown-item" href="#">Export as CSV</a>
+                                    <a class="dropdown-item" href="#">Export as XLSX</a>
+                                    <a class="dropdown-item" href="#">Export as JSON</a>
+                                </div>
+                            </div>-->
+                            <!-- ngIf: invoiceReport.length --><div ng-if="invoiceReport.length" class="ml-lg-auto ml-3 toolbar-item ng-scope" style="">
+                                
+                            </div><!-- end ngIf: invoiceReport.length -->
+                            <div class="ml-lg-auto ml-3 toolbar-item">
+                                <!-- ngIf: country != 'ghana' -->
+                                <a ng-if="country != &#39;ghana&#39;" href="https://beta.B2BOMS.com/dash/csv/invoice/download" class="ng-scope">
+                                    <button type="button" class="btn btn-secondary toolbar-item"><i class="mdi mdi-download"></i>Export</button>
+                                </a>
+                                <!-- end ngIf: country != 'ghana' -->
+                                <!-- ngIf: country == 'ghana' -->
+                                <!--<button type="button" class="btn btn-secondary toolbar-item"><i class="mdi mdi-upload"></i>Import</button>-->
+                            </div>
+                <div class="ml-lg-auto ml-3 toolbar-item">
+                    <button style="visibility:hidden;" ng-hide="((user.role == &#39;Auditor&#39;)||(user.role == &#39;Factory&#39;))" type="button" class="btn btn-primary toolbar-item ng-binding" ng-click="addInvoiceTab(0);" tabindex="0" aria-hidden="false">Create Invoice</button>
+                </div>
+                        </div>
+                        <!-- vasan comment-->
+                        <!--<div ng-if="multipleInvoices.length">-->
+                        <!--<button type="button" class="btn btn-primary toolbar-item ml-2 float-right" data-ng-click="invoiceProceedToPayment()">Proceed to Payment</button>-->
+                        <!--</div>-->
+                    </div>
+                </div>
+
+                <div class="row" ng-hide="addInvoice1" aria-hidden="false" style="display:none">
+                    <div class="col-md-12 grid-margin">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="d-flex">
+                                            <div class="wrapper">
+                                                <h3 class="mb-0 font-weight-semibold">Total Amount</h3>
+                                                <h5 class="mb-0 font-weight-medium text-primary ng-binding">₹10,954,684.00</h5>
+                                                <!--<p class="mb-0 text-muted">Last 7 Days ({{weeklyDashboardOrderAmount | currency : currency : 0}})</p>-->
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 mt-md-0 mt-4">
+                                        <div class="d-flex">
+                                            <div class="wrapper">
+                                                <h3 class="mb-0 font-weight-semibold">Paid Amount</h3>
+                                                <h5 class="mb-0 font-weight-medium text-primary ng-binding">₹0.00</h5>
+                                                <!--<p class="mb-0 text-muted">({{weeklyDashboardOrderAmountMonth | currency : currency : 0}})</p>-->
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 mt-md-0 mt-4">
+                                        <div class="d-flex">
+                                            <div class="wrapper">
+                                                <h3 class="mb-0 font-weight-semibold">Due Amount</h3>
+                                                <h5 class="mb-0 font-weight-medium text-primary ng-binding">₹328,025.00</h5>
+                                                <!--<p class="mb-0 text-muted">({{lastWeeklyDashboardOrderAmount | currency: currency : 0}})</p>-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--<div class="col-lg-3 col-md-6 mt-md-0 mt-4">
+                                        <div class="d-flex">
+                                            <div class="wrapper">
+                                                <h3 class="mb-0 font-weight-semibold">1,553</h3>
+                                                <h5 class="mb-0 font-weight-medium text-primary">Sales</h5>
+                                                <p class="mb-0 text-muted">+138.97(+0.54%)</p>
+                                            </div>
+
+                                        </div>
+                                    </div>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row" ng-hide="addInvoice1" aria-hidden="false">
+                    <div class="col grid-margin stretch-card">
+                        <div id="invoice-history" class="card">
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <div class="row">
+                                        <!-- ngIf: user.role != 'Dealer' --><div class="col-md-4 ng-scope" ng-if="user.role != &#39;Dealer&#39;">
+                                            <div class="input-group">
+                                                <!--<div class="input-group-prepend">
+                                                    <button class="btn btn-secondary dropdown-toggle" class="btn btn-primary button-md dropdown-toggle" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true"> Filter</button>
+                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 35px, 0px);">
+                                                        <a class="dropdown-item" href="#">Action</a>
+                                                        <a class="dropdown-item" href="#">Another action</a>
+                                                        <a class="dropdown-item" href="#">Something else here</a>
+                                                    </div>
+                                                </div>-->
+                                                <input type="text" class="form-control ng-pristine ng-untouched ng-valid" placeholder="Search Customers" ng-model="invoiceSearch.filter" ng-change="invoiceDealerSearchFilter(invoiceSearch.filter)" aria-label="Search Dealers" aria-describedby="basic-addon1" tabindex="0" aria-invalid="false">
+                                                <div class="input-group-prepend">
+                                                    <button class="btn btn-secondary " ng-click="invoiceDealerSearchFilter(invoiceSearch.filter)" type="button" aria-haspopup="true" tabindex="0"> Search</button>
+                                                </div>
+                                            </div>
+                                            <!-- ngIf: invoiceSearch.filter -->
+                                        </div><!-- end ngIf: user.role != 'Dealer' -->
+                                        <div class="col-md">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control ng-pristine ng-untouched ng-valid" placeholder="Enter Invoice#" ng-model="invoiceSearch.idFilter" ng-change="invoiceSearchFilter(invoiceSearch.idFilter)" aria-label="Enter Invoice Number" aria-describedby="basic-addon1" tabindex="0" aria-invalid="false">
+                                                <div class="input-group-prepend">
+                                                    <button class="btn btn-secondary " ng-click="invoiceSearchFilter(invoiceSearch.idFilter)" type="button" aria-haspopup="true" tabindex="0"> Search</button>
+                                                </div>
+                                            </div>
+                                            <!-- ngIf: invoiceSearch.idFilter -->
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-isolate-scope ng-valid-date" placeholder="From" ng-model="invoiceSearch.startDate" ng-change="refreshInvoices()" ng-init="calender[76] = false" ng-click="calender[76] = true;" uib-datepicker-popup="" is-open="calender[76]" show-button-bar="false" todayhighlight="true" aria-label="From" aria-describedby="basic-addon1" tabindex="0" aria-invalid="false"><!-- ngIf: isOpen -->
+                                                <div class="input-group-prepend">
+                                                    <button class="btn btn-secondary "><i class="fa fa-calendar"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-isolate-scope ng-valid-date" placeholder="To" ng-model="invoiceSearch.endDate" ng-change="refreshInvoices()" ng-click="calender[77] = true;" uib-datepicker-popup="" is-open="calender[77]" show-button-bar="false" todayhighlight="true" aria-label="To" aria-describedby="basic-addon1" tabindex="0" aria-invalid="false"><!-- ngIf: isOpen -->
+                                                <div class="input-group-prepend">
+                                                    <button class="btn btn-secondary "><i class="fa fa-calendar"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                    <input type="hidden" id="hdnordid" />
+                    @Html.Hidden("RedirectToOrderDetails", Url.Action("OrderDetails", "SalesOrder"))
+                                <!-- ngIf: invoiceSearch.filter || invoiceSearch.idFilter || invoiceSearch.startDate || invoiceSearch.endDate -->
+                                <!--<h4 class="card-title">Orders History</h4>-->
+                                <!--<p class="card-description"> Click on OrderID to view Order Details</p>-->
+                                <!-- ngIf: invoiceReport.length --><div class="table-responsive ng-scope" ng-if="invoiceReport.length" style="">
+                        <table class="table" width="100" ng-app="MyApp2" ng-controller="MyController2" ng-init="AdminProfileEnable();GetInvoice_Details();">
+                            <thead>
+                                <tr>
+                                    <!--vasan comment-->
+                                    <!--<td ng-if="nav[24].activated && user.role == 'Dealer' && razorPayModeStatus"></td>-->
+                                    <th>INVOICE DATE</th>
+                                    <th>INVOICE NO</th>
+                                    <th>ORDER ID</th>
+                                    <th>CUSTOMER</th>
+                                    <th>SALESPERSON</th>
+                                    <th>INVOICE AMOUNT</th>
+                                    <th>DUE AMOUNT</th>
+                                    <th>PAYMENT STATUS</th>
+                                    <!-- ngIf: nav[24].activated -->
+                                    <th ng-if="nav[24].activated" class="ng-scope">INVOICE PDF</th><!-- end ngIf: nav[24].activated -->
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr  ng-repeat="invoice in InvoiceDetails" class="ng-scope">
+
+                                    <td class="ng-binding">{{invoice.bill_Date}}</td>
+                                    <td style="cursor: pointer;"><a style="text-decoration: none" class="ng-binding">{{invoice.bill_Doc}}</a></td>
+                                    <td>
+                                        <div>
+                                            <!-- ngIf: invoice.orderId --><a ng-click="LoadOrder_History(invoice.zjinI_NO);" style="cursor: pointer; text-decoration: underline;"
+                                                                             class="ng-binding ng-scope" tabindex="0">{{invoice.zjinI_NO}}</a><!-- end ngIf: invoice.orderId -->
+                                            <!-- ngIf: !invoice.orderId -->
+                                            <br>
+                                            <span style="font-size: 10px;color: #61616" class="ng-binding"></span>
+                                        </div>
+                                    </td>
+                                    <td class="ng-binding">{{invoice.cust_Name}}</td>
+                                    <td class="ng-binding">N/A</td>
+                                    <td class="ng-binding">₹{{invoice.net_Value}}</td>
+                                    <td>
+                                        <!-- ngRepeat: y in invoice.payment -->
+                                        <!-- ngIf: !invoice.payment --><span ng-if="!invoice.payment" class="ng-binding ng-scope">₹{{invoice.tax_Amt}}</span><!-- end ngIf: !invoice.payment -->
+                                    </td>
+                                    <td>
+                                        <!-- ngIf: !invoice.payment --><span ng-if="!invoice.payment" style="color:red" class="ng-scope">Not Paid</span><!-- end ngIf: !invoice.payment -->
+                                        <!-- ngRepeat: x in invoice.payment -->
+                                    </td>
+                                    <!--<td style="cursor: pointer;"><a href="{{invoice.documents[0].secure_url}}" style="text-decoration: none" >{{invoice.documents[0].secure_url}}</a></td>-->
+                                    <!-- ngIf: nav[24].activated -->
+                                    <td ng-if="nav[24].activated" style="cursor: pointer;" class="ng-scope">
+                                        <a target="_blank"
+                                           href="https://res.cloudinary.com/B2BOMS/image/upload/v1651040343/jb18pz5t0uzg9jdslvzo.pdf"
+                                           style="text-decoration: none">  Download</a>
+                                    </td><!-- end ngIf: nav[24].activated -->
+
+                                </tr><!-- end ngIf: nav[24].activated && user.role != 'Manager' --><!-- end ngRepeat: invoice in invoiceReport.slice(viewLength, (viewLength + newViewBy)) --><!-- ngIf: nav[24].activated && user.role != 'Manager' -->
+                            </tbody>
+                        </table>
+                                </div><!-- end ngIf: invoiceReport.length -->
+                                <!-- ngIf: !invoiceReport.length -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="create-invoice" class="row ng-hide" ng-show="addInvoice1" aria-hidden="true">
+                    <span ng-click="addInvoiceTab(1)" role="button" tabindex="0">
+                        <p class="ng-binding"><i class="fa fa-arrow-left pl-4" aria-hidden="true"></i> Back to Invoices</p>
+                    </span>
+                    <div class="col-lg-12">
+                        <div class="card px-2">
+                            <div class="card-body">
+                                <hr>
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <img ng-src="http://res.cloudinary.com/B2BOMS/image/upload/v1633685064/logo/dd278ab3155f0ff2576fc19a90449c64.png" style="height:75px" src="./B2BOMS Console_Invoice_files/dd278ab3155f0ff2576fc19a90449c64.png">
+                                        </div>
+                                        <div class="col-md-4">
+                                            <h3 class="text-right my-5 ng-binding">Invoice&nbsp;&nbsp;#INV-17</h3>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                </div>
+                                <div class="container-fluid d-flex justify-content-between">
+                                    <div class="col-lg-3 pl-0">
+                                        <p class="mt-5 mb-2">
+                                            <b class="ng-binding">Duroflex</b>
+                                        </p>
+                                        <p class="ng-binding"></p>
+                                    </div>
+                                    <div class="col-lg-3 pr-0">
+                                        <p class="mt-5 mb-2 text-right">
+                                            <b>Invoice to <span class="mandatory">*</span></b>
+                                        </p>
+                                        <form class="ng-pristine ng-valid">
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <input type="text" class="form-control ng-pristine ng-untouched ng-valid" placeholder="Search for Customers" ng-model="invoicedealer.dealer" ng-change="searchDealer(invoicedealer.dealer)" id="invoiceDealerSearchBar" tabindex="0" aria-invalid="false">
+                                                    <div class="input-group-prepend">
+                                                        <button class="btn btn-secondary " ng-click="searchDealer(invoicedealer.dealer)" type="button" aria-haspopup="true" tabindex="0"> Search</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="invoiceloader ng-hide" ng-show="displayloader" style="margin-top:-9%;margin-left:103%" aria-hidden="true">
+                                            </div>
+                                            <div class="dealerDropdown search-result">
+                                                <!-- ngRepeat: x in newDealers | filter:invoicedealer.dealer -->
+                                            </div>
+                                        </form>
+                                        <div>
+                                            <p style="color : indianred; font-style : italic; font-size : 14px; text-align : center;">OR Enter Details</p>
+                                        </div>
+                                        <input type="text" class="form-control ng-pristine ng-untouched ng-valid" ng-model="invoice.customername" placeholder="Customer Name" tabindex="0" aria-invalid="false"><br>
+                                        <textarea type="text" class="form-control ng-pristine ng-untouched ng-valid" ng-model="invoice.customerAddress" placeholder="Customer Address" aria-multiline="true" tabindex="0" aria-invalid="false"></textarea>
+                                    </div>
+                                </div>
+                                <div class="container-fluid d-flex justify-content-between">
+                                    <div class="col-lg-3 pl-0">
+                                        <p class="mb-0 mt-5 ng-binding">Invoice Date : </p>
+                                        <input type="text" class="form-control datepicker ng-pristine ng-untouched ng-valid ng-isolate-scope ng-valid-date" ng-model="invoice.date" placeholder="dd/mm/yyyy" ng-init="calender[71] = false" ng-click="calender[71] = true;" uib-datepicker-popup="" is-open="calender[71]" show-button-bar="false" todayhighlight="true" datepicker-options="datepickerOptions" tabindex="0" aria-invalid="false"><!-- ngIf: isOpen -->
+                                        <!--<p>Due Date : 25th Jan 2017</p>-->
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="container-fluid d-flex">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <form class="ng-pristine ng-valid">
+                                                <div class="form-group">
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control ng-pristine ng-untouched ng-valid" placeholder="Search for Product" id="search_product" ng-model="item.Product" ng-change="selectItem(item.Product)" tabindex="0" aria-invalid="false">
+                                                        <div class="input-group-prepend">
+                                                            <button class="btn btn-secondary " ng-click="selectItem(item.Product)" type="submit" aria-haspopup="true" tabindex="0"> Search</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                            <div class="productDropdown search-result">
+                                                <!-- ngRepeat: x in allInvoiceItems | filter:item.Product -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <form class="ng-pristine ng-valid ng-valid-pattern">
+                                                <div class="row">
+                                                    <div class="col-md-3">
+                                                        <div class="col-12">
+                                                            <div class="form-group row">
+                                                                <label class="col-form-label">Product</label>
+                                                                <input ng-model="addInvoice3.invoiceProduct" class="form-control ng-pristine ng-untouched ng-valid" name="Name" placeholder="Name" type="text" tabindex="0" aria-invalid="false">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <div class="col-12">
+                                                            <div class="form-group row">
+                                                                <label class="col-form-label">Product Description</label>
+                                                                <input ng-model="addInvoice3.invoiceDescription" class="form-control ng-pristine ng-untouched ng-valid" name="Description" placeholder="Description" type="text" tabindex="0" aria-invalid="false">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <div class="col-12">
+                                                            <div class="form-group row">
+                                                                <label class="col-form-label">Price</label>
+                                                                <input ng-model="addInvoice3.invoiceMrp" ng-pattern="/^[0-9]/" class="form-control ng-pristine ng-untouched ng-valid ng-valid-pattern" name="Price" placeholder="Price" type="text" tabindex="0" aria-invalid="false">
+                                                            </div>
+                                                            <span style="color:Red" ng-show="serviceForm.price.$dirty&amp;&amp;serviceForm.price.$error.pattern" aria-hidden="true" class="ng-hide">Price should be greater than Zero</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <div class="col-12">
+                                                            <div class="form-group row">
+                                                                <label class="col-form-label">Quantity</label>
+                                                                <input ng-model="addInvoice3.quantity" ng-pattern="/^[0-9]/" class="form-control ng-pristine ng-untouched ng-valid ng-valid-pattern" name="Quantity" placeholder="Quantity" type="text" tabindex="0" aria-invalid="false">
+                                                            </div>
+                                                            <span style="color:Red" ng-show="serviceForm.quantity.$dirty&amp;&amp;serviceForm.quantity.$error.pattern" aria-hidden="true" class="ng-hide">Quantity should be greater than Zero</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <div class="col-12">
+                                                            <div class="form-group row">
+                                                                <button class="btn btn-success" ng-click="saveInvoices();addInvoiceMrp()" ng-disabled="!addInvoice3.invoiceProduct || !addInvoice3.invoiceMrp || !addInvoice3.quantity" tabindex="0" aria-disabled="true" disabled="disabled">Add</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- ngIf: invoice.items.length -->
+                                <div class="container-fluid mt-5 w-100">
+                                    <p class="text-right mb-2 ng-binding">Sub - Total amount: </p>
+                                    <!--<p class="text-right">Total GST : </p>-->
+                                    <h4 class="text-right mb-5 ng-binding">Total : </h4>
+                                    <hr>
+                                </div>
+                                <div class="container-fluid d-flex">
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <h4>Terms and Conditions</h4>
+                                            <p class="ng-binding"></p>
+                                        </div>
+                                        <div class="col-md-2">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container-fluid w-100">
+                                    <button type="button" data-toggle="modal" data-target="#invoice" ng-disabled="!invoice.customername || !invoice.items.length" class="btn btn-success float-right mt-4 ml-2 ng-binding" aria-disabled="true" disabled="disabled">
+                                        Preview Invoices
+                                    </button>
+                                    <button type="button" ng-click="clearInvoices()" class="btn btn-light float-right mt-4" tabindex="0">
+                                        Reset
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--modal form for preview-->
+            <div class="modal fade ng-scope" id="invoice" role="dialog" tabindex="-1">
+                <div class="modal-dialog modal-lg" role="document" style="width:80vw">
+                    <div class="modal-content">
+                        <div id="invoice_body1">
+                            <div class="modal-header">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <img ng-src="http://res.cloudinary.com/B2BOMS/image/upload/v1633685064/logo/dd278ab3155f0ff2576fc19a90449c64.png" style="height:75px" src="./B2BOMS Console_Invoice_files/dd278ab3155f0ff2576fc19a90449c64.png">
+                                    </div>
+                                    <div class="col-xs-5" style="margin:35px;float:left">
+                                        <p type="text" class="addDealer ng-binding" style="margin:10px 67px;font-size: 27px">B2BOMS</p>
+                                    </div>
+
+                                    <div class="col-xs-4" style="float:right;margin-top:-10%;">
+                                        <p class="text-wrap ng-binding" style="margin-top: -12%; text-align: right;font-size:14px;color: #003366;">Bengaluru</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-body" style="margin:1% 3%">
+                                <div>
+                                    <div class="row">
+                                        <div class="col-xs-3">
+                                            <p text-end="" style="margin-bottom: 0px;" class="addDealer ng-binding"> <b>Bill To: </b>   </p>
+                                            <p style="margin-bottom: 0px;" class="addDealer ng-binding" ng-bind="invoice.customerAddress"></p>
+                                        </div>
+                                        <div class="col-sm-4 col-sm-offset-4">
+                                            <p style="margin-bottom: 0px; text-align: right" class="addDealer"><b>Invoice #: 9340</b></p>
+                                            <p style="margin-bottom: 0px; text-align: right" class="addDealer ng-binding"><b>Date :</b> N/A</p>
+                                            <p style="margin-bottom: 0px; text-align: right" class="addDealer ng-binding"><b>REP :</b> N/A</p>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <!-- ngIf: invoice.PurchaseOrder -->
+                                    <br>
+                                    <div class="panel panel-default">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading">
+                                                        <h5 class="text-center"><strong>Invoice</strong></h5>
+                                                    </div>
+                                                    <div class="panel-body">
+                                                        <div class="table-responsive">
+                                                            <table class="table table-condensed table-bordered">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <td class="text-center"><strong>Item Code</strong></td>
+                                                                        <td class="text-center"><strong>Item Name</strong></td>
+                                                                        <td class="text-center"><strong>Description</strong></td>
+                                                                        <td class="text-center"><strong>Price</strong></td>
+                                                                        <td class="text-center"><strong>Quantity</strong></td>
+                                                                        <td class="ng-binding">Taxable Value(₹)</td>
+                                                                        <td colspan="2">CGST</td>
+                                                                        <td colspan="2">SGST</td>
+                                                                        <td colspan="2">IGST</td>
+                                                                        <td><b>Total Amount</b></td>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <!-- ngRepeat: label in invoice.items track by $index -->
+                                                                    <tr></tr>
+                                                                    <tr>
+                                                                        <td class="emptyrow text-center" colspan="4"><strong>Total Quantity</strong></td>
+                                                                        <td class="text-left ng-binding"></td>
+                                                                        <td colspan="8"></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="text-right" colspan="12"><strong>Total Amount : </strong></td>
+                                                                        <td colspan="1" class="ng-binding"></td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <br>
+                                    </div>
+
+
+                                    <div class="row">
+                                        <div class="col-xs-6" style="margin:25px;border-radius: 10px;text-align: left;">
+                                            <p class="addDealer" style="margin-top:4%;text-decoration: underline"><b>Terms and Conditions</b></p>
+                                            <p style="font-size:12px;color:black" class="ng-binding">NaN</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
+                            <button type="button" style="visibility:hidden;" class="btn btn-success ng-binding" ng-disabled="form1.$invalid" data-dismiss="modal" ng-click="createInvoices(invoice);addInvoiceTab(1)" tabindex="0" aria-disabled="false">Create Invoice</button>
+                            <button type="button" class="btn btn-primary" id="printInvoice"><span class="glyphicon glyphicon-print"></span>&nbsp;Print Preview</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        
+       

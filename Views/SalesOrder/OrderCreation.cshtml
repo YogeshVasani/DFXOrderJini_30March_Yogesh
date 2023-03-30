@@ -1,0 +1,419 @@
+﻿@{
+    ViewData["Title"] = "Build Your Order";
+}
+<style>
+    .searchbox {
+        border: 1px solid #456879;
+        border-radius: 6px;
+        height: 22px;
+        width: 200p;
+        margin-top: 5px;
+    }
+
+    #feedback {
+        font-size: 1.4em;
+    }
+
+    #selectable .ui-selecting {
+        background: #FECA40;
+    }
+
+    #selectable .ui-selected {
+        background: #F39814;
+        color: white;
+    }
+
+    #selectable {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 60%;
+    }
+
+        #selectable li {
+            margin: 3px;
+            padding: 0.4em;
+            font-size: 1.4em;
+            height: 18px;
+        }
+</style>
+
+
+<div ng-view="" class="ng-scope" style="" ng-init="LoadVehicleDetails();">
+    <div class="wrapper ng-scope">
+        <div class="refresh" style="display: none;"></div>
+        <!-- ngIf: orderViewTab.tab == 1 -->
+        <div class="row page-header ng-scope" ng-if="orderViewTab.tab == 1" style="">
+           @* <div class="col-5">
+                <div class="backtoOrder">
+                    <p ng-click="changeOrderView(0)" role="button" tabindex="0"><i class="fa fa-arrow-left pl-4" aria-hidden="true"></i> Go Back</p>
+                </div>
+            </div>*@
+            <div class="col-6">
+                <div class="">
+                    <h4 class="ng-binding">Build Your Order</h4>
+                    <input type="text" id="Dealercode" style="display:none" />
+                    <!--<h4></h4>-->
+                </div>
+            </div>
+        </div><!-- end ngIf: orderViewTab.tab == 1 -->
+        <!-- ngIf: orderViewTab.tab == 0 -->
+        <!-- ngIf: orderViewTab.tab == 0 && user.role != 'dealer' -->
+        <!-- ngIf: orderViewTab.tab == 1 && customer.Dealercode -->
+        <div class="row ng-scope" ng-if="orderViewTab.tab == 1 &amp;&amp; customer.Dealercode" style="">
+            <div class="col-2" style="padding: 5px">
+                <div class="card" style="text-align: center">
+                    <div class="card-body" style="padding: 15px">
+                        <h6 style="color:#007bff ;"><p style="display: inline-block;border-radius: 60px;box-shadow: 0px 0px 2px #888;padding: 0.4em 0.4em ;color:#007bff ;border-color:#007bff ">1</p>  &nbsp; Select Item</h6>
+                        @*  <div class="input-group">
+                        <input type="text" class="form-control ng-pristine ng-untouched ng-valid" placeholder="Search"
+                        ng-change="selectedItems()" ng-model="selitem1" ng-click="clearFilter(2);" id="myInput" onkeyup="filterFunction()"
+                        data-toggle="modal" data-target="#searchModal" aria-label="Username" aria-describedby="basic-addon1"
+                        tabindex="0" aria-invalid="false">
+                        </div>*@
+                        <!-- ngRepeat: item in matressName | unique: 'l5' | filter : itemSearch.item -->
+                        <div style="text-align: center;" class="ng-scope">
+                            <p style="margin: 0px" class="ng-binding" role="button" tabindex="0">
+                                <select name="subject" id="subject" class="form-control ng-pristine ng-untouched ng-valid" tabindex="0" aria-invalid="false" ng-app="MyApp2" ng-controller="MyController2" ng-init="AdminProfileEnable();GetItems('');LoadVehicleDetails();GetAllData1();"
+                                        ng-options="name.productItems for name in SelectItems" ng-model="selitem" ng-click="selectedItems()">
+                                    <option value="">Select</option>
+                                </select>
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- ngIf: activeDensity --><div class="row-2 ng-scope" style="padding: 5px;display:none" ng-if="activeDensity" id="Primuomdiv">
+                    <div class="card" style="text-align: center ">
+                        <div class="card-body" style="padding: 15px">
+                            <h6 style="color:#007bff ;text-align: center">&nbsp; Primary UOM</h6>
+                            <p class="ng-binding" id="lblBundle"></p>
+                        </div>
+                    </div>
+                </div><!-- end ngIf: activeDensity -->
+                <!-- ngIf: activeDensity --><div class="row-2 ng-scope" style="padding: 5px;display:none;" id="Sizediv">
+                    <div class="card" style="text-align: center ">
+                        <div class="card-body" style="padding: 15px">
+                            <h6 style="color:#007bff ;text-align: center">
+                                <p style="display: inline-block;border-radius: 60px;box-shadow: 0px 0px 2px #888;padding: 0.4em 0.4em ;color:#007bff ;border-color:#007bff ">4</p>  &nbsp; Select Size
+                            </h6>
+                            <!-- ngIf: custOrder.primary_UOM != 'KG' -->
+                            <span id="IsMfrollslength" style="display:none">
+                            <p style="margin: 0px;text-align: left" class="ng-binding ng-scope">Length (Inch)</p><!-- end ngIf: custOrder.primary_UOM != 'KG' -->
+                            <!-- ngIf: custOrder.primary_UOM != 'KG' -->
+                            <select name="Lengthel" id="LengthSel" class="form-control ng-pristine ng-untouched ng-valid" tabindex="0"
+                                    aria-invalid="false" data-ng-controller="MyController3"
+                                    ng-model="selitem3" ng-options="name.productItems for name in Selectlendth">
+                                <option value="">Select</option>
+                            </select>
+                            </span>
+                            <br>
+                            <input class="mb-3 ng-pristine ng-untouched ng-valid ng-scope ng-valid-min ng-valid-max ng-valid-pattern" placeholder="Enter in steps .5"
+                                   type="number" pattern="^[0-9]*\.?[05]?" min="0" step="0.5" max="999" style="width: 100%; font-size: 12px;" ng-model="custOrder.leng"
+                                   ng-if="custOrder.primary_UOM != &#39;KG&#39; &amp;&amp; custLen" tabindex="0" aria-invalid="false" id="CustomLengthId">
+                            <span id="TCustomLength" style="color:red"></span>
+                            <!-- end ngIf: custOrder.primary_UOM != 'KG' -->
+                            <!-- ngIf: custOrder.primary_UOM != 'KG' --><br ng-if="custOrder.primary_UOM != &#39;KG&#39;" class="ng-scope"><!-- end ngIf: custOrder.primary_UOM != 'KG' -->
+                            <!-- ngIf: custOrder.primary_UOM != 'KG' && custLen -->
+                            <!-- ngIf: custOrder.primary_UOM != 'KG' --><br ng-if="custOrder.primary_UOM != &#39;KG&#39;" class="ng-scope"><!-- end ngIf: custOrder.primary_UOM != 'KG' -->
+                            <p style="margin: 0px;text-align: left" class="ng-binding">Width (Inch)</p>
+                            <select name="widthSel" id="widthSel" class="form-control ng-pristine ng-untouched ng-valid" tabindex="0"
+                                    aria-invalid="false" data-ng-controller="MyController3"
+                                    ng-model="selitem3" ng-options="name.productItems for name in SelectWidth">
+                                <option value="">Select</option>
+                            </select>
+                            <br>
+                            <input class="mb-3 ng-pristine ng-untouched ng-valid ng-scope ng-valid-min ng-valid-max ng-valid-pattern" placeholder="Enter in steps .5"
+                                   type="number" pattern="^[0-9]*\.?[05]?" min="0" step="0.5" max="999" style="width: 100%; font-size: 12px;" ng-model="custOrder.width"
+                                   ng-if="custWidth" tabindex="0" aria-invalid="false" id="CustomWidthId">
+                            <span id="TCustomwidth" style="color:red"></span>
+
+                            <br>
+                            <!-- ngIf: custWidth -->
+                            <br>
+                            <span id="IsBlockCuson" style="display:none">
+                                <!-- ngIf: custOrder.primary_UOM != 'BLOCKS' -->
+
+                                <p style="margin: 0px;text-align: left" ng-if="custOrder.primary_UOM != &#39;BLOCKS&#39;" class="ng-binding ng-scope">Thickness (MM)</p><!-- end ngIf: custOrder.primary_UOM != 'BLOCKS' -->
+                                <!-- ngIf: duroThickness.length && custOrder.primary_UOM != 'BLOCKS' -->
+                                <select name="thicknessSel" id="thicknessSel" class="form-control ng-pristine ng-untouched ng-valid" tabindex="0"
+                                        aria-invalid="false" data-ng-controller="MyController3"
+                                        ng-model="selitem3" ng-options="name.productItems for name in SelectThickness">
+                                    <option value="">Select</option>
+                                </select>
+                                <!-- end ngIf: duroThickness.length && custOrder.primary_UOM != 'BLOCKS' -->
+                                <!-- ngIf: !duroThickness.length && custOrder.primary_UOM != 'BLOCKS' -->
+                                <!-- ngIf: custOrder.primary_UOM != 'BLOCKS' -->
+
+                                <p style="margin: 0px; text-align: left" ng-if="custOrder.primary_UOM != &#39;BLOCKS&#39;" class="ng-scope"><!-- ngIf: duroThickness.TMin --><!-- ngIf: duroThickness.TMax --></p><!-- end ngIf: custOrder.primary_UOM != 'BLOCKS' -->
+                                <!-- ngIf: custOrder.primary_UOM == 'BLOCKS' -->
+                            </span>
+                            <!-- CHIP FOAM SHEETS & LATEX LIKE FOAM SHEETS-->
+                            <span id="IsFoamSheet" style="display:none">
+                                <p style="margin: 0px;text-align: left" ng-if="custOrder.primary_UOM != &#39;BLOCKS&#39;" class="ng-binding ng-scope">Thickness (MM)</p><!-- end ngIf: custOrder.primary_UOM != 'BLOCKS' -->
+                                <!-- ngIf: duroThickness.length && custOrder.primary_UOM != 'BLOCKS' -->
+                                <!-- ngIf: !duroThickness.length && custOrder.primary_UOM != 'BLOCKS' -->
+                                <input id="IsFoamid" class="mb-1 ng-pristine ng-untouched ng-valid ng-scope ng-valid-min ng-valid-max ng-valid-pattern"
+                                       type="number" ng-if="!duroThickness.length &amp;&amp; custOrder.primary_UOM != &#39;BLOCKS&#39;"
+                                       min="15" max="150" step="1" pattern="^[0-9]*$" style="width: 100%;font-size: 12px" ng-model="custOrder.thickness" tabindex="0" aria-invalid="false"><!-- end ngIf: !duroThickness.length && custOrder.primary_UOM != 'BLOCKS' -->
+                                <span id="tmaxid" style="color:red"></span>
+                                <!-- ngIf: custOrder.primary_UOM != 'BLOCKS' -->
+                                <p style="margin: 0px; text-align: left" ng-if="custOrder.primary_UOM != &#39;BLOCKS&#39;" class="ng-scope"><!-- ngIf: duroThickness.TMin --><span ng-if="duroThickness.TMin" class="ng-binding ng-scope">Min : 15 </span><!-- end ngIf: duroThickness.TMin --><!-- ngIf: duroThickness.TMax --><span ng-if="duroThickness.TMax" class="ng-binding ng-scope">, Max : 150</span><!-- end ngIf: duroThickness.TMax --></p><!-- end ngIf: custOrder.primary_UOM != 'BLOCKS' -->
+                                <!-- CHIP FOAM SHEETS & LATEX LIKE FOAM SHEETS-->
+                            </span>
+
+                            <span id="IsLatexsheet" style="display:none">
+                                <p style="margin: 0px;text-align: left" ng-if="custOrder.primary_UOM != &#39;BLOCKS&#39;" class="ng-binding ng-scope">Thickness (MM)</p><!-- end ngIf: custOrder.primary_UOM != 'BLOCKS' -->
+                                <!-- ngIf: duroThickness.length && custOrder.primary_UOM != 'BLOCKS' -->
+                                <!-- ngIf: !duroThickness.length && custOrder.primary_UOM != 'BLOCKS' -->
+                                <input id="IsLatexsheetid" class="mb-1 ng-pristine ng-untouched ng-valid ng-scope ng-valid-min ng-valid-max ng-valid-pattern"
+                                       type="number" ng-if="!duroThickness.length &amp;&amp; custOrder.primary_UOM != &#39;BLOCKS&#39;"
+                                       min="25" max="150" step="1" pattern="^[0-9]*$" style="width: 100%;font-size: 12px" ng-model="custOrder.thickness" tabindex="0" aria-invalid="false"><!-- end ngIf: !duroThickness.length && custOrder.primary_UOM != 'BLOCKS' -->
+                                <span id="tmaxatexid" style="color:red"></span>
+                                <!-- ngIf: custOrder.primary_UOM != 'BLOCKS' -->
+                                <p style="margin: 0px; text-align: left" ng-if="custOrder.primary_UOM != &#39;BLOCKS&#39;" class="ng-scope"><!-- ngIf: duroThickness.TMin --><span ng-if="duroThickness.TMin" class="ng-binding ng-scope">Min : 25 </span><!-- end ngIf: duroThickness.TMin --><!-- ngIf: duroThickness.TMax --><span ng-if="duroThickness.TMax" class="ng-binding ng-scope">, Max : 150</span><!-- end ngIf: duroThickness.TMax --></p><!-- end ngIf: custOrder.primary_UOM != 'BLOCKS' -->
+                                <!-- CHIP FOAM SHEETS & LATEX LIKE FOAM SHEETS-->
+                            </span>
+
+                            <span id="IsPufxsheet" style="display:none">
+                                <p style="margin: 0px;text-align: left" ng-if="custOrder.primary_UOM != &#39;BLOCKS&#39;" class="ng-binding ng-scope">Thickness (MM)</p><!-- end ngIf: custOrder.primary_UOM != 'BLOCKS' -->
+                                <!-- ngIf: duroThickness.length && custOrder.primary_UOM != 'BLOCKS' -->
+                                <!-- ngIf: !duroThickness.length && custOrder.primary_UOM != 'BLOCKS' -->
+                                <input id="IsPufsheetid" class="mb-1 ng-pristine ng-untouched ng-valid ng-scope ng-valid-min ng-valid-max ng-valid-pattern"
+                                       type="number" ng-if="!duroThickness.length &amp;&amp; custOrder.primary_UOM != &#39;BLOCKS&#39;"
+                                       min="5" max="250" step="1" pattern="^[0-9]*$" style="width: 100%;font-size: 12px" ng-model="custOrder.thickness" tabindex="0" aria-invalid="false"><!-- end ngIf: !duroThickness.length && custOrder.primary_UOM != 'BLOCKS' -->
+                                <span id="tpuftexid" style="color:red"></span>
+                                <!-- ngIf: custOrder.primary_UOM != 'BLOCKS' -->
+                                <p style="margin: 0px; text-align: left" ng-if="custOrder.primary_UOM != &#39;BLOCKS&#39;" class="ng-scope"><!-- ngIf: duroThickness.TMin --><span ng-if="duroThickness.TMin" class="ng-binding ng-scope">Min : 5 </span><!-- end ngIf: duroThickness.TMin --><!-- ngIf: duroThickness.TMax --><span ng-if="duroThickness.TMax" class="ng-binding ng-scope">, Max : 250</span><!-- end ngIf: duroThickness.TMax --></p><!-- end ngIf: custOrder.primary_UOM != 'BLOCKS' -->
+                                <!-- CHIP FOAM SHEETS & LATEX LIKE FOAM SHEETS-->
+                            </span>
+                        </div>
+                        <br>
+                    </div>
+                </div><!-- end ngIf: activeDensity -->
+            </div>
+            <!-- ngIf: matressGrades.length -->
+            <div class="col-2" style="padding: 5px">
+                <div class="card" style="text-align: center;display:none" id="Gradediv">
+                    <div class="card-body" style="padding: 15px">
+                        <h6 style="color:#007bff ;"><p style="display: inline-block;border-radius: 60px;box-shadow: 0px 0px 2px #888;padding: 0.4em 0.4em ;color:#007bff ;border-color:#007bff ">2</p>  &nbsp; Select Grade</h6>
+                        @* <div class="input-group">
+                        <input type="text" class="form-control ng-pristine ng-untouched ng-valid" placeholder="Search" ng-change="selectedItems()" ng-model="selitem1" ng-click="clearFilter(2);" data-toggle="modal" data-target="#searchModal" aria-label="Username" aria-describedby="basic-addon1" tabindex="0" aria-invalid="false">
+                        </div>*@
+                        <!-- ngRepeat: item in matressGrades | unique: 'grade' | filter : itemSearch.grade -->
+                        <div style="text-align: center;" class="ng-scope">
+                            <p style="margin: 0px" class="ng-binding" role="button" tabindex="0" ng-click="selectedGrade()">
+                                <select name="topic" id="topic" class="form-control ng-pristine ng-untouched ng-valid" tabindex="0"
+                                        aria-invalid="false" data-ng-controller="MyController3"
+                                        ng-model="selitem1" ng-options="name.productItems for name in SelectGrade" ng-click="selectedGrade()">
+                                    <option value="">Select</option>
+                                </select>
+                            </p>
+                            <!-- <div class="row" style="text-align: center">
+                                 <div class="col-1" style="padding: 0px">
+                                     <i class="fa fa-check" style=" color:#007bff;" ng-if="activeGrade == item.grade && activeGrade" aria-hidden="true"></i>
+                                 </div>
+                                 <div class="col-6" style="padding: 0px">
+                                     <p style="margin: 0px" ng-click="selectedGrade(item.grade)">{{item.grade}}</p>
+                                 </div>
+                             </div>-->
+
+                        </div>
+                    </div>
+                </div>
+                <!-- ngIf: checkInputsQuantity() -->
+                <!-- end ngIf: checkInputsQuantity() -->
+
+            </div><!-- end ngIf: matressGrades.length -->
+            <!-- ngIf: matressDensity.length -->
+            <div class="col-2 ng-scope" style="padding: 5px;display:none" id="Densitydiv">
+                <div class="card" style="text-align: center ">
+                    <div class="card-body" style="padding: 15px">
+                        <h6 style="color:#007bff;font-size: medium;"><p style="display: inline-block;border-radius: 60px;box-shadow: 0px 0px 2px #888;padding: 0.4em 0.4em ;color:#007bff ;border-color:#007bff;">3</p>  &nbsp; Select Density</h6>
+                        @*<div class="input-group">
+                        <input type="text" class="form-control ng-pristine ng-untouched ng-valid" placeholder="Search" ng-model="itemSearch.density" ng-click="clearFilter(2);" data-toggle="modal" data-target="#searchModal" aria-label="Username" aria-describedby="basic-addon1" tabindex="0" aria-invalid="false">
+                        </div>*@
+                        <!-- ngRepeat: item in matressDensity | unique: 'density' | filter : itemSearch.density -->
+                        <div style="text-align: center;" class="ng-scope">
+                            <p style="margin: 0px" class="ng-binding" role="button" tabindex="0" ng-click="selectedDensity()">
+                                <select name="Density" id="Density" class="form-control ng-pristine ng-untouched ng-valid" tabindex="0"
+                                        aria-invalid="false" data-ng-controller="MyController3"
+                                        ng-model="selitem2" ng-options="name.productItems for name in SelectDensity">
+                                    <option value="">Select</option>
+                                </select>
+                            </p>
+                            <!-- <div class="row" style="text-align: center">
+                                 <div class="col-1" style="padding: 0px">
+                                     <i class="fa fa-check" style=" color:#007bff;" ng-if="activeDensity == item.density && activeDensity" aria-hidden="true"></i>
+                                 </div>
+                                 <div class="col-6" style="padding: 0px">
+                                     <p style="margin: 0px" ng-click="selectedDensity(item.density)">{{item.density}}</p>
+                                 </div>
+                             </div>-->
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row-2 ng-scope" style="padding: 5px;display:none" id="Qtydiv">
+                    <div class="card" style="text-align: center ">
+                        <div class="card-body" style="padding: 15px">
+                            <h6 style="color:#007bff ;text-align: center"><p style="display: inline-block;border-radius: 60px;box-shadow: 0px 0px 2px #888;padding: 0.4em 0.4em ;color:#007bff ;border-color:#007bff ">5</p>  &nbsp; Choose Quantity</h6>
+                            <div>
+                                <p style="margin: 0px;text-align: left" class="ng-binding"><span id="QtyBundleName"></span></p>
+                                <input type="number" style="width: 100%;" ng-model="custOrder.quantity" ng-change="calculatePieces()" min="1"
+                                       class="ng-valid ng-dirty ng-valid-number ng-touched" tabindex="0" aria-invalid="false" id="CalcualtePieces">
+                            </div>
+                            <br><p class="ng-binding ng-scope" style="display:none" id="pieces"></p>
+                            <br><p class="ng-binding ng-scope" style="display:none" id="bundleheight"></p>
+                            <br><p class="ng-binding ng-scope" style="display:none" id="Weightid"></p>
+                            <p class="ng-binding ng-scope" style="display:none" id="volumecal"></p>
+                            <!-- ngIf: custOrder.pieces --><p class="ng-binding ng-scope" style="" id="piecescal"></p><!-- end ngIf: custOrder.pieces -->
+                            <!-- ngIf: custOrder.volume --><p class="ng-binding ng-scope" id="Volume"></p><!-- end ngIf: custOrder.volume -->
+                            <br>
+                            <!-- ngIf: short_code_selected.Primary != 'KG' && short_code_selected.Primary != 'BLOCKS' -->
+                            <span id="LDPEdiv" style="display:none">
+                                <p style="margin: 0px;text-align: left" ng-if="short_code_selected.Primary != &#39;KG&#39; &amp;&amp; short_code_selected.Primary != &#39;BLOCKS&#39;" class="ng-scope">LDPE</p><!-- end ngIf: short_code_selected.Primary != 'KG' && short_code_selected.Primary != 'BLOCKS' -->
+                                <!-- ngIf: short_code_selected.Primary != 'KG' && short_code_selected.Primary != 'BLOCKS' -->
+
+                                <br ng-if="short_code_selected.Primary != &#39;KG&#39; &amp;&amp; short_code_selected.Primary != &#39;BLOCKS&#39;" class="ng-scope"><!-- end ngIf: short_code_selected.Primary != 'KG' && short_code_selected.Primary != 'BLOCKS' -->
+                                <!-- ngIf: short_code_selected.Primary != 'KG' && short_code_selected.Primary != 'BLOCKS' -->
+                                <div class="row ng-scope" style="font-size: 12px;margin: 0px" ng-if="short_code_selected.Primary != &#39;KG&#39; &amp;&amp; short_code_selected.Primary != &#39;BLOCKS&#39;">
+                                    <div class="col" style="padding: 0px">
+                                        <input class="form-check-input ng-pristine ng-untouched ng-valid" type="radio" checked="checked" name="ldpe" ng-model="custOrder.ldpe" value="YES" aria-checked="true" tabindex="0" aria-invalid="false">
+                                        <label class="form-check-label">
+                                            YES
+                                        </label>
+                                    </div>
+                                    <div class="col" style="padding: 0px">
+                                        <input class="form-check-input ng-pristine ng-untouched ng-valid" type="radio" name="ldpe" ng-model="custOrder.ldpe" value="NO" aria-checked="false" tabindex="-1" aria-invalid="false">
+                                        <label class="form-check-label">
+                                            NO
+                                        </label>
+                                    </div>
+                                </div>
+                            </span><!-- end ngIf: short_code_selected.Primary != 'KG' && short_code_selected.Primary != 'BLOCKS' -->
+                            <br> <input type="hidden" id="hdnprimary" />
+                            <div style="text-align: center" ng-click="addToCart()" onchange="calculatePieces()" role="button" tabindex="0">
+                                <button class="btn btn-primary" type="submit" aria-disabled="false" id="btnOrderSave">Add to cart</button>
+                            </div>
+                        </div>
+                        <br>
+                    </div>
+                </div>
+            </div><!-- end ngIf: matressDensity.length -->
+            <div class="col-2 ng-scope" style="padding: 5px;display:none" id="Densitydiv">
+                <div class="card" style="text-align: center ">
+                    <div class="card-body" style="padding: 15px">
+                    </div>
+                </div>
+            </div>
+            @*@Html.Partial("ItemsPartial.cshtml")*@ 
+            <input id="HdnAddEditOrderHistory" name="StudentIdh" type="hidden" />
+           
+            <div class="col-4" style="padding: 5px">
+                <div class="card">
+                    <div class="card-body" style="padding: 15px">
+                        <h6 style="color:#007bff;text-align: center"> Order -  <span id="AddEditOrderHistory">  </span> </h6>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p style="color: grey;margin: 0px">Customer Name</p>
+                                <p class="ng-binding" id="CustomeraName"></p>
+                                <p style="color: grey;margin:0px">Billing Address</p>
+                                <p class="ng-binding" id="BillingAdd">
+
+                                </p>
+                            </div>
+                            <div class="col-md-6">
+                                <p style="color: grey;margin: 0px">Customer Code</p>
+                                <p class="ng-binding" id="CustomerCode"></p>
+                                <p style="color: grey;margin:0px">Shipping To Code</p>
+                                <p class="ng-binding">
+                                    N/A
+                                </p>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>  @Html.Hidden("RedirectToOrderDetails", Url.Action("OrderDetails", "SalesOrder"))
+                    <!-- ngIf: newOrder.length --><div ng-if="newOrder.length" class="ng-scope" style="height:450px;">
+                        <h6 style="color:#007bff;text-align: center">  Cart Information</h6>
+                        <div class="text-center">
+                            <button class="btn btn-primary text-center" onclick="BtnPreview()"
+                                    type="submit"  tabindex="0" id="btnPreview">
+                                Preview
+
+                            </button>
+                        </div>
+
+                        <hr>
+                        <div class="table-responsive" ng-show="IsVisible" ng-init="GetItems();AdminProfileEnable();" style="height:400px;overflow-y:scroll;line-height:0px!important;">
+                            <table class="table table-hover" id="myTable" style="border-bottom:0px;color: grey">
+                                <thead>
+                                </thead>
+                                <tbody id="tblBykeLists">
+                                </tbody>
+                            </table>
+
+
+                        </div><!-- end ngIf: newOrder.length -->
+                        <br>
+                    </div>
+                </div>
+
+            </div>
+            <!-- end ngIf: orderViewTab.tab == 1 && customer.Dealercode -->
+            <div class="col-4" style="padding: 5px">
+                <div class="card">
+                    <div class="card-body" style="padding: 15px">
+                        <h6 style="color:#007bff;text-align: center"> Repeat Order</h6>
+                        <div class="row">
+                            @Html.Hidden("RedirectToOrderDetails", Url.Action("OrderItems", "SalesOrder"))
+                            <div class="table-responsive" ng-show="IsVisible" style="height:200px;overflow-y:scroll" ng-init="GetAllData1()">
+                                <table class="table" id="OrdrHistoryTbfl">
+                                    <thead>
+                                        <tr>
+                                            <th>ORDER ID</th>
+                                            <th>ORDER DATE</th>
+                                            <th>REPEAT ORDER</th>
+
+
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tblBykeListsv">
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                    <!-- ngIf: newOrder.length -->
+                </div>
+
+            </div>
+            <!-- ngIf: (orderViewTab.tab == 1 || user.role == 'dealer') && !customer.Dealercode -->
+            <!-- ngIf: orderViewTab.tab == 3 && newOrder.length -->
+            <!-- ngIf: orderViewTab.tab == 3 && !newOrder.length -->
+        </div>
+    </div>
+</div>
+
+
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<script>
+   // $(document).ready(function () {
+    function BtnPreview() {
+       //alert('ok');
+        var OrderIDForItem = localStorage.getItem("Orderid");// $("#OrderIDForItemUpdate").val();
+     
+       // localStorage["OrderHistoryId"] = "";
+       // localStorage["OrderHistoryId"] = id;
+
+
+        var url = $("#RedirectToOrderDetails").val();
+        location.href = url + "?id=" + OrderIDForItem;
+        }
+   // });
+    // $('#subject').editableSelect();
+</script>

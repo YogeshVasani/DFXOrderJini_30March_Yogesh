@@ -1,0 +1,1333 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0047)dashboard#/ui-orders -->
+<html lang="en">
+    <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+    <!-- Required meta tags -->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>B2BOMS Console</title>
+    <script type="application/javascript" src="../js/jquery.min.js"></script>
+    <script type="application/javascript" src="../js/jquery-ui.min.js" integrity="sha512-4DaiBX8rsgOoBSNLceQ/IixDF+uUDV0hJrQX/MJ9RwJZCDqbEp0EjIQodGxszPtTpwlenJznR2jkgDWqj4Hs+A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" src="../js/popper.min.js" integrity="sha512-hCP3piYGSBPqnXypdKxKPSOzBHF75oU8wQ81a6OiGXHFMeKs9/8ChbgYl7pUvwImXJb03N4bs1o1DzmbokeeFw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="../css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="../css/ionicons.min.css">
+    <link rel="stylesheet" href="../css/typicons.css">
+    <link rel="stylesheet" href="../css/flag-icon.min.css">
+    <link rel="stylesheet" href="../css/vendor.bundle.base.css">
+    <link rel="stylesheet" href="../css/vendor.bundle.addons.css">
+    <link type="text/css" rel="stylesheet" href="../css/toastr.min.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/bootstrap-datepicker.min.css">
+    <!-- <link rel="stylesheet" href="./assets/vendors/x-editable/bootstrap-editable.css"> -->
+    <link rel="stylesheet" href="../css/jquery.toast.min.css" integrity="sha512-wJgJNTBBkLit7ymC6vvzM1EcSWeM9mmOu+1USHaRBbHkm6W9EgM0HY27+UtUaprntaYQJF75rc8gjxllKs5OIQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <link rel="stylesheet" href="../css/angular-material.min.css" integrity="sha512-Ocqq4H4xeJhZvt0swXEXJHApNx/VGw0YCTnqEe9YjTpcOGoTYEqsg1vb3BDZoUuJ9kE7QAUju6fR1unc6ynwWw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <script type="text/javascript" src="../js/angular-material.min.js" integrity="sha512-Zv2mf5vl3y7MBL/j1BhBaGUKYWfvHWrtkc277bdWA3/0ynAihPm6eyECyk8XZnEkIytk2ZpqljuI5Br0nAxN0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="../css/collapsible.min.css">
+    <!-- endinject -->
+    <!-- plugin css for this page -->
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/select2.min.css">
+    <link rel="stylesheet" href="../css/select2-bootstrap.min.css">
+    <link rel="stylesheet" href="../css/all.css">
+    <link rel="stylesheet" href="../css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../css/owl.theme.default.min.css">
+    <!-- endinject -->
+    <!-- Layout styles -->
+    <link rel="stylesheet" href="../css/style(1).css">
+    <link rel="stylesheet" href="../css/main.css">
+    <!-- End Layout styles -->
+    <link rel="shortcut icon" href="assets/images/favicon.png">
+
+    <!-- Angular Material Dependencies -->
+    <script type="text/javascript" src="../js/angular.min.js" integrity="sha512-y2SOwfsp2w/M2K9LzWRyFd/V62w3z9frSvAB96p7AJlyNIF7O40A6ezctVEgyI2gap6ikSoFpSrtC8Gztmjp4A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" src="../js/angular-route.min.js" integrity="sha512-+brZuQwO0/zS28FEqUovKk/b+5Z1XfcStkteJgv8+NpFhZPEqJUBmlSTrwaPP65W60n+M9mbr1qqJNxvR862JA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script type="text/javascript" src="../js/bootbox.min.js" integrity="sha512-8vfyGnaOX2EeMypNMptU+MwwK206Jk1I/tMQV4NkhOz+W8glENoMhGyU6n/6VgQUhQcJH8NqQgHhMtZjJJBv3A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script type="text/javascript" src="../js/svg-assets-cache.js"></script>
+    <script type="text/javascript" src="../js/collapsible.min.js"></script>
+    <script type="text/javascript" src="../js/collapsibleDirective.min.js"></script>
+    <script type="text/javascript" src="../js/checkout.js"></script>
+    <script type="text/javascript" src="../js/OneSignalSDK.js" async=""></script>
+
+    <script type="text/javascript" src="../js/toastr.min.js"></script>
+    <script type="text/javascript" src="../js/moment.min.js"></script>
+    <script type="text/javascript" src="../js/jsBarcode.all.min.js"></script>
+    <script type="text/javascript" src="../js/qrcode.min.js"></script>
+    <script type="text/javascript" src="../js/markerclusterer.js"></script>
+
+    <script type="text/javascript" src="../js/Chart.min.js"></script>
+
+    <script type="text/javascript" src="../js/crypto-js.min.js" integrity="sha512-Zl1k/bs5R0zzwAw+kxzMh4HjpC2Y2fy8Qu8xoUUA4mXTYtgq6oWtLUUMSRiaJZ/hH0hwE7locgWLozvskZrnvw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!--Alert Dependencies -->
+    <script type="text/javascript" src="../js/sweetalert.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.avgrund.min.js"></script>
+    <link rel="stylesheet" href="../js/bootstrap-datepicker.min.css">
+    
+
+    <!-- <script type="text/javascript" src="./assets/vendors/tempusdominus-bootstrap-4/tempusdominus-bootstrap-4.js"></script> -->
+    <script type="text/javascript" src="../js/bootstrap-datepicker.min.js"></script>
+    
+
+    <!-- Planned to be removed next releases -->
+    <!-- <script type="text/javascript" src=""></script> -->
+
+    <link rel="stylesheet" href="../css/bootstrap-select.min.css" integrity="sha512-vHWRw+H28F7d7lODIyQeh/ny90XO/2oQwbsE+r4th4QeLcViey0PCQ2lpaRPQeDUH3pamu1mbq4dmJ/DasBxcg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <script type="text/javascript" src="../js/firebase.js" integrity="sha512-7TZPLEBNG/D2J8lm8VGHgynowGUxAXbJP8XaoIfDqOmEz0RlK7iXmk+6pd1vgfKuPttOg6JQMiteertk+NgIhA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- <script type="text/javascript" src="" integrity="sha512-Kzz+evOEo4bLmbirWJq2LYPWLDTT0m6BdUwB5hocBz6iB4oH3O3j+a5QGZDbYhgqbpXPGnJPuK8L/U2ZUp+krg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+    <script type="text/javascript" src="../js/roundProgress.min.js" integrity="sha512-HEatH9bH+vUg5P5G05ZOeNQMuh9Pe55r2kjXTSCsKtIAn3g1RGn3AiKy9GZL6q1/f2XtFenEr70XjXSqfJZ33w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <link rel="stylesheet" href="../css/ng-tags-input.min.css" integrity="sha512-v0p0Y9E5kZtkybEBqZ0X4wvUB2y9Mynyb0DWrlzui8bftuqzWgNslV4eHB91nRcGtPJ1gwqYqmy/xKM5swSynA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <script type="text/javascript" src="../js/ng-tags-input.min.js" integrity="sha512-pOR09ff/vusKS0jvxPr+LvHlpoKhY6TFS8MZS755ZXkosj70iDJ032ivJA0G+ZCe7dheEeBcHQL3SUY4cejiwg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- To download html code as .pdf-->
+    <script type="text/javascript" src="../js/jspdf.min.js" integrity="sha512-1g3IT1FdbHZKcBVZzlk4a4m5zLRuBjMFMxub1FeIRvR+rhfqHFld9VFXXBYe66ldBWf+syHHxoZEbZyunH6Idg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" src="../js/ng-infinite-scroll.min.js"></script>
+    <script type="text/javascript" src="../js/angular-material.min.js(1).download" integrity="sha512-aN3I5b9xhsCLg0rOosQYJ/MmXoEaEHb+ifKFZcPAMCacwZItC4xFtc6G3xCVgf7dBf6vLKUUcl8tGGjH7ct1Bg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" src="../js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="../js/angular-filter.min.js"></script>
+    <script type="text/javascript" src="../js/ng-google-chart.min.js" integrity="sha512-WQDcARDKWRgM61NsUNTW8iQeY5A1DJEXsYFo0438rkF9i0xzHxBn3RCF7Jmm90PEQUo90sc2lhBgy74hsVru4g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" src="../js/loader.js"></script>
+    <script type="text/javascript" src="../js/ui-bootstrap-tpls.min.js" integrity="sha512-f3+RAt8dvrEavz118YNmA863EcI+k/m0h6arWiQ9nUikOQef3gBXWSUdm2RXiX48lLetlBSEimLPCDZTijncsw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" src="../js/jquery.toast.min.js" integrity="sha512-zlWWyZq71UMApAjih4WkaRpikgY9Bz1oXIW5G0fED4vk14JjGlQ1UmkGM392jEULP8jbNMiwLWdM8Z87Hu88Fw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script type="text/javascript" src="../js/angular-animate.min.js" integrity="sha512-xxVsTGQ8RdSdw3l4Iujtf9TfxEMHAWKMitA5D+Bctp4Q4/ImdllAp8K+YMORot8peCngDQiVD+KfTE28vX0xxA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" src="../js/angular-aria.min.js" integrity="sha512-iap8IARx29GAlrEu6bMFpNZinVAVCqcnerowSvc8xw6kF670FbN6jcLiVFDhXA/ZzHJpOHXz0A7bXCpNu1eEIA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" src="../js/angular-messages.min.js" integrity="sha512-/z1+JkdCvKn+yQPiA6g78VgBKMds6Vezpo5iwpVuAoIvs+kmkn0Ca3loxCopq4uv8uoBLi03S73JUSlplzo1sA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Services & Filters -->
+    <script type="text/javascript" src="../js/Services.js"></script>
+    <script type="text/javascript" src="../js/Filters.js"></script>
+
+    <!-- Main Controllers -->
+    <script type="text/javascript" src="../js/Controller.js"></script>
+@*    <script type="text/javascript" src="../js/SideMenuCtrl.js"></script>*@
+    
+    <!-- Dashboard Controllers -->
+    <script type="text/javascript" src="../js/CustomerDashboardCtrl.js"></script>
+
+    <!-- Reports Controllers -->
+    <script type="text/javascript" src="../js/ReportsCtrl.js"></script>
+    <script type="text/javascript" src="../js/TopSoldReportCtrl.js"></script>
+    <script type="text/javascript" src="../js/TopCustomersReportCtrl.js"></script>
+    <script type="text/javascript" src="../js/SummaryReportCtrl.js"></script>
+    <script type="text/javascript" src="../js/TopUsersReportCtrl.js"></script>
+    <script type="text/javascript" src="../js/PaymentsReportCtrl.js"></script>
+    <script type="text/javascript" src="../js/CheckinsReportCtrl.js"></script>
+    <script type="text/javascript" src="../js/CheckinsDistanceReportCtrl.js"></script>
+    <script type="text/javascript" src="../js/ExpenseReportCtrl.js"></script>
+    <script type="text/javascript" src="../js/MeetingsReportCtrl.js"></script>
+    <script type="text/javascript" src="../js/BilledReportCtrl.js"></script>
+    <script type="text/javascript" src="../js/EmployeeReportCtrl.js"></script>
+    <script type="text/javascript" src="../js/OverallReportCtrl.js"></script>
+    <script type="text/javascript" src="../js/AttendanceReportCtrl.js"></script>
+    <script type="text/javascript" src="../js/DistributionReportCtrl.js"></script>
+    <script type="text/javascript" src="../js/RiderReconciliationReportCtrl.js"></script>
+
+    <!-- Orders Controllers -->
+    <script type="text/javascript" src="../js/OrdersCtrl.js"></script>
+    <script type="text/javascript" src="../js/OrderDetailsCtrl.js"></script>
+    <script type="text/javascript" src="../js/PosCtrl.js"></script>
+    <script type="text/javascript" src="../js/NewOrderCtrl.js"></script>
+    <script type="text/javascript" src="../js/DuroNewOrdersCtrl.js"></script>
+    <script type="text/javascript" src="../js/RegalRexNewOrdersCtrl.js"></script>
+    <script type="text/javascript" src="../js/OrderRoutePlanCtrl.js"></script>
+    <script type="text/javascript" src="../js/CreateOrderCtrl.js"></script>
+
+    <!-- Inventory & Stocks Controllers -->
+    <script type="text/javascript" src="../js/StocksCtrl.js"></script>
+    <script type="text/javascript" src="../js/InventoryCtrl.js"></script>
+
+    <!-- Beat Plan Controllers -->
+    <script type="text/javascript" src="../js/BeatPlan.js"></script>
+    <script type="text/javascript" src="../js/AddBeat.js"></script>
+    <script type="text/javascript" src="../js/AssignSalesPer.js"></script>
+
+    <!-- Settings Controllers -->
+    <script type="text/javascript" src="../js/OldSettingsCtrl.js"></script>
+    <script type="text/javascript" src="../js/SettingsCtrl.js"></script>
+    <script type="text/javascript" src="../js/CompanySettingsCtrl.js"></script>
+    <script type="text/javascript" src="../js/DataSettingsCtrl.js"></script>
+    <script type="text/javascript" src="../js/ShopifyCtrl.js"></script>
+    <script type="text/javascript" src="../js/QuickBooksCtrl.js"></script>
+    <script type="text/javascript" src="../js/FTPCtrl.js"></script>
+    <script type="text/javascript" src="../js/CloudinaryCtrl.js"></script>
+    <script type="text/javascript" src="../js/EInvoiceCtrl.js"></script>
+    <script type="text/javascript" src="../js/EcommCtrl.js"></script>
+    <script type="text/javascript" src="../js/ManageCloudinaryCtrl.js"></script>
+
+    <!-- Settings Admin Controllers -->
+    <script type="text/javascript" src="../js/AdminLoginCtrl.js"></script>
+    <script type="text/javascript" src="../js/CatalogAdminCtrl.js"></script>
+    <script type="text/javascript" src="../js/CustomersAdminCtrl.js"></script>
+    <script type="text/javascript" src="../js/ModuleAdminCtrl.js"></script>
+    <script type="text/javascript" src="../js/NavCtrl.js"></script>
+    <script type="text/javascript" src="../js/NotificationsAdminCtrl.js"></script>
+    <script type="text/javascript" src="../js/PaymentsAdminCtrl.js"></script>
+    <script type="text/javascript" src="../js/TaxAdminCtrl.js"></script>
+    <script type="text/javascript" src="../js/BillingAdminCtrl.js"></script>
+
+    <!-- Archieve Controllers -->
+    <script type="text/javascript" src="../js/ArchiveCtrl.js"></script>
+    <script type="text/javascript" src="../js/ArchiveDetailCtrl.js"></script>
+
+    <!-- Catalog Controllers -->
+    <script type="text/javascript" src="../js/CatalogCtrl.js"></script>
+    <script type="text/javascript" src="../js/CatalogDetailsCtrl.js"></script>
+    <script type="text/javascript" src="../js/CatalogDetailCtrl.js"></script>
+    <script type="text/javascript" src="../js/NewCatalogCtrl.js"></script>
+    <script type="text/javascript" src="../js/EditCatalogCtrl.js"></script>
+
+    <!-- Customer Controllers -->
+    <script type="text/javascript" src="../js/CustomersCtrl.js"></script>
+    <script type="text/javascript" src="../js/NewCustomerCtrl.js"></script>
+    <script type="text/javascript" src="../js/CustomerDetailCtrl.js"></script>
+
+    <!-- Users Controllers -->
+    <script type="text/javascript" src="../js/UsersCtrl.js"></script>
+    <script type="text/javascript" src="../js/NewUserCtrl.js"></script>
+    <script type="text/javascript" src="../js/EditUserCtrl.js"></script>
+    <script type="text/javascript" src="../js/InviteUsersCtrl.js"></script>
+    <script type="text/javascript" src="../js/UserDetailsCtrl.js"></script>
+
+    <!-- Serive Complaints Controllers -->
+    <script type="text/javascript" src="../js/NewComplaintCtrl.js"></script>
+    <script type="text/javascript" src="../js/ServiceComplaintsCtrl.js"></script>
+    <script type="text/javascript" src="../js/TicketDetailsCtrl.js"></script>
+
+    <!-- Invoice Controllers -->
+    <script type="text/javascript" src="../js/NewInvoiceCtrl.js"></script>
+    <script type="text/javascript" src="../js/InvoiceDetailsCtrl.js"></script>
+    <script type="text/javascript" src="../js/InvoicesCtrl.js"></script>
+
+    <!-- Enquiry Controllers -->
+    <script type="text/javascript" src="../js/EnquiryCtrl.js"></script>
+    <script type="text/javascript" src="../js/NewEnquiryCtrl.js"></script>
+    <script type="text/javascript" src="../js/EnquiryDetailsCtrl.js"></script>
+
+    <!-- Inventory Controllers -->
+    <script type="text/javascript" src="../js/InventoryCtrl.js"></script>
+    <script type="text/javascript" src="../js/ReceiveInventoryCtrl.js"></script>
+    <script type="text/javascript" src="../js/InventoryTransferCtrl.js"></script>
+    <script type="text/javascript" src="../js/TransactionHistoryCtrl.js"></script>
+
+    <!-- Other Controllers -->
+    <script type="text/javascript" src="../js/ProfileDetailsCtrl.js"></script>
+    <script type="text/javascript" src="../js/TasksCtrl.js"></script>
+    <script type="text/javascript" src="../js/MapsCtrl.js"></script>
+    <script type="text/javascript" src="../js/MessagesCtrl.js"></script>
+    
+    <script type="text/javascript" src="../js/LeaveCtrl.js"></script>
+
+    <!-- Atmosphere Controllers -->
+    <script type="text/javascript" src="../js/NewRequestCtrl.js"></script>
+    <script type="text/javascript" src="../js/CheckStatusCtrl.js"></script>
+    <script type="text/javascript" src="../js/ApprovalBucketCtrl.js"></script>
+    <script type="text/javascript" src="../js/StoreDiscountCtrl.js"></script>
+    <script type="text/javascript" src="../js/CustomerAddressCtrl.js"></script>
+    <script type="text/javascript" src="../js/CustomerAddressDetailCtrl.js"></script>
+    <script type="text/javascript" src="../js/AtmosphereGoalsCtrl.js"></script>
+    <script type="text/javascript" src="../js/AtmosphereDashboardCtrl.js"></script>
+    <script type="text/javascript" src="../js/AtmosphereReportsCtrl.js"></script>
+
+    <!-- Router -->
+    <script type="text/javascript" src="../js/Router.js"></script>
+<style>
+    #main {
+        display: none;
+    }
+</style><script>
+    var myVar;
+    function myFunction() {
+        myVar = setTimeout(showPage, 750);
+    }
+
+    function showPage() {
+        document.getElementById("loader").style.display = "none";
+        document.getElementById("main").style.display = "block";
+    }
+</script><script src="../js/OneSignalPageSDKES6.js" async=""></script>
+<link rel="stylesheet" href="../css/OneSignalSDKStyles.css"><style type="text/css">/* Chart.js */
+</head>
+
+<body class="sidebar-fixed ng-scope" ng-app="ebs" onload="myFunction();">
+    <div id="loader" style="display: none;">
+        <div class="square-box-loader">
+            <div class="square-box-loader-container">
+                <div class="square-box-loader-corner-top"></div>
+                <div class="square-box-loader-corner-bottom"></div>
+            </div>
+            <div class="square-box-loader-square"></div>
+        </div>
+        <!--<h1 class="text-primary text-center square-box-loader-text">Initializing ...</h1>-->
+    </div>  
+    <div id="main" class="container-scroller ng-scope" ng-controller="SideMenuCtrl" style="display: block;">
+        <!-- partial:partials/_navbar.html -->
+        <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+            <div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center">
+                <a class="navbar-brand brand-logo" href="dashboard#/overview">
+                    <img ng-src="http://res.cloudinary.com/B2BOMS/image/upload/v1633685064/logo/dd278ab3155f0ff2576fc19a90449c64.png" alt="logo" src="../js/dd278ab3155f0ff2576fc19a90449c64.png"> </a>
+                <a class="navbar-brand brand-logo-mini" href="dashboard#/overview">
+                    <img src="../js/favicon1.svg" alt="logo"> </a>
+            </div>
+            <div class="navbar-menu-wrapper d-flex align-items-center">
+                <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+                    <span class="mdi mdi-menu"></span>
+                </button>
+                <ul class="navbar-nav">
+                    <li class="nav-item font-weight-semibold d-none d-lg-block">Help : <a ng-href="mailto:support@B2BOMS.com" class="ng-binding" href="mailto:support@B2BOMS.com">support@B2BOMS.com</a></li>
+                    <li class="nav-item dropdown language-dropdown">
+                        <a class="nav-link dropdown-toggle px-2 d-flex align-items-center" id="LanguageDropdown" data-target="#" data-toggle="dropdown" aria-expanded="false">
+                            <div class="d-inline-flex mr-0 mr-md-3">
+                                <div class="flag-icon-holder">
+                                    <i class="flag-icon flag-icon-us"></i>
+                                </div>
+                            </div>
+                            <span class="profile-text font-weight-medium d-none d-md-block">English</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-left navbar-dropdown py-2" aria-labelledby="LanguageDropdown">
+                            <a class="dropdown-item">
+                                <div class="flag-icon-holder">
+                                    <i class="flag-icon flag-icon-us"></i>
+                                </div>
+                                English
+                            </a>
+                            <a class="dropdown-item">
+                                <div class="flag-icon-holder">
+                                    <i class="flag-icon flag-icon-th"></i>
+                                </div>
+                                Thailand
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+                <!--<form class="ml-auto search-form d-none d-md-block" action="#">
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search Here">
+                    </div>
+                </form>-->
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link count-indicator" id="messageDropdown" data-target="#" data-toggle="dropdown" aria-expanded="false">
+                            <i class="mdi mdi-bell-outline"></i>
+                            <span class="count ng-binding">0</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list pb-0" aria-labelledby="messageDropdown">
+                            <a class="dropdown-item py-3">
+                                <p class="mb-0 font-weight-medium float-left ng-binding">You have 0 unread notifications </p>
+                                <!-- ngIf: notifications.length -->
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <!-- ngRepeat: notification in notifications -->
+                            <!-- ngIf: !notifications.length --><h6 class="text-center p-3 ng-scope" ng-if="!notifications.length">You are all caught up!</h6><!-- end ngIf: !notifications.length -->
+                        </div>
+                    </li>
+                    <!--<li class="nav-item dropdown">
+                        <a class="nav-link count-indicator" id="notificationDropdown" data-toggle="dropdown">
+                            <i class="mdi mdi-email-outline"></i>
+                            <span class="count bg-success">3</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list pb-0"
+                             aria-labelledby="notificationDropdown">
+                            <a class="dropdown-item py-3 border-bottom">
+                                <p class="mb-0 font-weight-medium float-left">You have 4 new notifications </p>
+                                <span class="badge badge-pill badge-primary float-right">View all</span>
+                            </a>
+                            <a class="dropdown-item preview-item py-3">
+                                <div class="preview-thumbnail">
+                                    <i class="mdi mdi-alert m-auto text-primary"></i>
+                                </div>
+                                <div class="preview-item-content">
+                                    <h6 class="preview-subject font-weight-normal text-dark mb-1">Application Error</h6>
+                                    <p class="font-weight-light small-text mb-0"> Just now </p>
+                                </div>
+                            </a>
+                            <a class="dropdown-item preview-item py-3">
+                                <div class="preview-thumbnail">
+                                    <i class="mdi mdi-settings m-auto text-primary"></i>
+                                </div>
+                                <div class="preview-item-content">
+                                    <h6 class="preview-subject font-weight-normal text-dark mb-1">Settings</h6>
+                                    <p class="font-weight-light small-text mb-0"> Private message </p>
+                                </div>
+                            </a>
+                            <a class="dropdown-item preview-item py-3">
+                                <div class="preview-thumbnail">
+                                    <i class="mdi mdi-airballoon m-auto text-primary"></i>
+                                </div>
+                                <div class="preview-item-content">
+                                    <h6 class="preview-subject font-weight-normal text-dark mb-1">New user registration</h6>
+                                    <p class="font-weight-light small-text mb-0"> 2 days ago </p>
+                                </div>
+                            </a>
+                        </div>
+                    </li>-->
+                    <li class="nav-item dropdown d-none d-xl-inline-block user-dropdown">
+                        <a class="nav-link dropdown-toggle" id="UserDropdown" data-toggle="dropdown" aria-expanded="false">
+                            <img class="img-xs rounded-circle" ng-src="../assets/images/faces/face9.png" alt="Profile image" src="../js/face9.png">
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
+                            <div class="dropdown-header text-center">
+                                <img class="img-md rounded-circle" ng-src="../assets/images/faces/face9.png" alt="Profile image" src="../js/face9.png">
+                                <p class="mb-1 mt-3 font-weight-semibold ng-binding"></p>
+                                <p class="font-weight-light text-muted ng-binding"></p>
+                                <p class="font-weight-light text-muted ng-binding">dd278ab3155f0ff2576fc19a90449c64</p>
+                                <p class="font-weight-light text-muted mb-0 ng-binding">DRFX</p>
+                            </div>
+                            <!--<a class="dropdown-item">My Profile <span class="badge badge-pill badge-danger">1</span><i
+                                    class="dropdown-item-icon ti-dashboard"></i></a>-->
+                            <a class="dropdown-item" href="dashboard#/messages">Messages<i class="dropdown-item-icon ti-comment-alt"></i></a>
+                            <!--<a class="dropdown-item">Activity<i class="dropdown-item-icon ti-location-arrow"></i></a>-->
+                            <a class="dropdown-item" id="faq_dropdown">FAQ<i class="dropdown-item-icon ti-help-alt"></i></a>
+                            <a class="dropdown-item" href="switch_account">Switch Account<i class="dropdown-item-icon ti-power-off"></i></a>
+                            <a class="dropdown-item" href="logout">Sign Out <i class="dropdown-item-icon ti-power-off"></i></a>
+                        </div>
+                    </li>
+                </ul>
+                <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+                    <span class="mdi mdi-menu"></span>
+                </button>
+
+            </div>
+        </nav>
+        <!-- partial -->
+        <div class="container-fluid page-body-wrapper">
+            <!-- partial:partials/_sidebar.html -->
+            <div class="right-sidebar-toggler-wrapper" ng-hide="instance_details.coID==&#39;ATMS&#39;" aria-hidden="false">
+                <div class="sidebar-toggler" title="Home"><a href="dashboard#/overview"><i class="mdi mdi-home"></i></a></div>
+                <div class="sidebar-toggler" title="Settings" id="layout-toggler"><a href="dashboard#/settings"><i class="mdi mdi-settings"></i></a></div>
+                <div class="sidebar-toggler" title="FAQ" id="chat-toggler"><i class="mdi mdi-chat-processing"></i></div>
+                <div class="sidebar-toggler" title="Order History"><a href="dashboard#/ui-orders"><i class="mdi mdi-file-document-outline"></i></a></div>
+                <div class="sidebar-toggler"><i class="mdi mdi-cart"></i></div>
+            </div>
+
+            <div id="right-sidebar" class="settings-panel" style="overflow-y: scroll">
+                <i class="settings-close mdi mdi-close"></i>
+                <div class="d-flex align-items-center justify-content-between border-bottom">
+                    <p class="settings-heading font-weight-bold border-top-0 mb-3 pl-3 pt-0 border-bottom-0 pb-0">FAQ's &amp; What's New</p>
+                </div>
+                <ul class="chat-list">
+                    <li class="list active">
+                        <div class="card-body bg-green-gradient">
+                            <h4 class="card-title">B2BOMS Version - 2.0</h4>
+                            <p class="card-description">Welcome to the new refreshed B2BOMS Portal. </p>
+                        </div>
+                    </li>
+                    <li class="list active">
+                        <div class="card-body">
+                            <h4 class="card-title">Manufacturers &amp; Distributors</h4>
+                            <p class="card-description">Optimize Sales Efforts &amp; Collect Orders directly from B2B Customers.</p>
+                            <a href="https://www.B2BOMS.com/platform-for-b2b-selling" target="_blank">Learn More?</a>
+                        </div>
+                    </li>
+                    <li class="list active">
+                        <div class="card-body">
+                            <h4 class="card-title">Connect with QuickBooks?</h4>
+                            <p class="card-description">Digitize your Sales with B2BOMS and QuickBooks </p>
+                            <a href="https://www.B2BOMS.com/quickbooks" target="_blank">Learn More?</a>
+                        </div>
+                    </li>
+                    <li class="list active">
+                        <div class="card-body">
+                            <h4 class="card-title">Have any questions on the new B2BOMS Portal?</h4>
+                            <p class="card-description">Please write to us at <a href="mailto:support@B2BOMS.com">support@B2BOMS.com</a></p>
+                            <!--<a href="https://www.B2BOMS.com/quickbooks" target="_blank">Cont</a>-->
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <nav class="sidebar sidebar-offcanvas" id="sidebar">
+                <ul class="nav ps">
+                    <li class="nav-item nav-profile">
+                        <a href="dashboard#/profile" class="nav-link">
+                            <div class="profile-image">
+                                <img class="img-xs rounded-circle" ng-src="../assets/images/faces/face9.png" alt="profile image" src="../js/face9.png">
+                                <div class="dot-indicator bg-success"></div>
+                            </div>
+                            <div class="text-wrapper">
+                                <p class="profile-name ng-binding"></p>
+                                <p class="designation ng-binding">Admin</p>
+                            </div>
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item nav-category">Main Menu</li>
+
+                    <!-- Dashboard --->
+
+                    <li ng-show="nav[0].activated" class="nav-item" aria-hidden="false" style="">
+                        <a class="nav-link" href="dashboard#/overview">
+                            <i class="menu-icon typcn typcn-chart-pie"></i>
+                            <span class="menu-title ng-binding">Overview</span>
+                        </a>
+                    </li>
+                    <!-- <li ng-show = "nav[43].activated" class="nav-item">-->
+                    <!--    <a class="nav-link" href="#/storeDiscount">-->
+                    <!--        <i class="menu-icon typcn typcn-business-card"></i>-->
+                    <!--        <span class="menu-title">{{nav[43].tab || 'Store Discount'}}</span>-->
+                    <!--    </a>-->
+                    <!-- </li>-->
+                    <!-- Orders --->
+                    <li ng-show="nav[1].activated" class="nav-item" aria-hidden="false">
+                        <a class="nav-link" data-toggle="collapse" data-target="#ui-orders" aria-expanded="true" aria-controls="ui-orders">
+                            <i class="menu-icon typcn typcn-document-text"></i>
+                            <span class="menu-title ng-binding">Sales &amp; Orders</span>
+                            <i class="menu-arrow"></i>
+                        </a>
+                        <div class="collapse show" id="ui-orders" style="">
+                            <ul class="nav flex-column sub-menu">
+                                <li class="nav-item">
+                                    <a class="nav-link ng-binding" href="dashboard#ui-orders">Orders History</a>
+                                </li>
+                                <!-- ngIf: nav[22].activated -->
+                                <li class="nav-item ng-hide" ng-show="nav[1].create_order || (!nav[1].create_order &amp;&amp; nav[1].create_order !== false)" aria-hidden="true" style="">
+                                    <a class="nav-link ng-binding" href="dashboard#new-order/0">Create New Order</a>
+                                </li>
+                                <!-- ngIf: nav[25].activated -->
+                                <!-- ngIf: nav[24].activated --><li class="nav-item ng-scope" ng-if="nav[24].activated" style="">
+                                    <a class="nav-link ng-binding" href="dashboard#duro-custom-order/new">FOAM Order</a>
+                                </li><!-- end ngIf: nav[24].activated -->
+                                <!-- ngIf: nav[23].activated -->
+                            </ul>
+                        </div>
+                    </li>
+                    <!-- Dealers / Customers --->
+                    <li ng-show="nav[2].activated" class="nav-item" aria-hidden="false">
+                        <a class="nav-link" href="dashboard#/customers">
+                            <i class="menu-icon typcn typcn-business-card"></i>
+                            <span class="menu-title ng-binding">Customers</span>
+                        </a>
+                    </li>
+                    <!-- Catalog --->
+                    <li ng-show="nav[3].activated" class="nav-item" aria-hidden="false">
+                        <a class="nav-link" href="dashboard#/catalog">
+                            <i class="menu-icon typcn typcn-book"></i>
+                            <span class="menu-title ng-binding">Catalog</span>
+                        </a>
+                    </li>
+                    <li ng-show="nav[10].activated" class="nav-item nav-category ng-hide" aria-hidden="true">CRM</li>
+                    <!-- Service Complaints --->
+                    <li ng-show="nav[10].activated" class="nav-item ng-hide" aria-hidden="true">
+                        <a class="nav-link" data-toggle="collapse" data-target="#ui-service-complaints" aria-expanded="false" aria-controls="ui-service-complaints">
+                            <i class="menu-icon typcn typcn-ticket"></i>
+                            <span class="menu-title ng-binding">Service Complaints</span>
+                            <i class="menu-arrow"></i>
+                        </a>
+                        <div class="collapse" id="ui-service-complaints">
+                            <ul class="nav flex-column sub-menu">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="dashboard#/service/new/ticket">Create A New Ticket</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="dashboard#/service/complaints/open">Ticket History</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <!-- Enquiry --->
+                    <li ng-show="nav[18].activated" class="nav-item ng-hide" aria-hidden="true">
+                        <a class="nav-link" data-toggle="collapse" data-target="#ui-enquiry" aria-expanded="false" aria-controls="ui-enquiry">
+                            <i class="menu-icon typcn typcn-headphones"></i>
+                            <span class="menu-title ng-binding">Enquiry</span>
+                            <i class="menu-arrow"></i>
+                        </a>
+                        <div class="collapse" id="ui-enquiry">
+                            <ul class="nav flex-column sub-menu">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="dashboard#/enquiry/create">Log New Enquiry</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="dashboard#/enquiry/tracker">Enquiry Tracker</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li ng-show="nav[13].activated" class="nav-item nav-category ng-binding ng-hide" aria-hidden="true">Manage Inventory</li>
+                    <!-- Inventory --->
+                    <li ng-show="nav[13].activated" class="nav-item ng-hide" aria-hidden="true">
+                        <a class="nav-link" href="dashboard#/inventory">
+                            <i class="menu-icon typcn typcn-chart-bar"></i>
+                            <span class="menu-title ng-binding">Inventory</span>
+                        </a>
+                    </li>
+
+
+                    <!-- Beat plan/PJP--->
+                    <li ng-show="nav[11].activated" class="nav-item ng-hide" aria-hidden="true">
+                        <a class="nav-link" href="dashboard#/beat-plan">
+                            <i class="menu-icon typcn typcn-business-card"></i>
+                            <span class="menu-title ng-binding">Beat Plan / PJP</span>
+                        </a>
+                    </li>
+                    <!-- Asset Management Gate Pass--->
+                    <li ng-show="nav[39].activated" class="nav-item ng-hide" aria-hidden="true">
+                        <a class="nav-link" href="dashboard#/newRequest">
+                            <i class="menu-icon typcn typcn-business-card"></i>
+                            <span class="menu-title ng-binding">New Request</span>
+                        </a>
+                    </li>
+                    <li ng-show="nav[40].activated" class="nav-item ng-hide" aria-hidden="true">
+                        <a class="nav-link" href="dashboard#/checkStatus">
+                            <i class="menu-icon typcn typcn-business-card"></i>
+                            <span class="menu-title ng-binding">Check Status</span>
+                        </a>
+                    </li>
+                    <li ng-show="nav[41].activated" class="nav-item ng-hide" aria-hidden="true">
+                        <a class="nav-link" href="dashboard#/approvalBucket">
+                            <i class="menu-icon typcn typcn-business-card"></i>
+                            <span class="menu-title ng-binding">Approval Bucket</span>
+                        </a>
+                    </li>
+                    <li ng-show="nav[42].activated" class="nav-item ng-hide" aria-hidden="true">
+                        <a class="nav-link" href="dashboard#/customerAddresses">
+                            <i class="menu-icon typcn typcn-business-card"></i>
+                            <span class="menu-title ng-binding">Locations</span>
+                        </a>
+                    </li>
+                    <li ng-show="nav[26].activated" class="nav-item ng-hide" aria-hidden="true">
+                        <a class="nav-link" href="dashboard#/storeDiscount">
+                            <i class="menu-icon typcn typcn-business-card"></i>
+                            <span class="menu-title ng-binding">Locations</span>
+                        </a>
+                    </li>
+                    <li ng-show="nav[28].activated" class="nav-item ng-hide" aria-hidden="true">
+                        <a class="nav-link" href="dashboard#/atmsDashboard">
+                            <i class="menu-icon typcn typcn-business-card"></i>
+                            <span class="menu-title ng-binding">Dashboard</span>
+                        </a>
+                    </li>
+
+
+                    <li ng-show="nav[27].activated" class="nav-item ng-hide" aria-hidden="true">
+                        <a class="nav-link" href="dashboard#/goals">
+                            <i class="menu-icon typcn typcn-business-card"></i>
+                            <span class="menu-title ng-binding">Goals</span>
+                        </a>
+                    </li>
+
+
+                    <li ng-show="nav[29].activated" class="nav-item ng-hide" aria-hidden="true">
+                        <a class="nav-link" href="dashboard#/atmsReports">
+                            <i class="menu-icon typcn typcn-business-card"></i>
+                            <span class="menu-title ng-binding">Atmosphere Reports</span>
+                        </a>
+                    </li>
+
+
+
+                    <!--- Stock in Channel --->
+                    <li ng-show="nav[12].activated" class="nav-item ng-hide" aria-hidden="true">
+                        <a class="nav-link" href="dashboard#/stocks">
+                            <i class="menu-icon typcn typcn-flow-children"></i>
+                            <span class="menu-title ng-binding">Stock In Channel</span>
+                        </a>
+                    </li>
+
+                    <li ng-show="nav[21].activated" class="nav-item nav-category ng-binding" aria-hidden="false" style="">Invoices</li>
+                    <!--- Invoices --->
+                    <li ng-show="nav[21].activated" class="nav-item" aria-hidden="false">
+                        <a class="nav-link" data-toggle="collapse" data-target="#ui-invoices" aria-expanded="false" aria-controls="ui-invoices">
+                            <i class="menu-icon typcn typcn-credit-card"></i>
+                            <span class="menu-title ng-binding">Manage Invoices</span>
+                            <i class="menu-arrow"></i>
+                        </a>
+                        <div class="collapse" id="ui-invoices">
+                            <ul class="nav flex-column sub-menu">
+                                <li class="nav-item">
+                                    <a class="nav-link ng-binding" href="dashboard#/ui-invoices">Invoice History</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link ng-binding" href="dashboard#/ui-invoices" ng-click="addInvoiceTab(0);" tabindex="0">Create a New Invoice</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <!--<li class="nav-item nav-category">Purchase Order</li>
+                    <li class="nav-item">
+                        <a class="nav-link">
+                            <i class="menu-icon typcn typcn-user-outline"></i>
+                            <span class="menu-title">Suppliers</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"  ng-click="loaded(5)">
+                            <i class="menu-icon typcn typcn-user-outline"></i>
+                            <span class="menu-title">PO History</span>
+                        </a>
+                    </li>-->
+                    <!--<li class="nav-item nav-category">Services</li>
+                    <li class="nav-item">
+                        <a class="nav-link" ng-click="loaded(18)">
+                            <i class="menu-icon typcn typcn-user-outline"></i>
+                            <span class="menu-title">Enquiry</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" >
+                            <i class="menu-icon typcn typcn-user-outline"></i>
+                            <span class="menu-title">Service Complaints</span>
+                        </a>
+                    </li>-->
+                    <li ng-show="nav[20].activated || nav[7].activated || nav[17].activated" class="nav-item nav-category ng-hide" aria-hidden="true">Others</li>
+                    <!--- Tasks --->
+                    <li ng-show="nav[20].activated" class="nav-item ng-hide" aria-hidden="true">
+                        <a class="nav-link" href="dashboard#/tasks">
+                            <i class="menu-icon typcn typcn-th-list"></i>
+                            <span class="menu-title ng-binding">Tasks</span>
+                        </a>
+                    </li>
+                    <!--- SMS --->
+                    <li ng-show="nav[7].activated" class="nav-item ng-hide" aria-hidden="true">
+                        <a class="nav-link" href="dashboard#/messages">
+                            <i class="menu-icon typcn typcn-messages"></i>
+                            <span class="menu-title ng-binding">SMS</span>
+                        </a>
+                    </li>
+
+                    <!--- Maps --->
+                    <li ng-show="nav[17].activated" class="nav-item ng-hide" aria-hidden="true">
+                        <a class="nav-link" href="dashboard#/maps">
+                            <i class="menu-icon typcn typcn-map"></i>
+                            <span class="menu-title ng-binding">Maps</span>
+                        </a>
+                    </li>
+                    <!--- Leave --->
+                    <!--<li class="nav-item">
+                        <a class="nav-link" >
+                            <i class="menu-icon typcn typcn-user-outline"></i>
+                            <span class="menu-title">{{nav[17].tab || "Leave"}}</span>
+                        </a>
+                    </li>-->
+                    <!--- Beat Plan / PJP --->
+                    <!--<li class="nav-item">
+                        <a class="nav-link" >
+                            <i class="menu-icon typcn typcn-location"></i>
+                            <span class="menu-title">Beat Plan / PJP</span>
+                        </a>
+                    </li>-->
+                    <li ng-show="nav[8].activated" class="nav-item nav-category ng-binding" aria-hidden="false">Reports</li>
+                    <!--- Reports --->
+                    <!--<li ng-show="nav[8].activated" class="nav-item">
+                        <a class="nav-link" data-toggle="collapse" href="#reports" aria-expanded="false"
+                           aria-controls="reports">
+                            <i class="menu-icon typcn typcn-chart-line"></i>
+                            <span class="menu-title">{{nav[8].tab || "Reports"}}</span>
+                            <i class="menu-arrow"></i>
+                        </a>
+                        <div class="collapse" id="reports">
+                            <ul class="nav flex-column sub-menu">
+                                <li class="nav-item" ng-repeat="activeTabs in enabledReports" ng-if="activeTabs.enabled">
+                                    <a class="nav-link" href="#reports/{{activeTabs.reportTab}}" ng-click="changeReportView(activeTabs.reportTab, activeTabs.tabName)">{{activeTabs.tabName}}</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>-->
+                    <!--- Reports --->
+                    <li ng-show="nav[8].activated" class="nav-item" aria-hidden="false">
+                        <a class="nav-link" href="dashboard#/reports/0">
+                            <i class="menu-icon typcn typcn-chart-line"></i>
+                            <span class="menu-title ng-binding">Reports</span>
+                        </a>
+                    </li>
+                    <li ng-show="nav[14].activated || nav[4].activated || nav[5].activated" class="nav-item nav-category" aria-hidden="false" style="">Manage</li>
+                    <!--- Archive Orders --->
+                    <li ng-show="nav[14].activated" class="nav-item ng-hide" aria-hidden="true">
+                        <a class="nav-link" href="dashboard#/archive">
+                            <i class="menu-icon typcn typcn-archive"></i>
+                            <span class="menu-title ng-binding">Archive Orders</span>
+                        </a>
+                    </li>
+                    <!--- Users --->
+                    <li ng-show="nav[4].activated" class="nav-item" aria-hidden="false">
+                        <a class="nav-link" href="dashboard#/users">
+                            <i class="menu-icon typcn typcn-user-add"></i>
+                            <span class="menu-title ng-binding">Users</span>
+                        </a>
+                    </li>
+                    <!--- Settings --->
+                    <li ng-show="nav[5].activated" class="nav-item" aria-hidden="false">
+                        <a class="nav-link" href="dashboard#/settings">
+                            <i class="menu-icon typcn typcn-cog"></i>
+                            <span class="menu-title ng-binding">Settings</span>
+                        </a>
+                    </li>
+
+                    
+                <div class="ps__rail-x" style="left: 0px; bottom: 0px;"><div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__rail-y" style="top: 0px; right: 0px;"><div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div></div></ul>
+            </nav>
+            <!-- partial -->
+            <div class="main-panel">
+                <div class="content-wrapper">  @RenderBody()
+                    <!-- ngView:  --><div ng-view="" class="ng-scope" style=""><div class="wrapper ng-scope">
+    <div class="refresh" style="display: none;"></div>
+    <div class="row page-title-header">
+        <div class="col-12">
+            <div class="page-header">
+                <h4 class="page-title ng-binding">Orders History</h4>
+            </div>
+        </div>
+    </div>
+
+    <div ng-show="displayloader" aria-hidden="true" class="ng-hide">
+        <div class="loader-demo-box" style="border: none !important;">
+            <div class="dot-opacity-loader">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div ng-show="!displayloader" aria-hidden="false" class="">
+        <div class="row" style="margin-left:1px">
+            <!-- ngIf: !nav[24].activated -->
+        </div>
+        <div class="col-md-12">
+            <div class="page-header-toolbar mb-1">
+                <div class="filter-wrapper mb-1">
+                    <button type="button" class="btn btn-secondary mr-1" ng-click="refreshTransactions(1);" tabindex="0">
+                        <i class="fa fa-refresh" aria-hidden="true"></i></button>
+
+                    <!-- ngIf: coID != 'GLGR' --><a class="mr-1 ng-scope" ng-click="downloadCSV(1)" ng-if="coID != &#39;GLGR&#39;" tabindex="0">
+                        <button type="button" class="btn btn-secondary">
+                            <i class="mdi mdi-download"></i>Export</button>
+                    </a><!-- end ngIf: coID != 'GLGR' -->
+                    <a class="mr-1" ng-click="OrderFilterBy()" tabindex="0">
+                        <button type="button" class="btn btn-secondary">
+                            <i class="mdi mdi-filter"></i>Filter</button>
+                    </a>
+
+                    <!-- ngIf: coID == 'GLGR' -->
+
+                    <!-- ngIf: nav[24].activated --><a class="mr-1 ng-scope" ng-if="nav[24].activated" href="dash/csv/reports/custom/orders/2023-01-01%2000:00:00/2023-02-03%2023:59:59/all">
+                        <button type="button" class="btn btn-secondary">
+                            <i class="mdi mdi-download"></i>Export Custom Orders</button>
+                    </a><!-- end ngIf: nav[24].activated -->
+                </div>
+                <!-- ngIf: shopify.api_key -->
+                
+                <div class="btn-group toolbar-item ml-auto" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-secondary" ng-click="navPage(0)" tabindex="0"><i class="mdi mdi-chevron-left"></i></button>
+                    <button type="button" class="btn btn-secondary ng-binding">Showing 1 - 4 of 4</button>
+                    <button type="button" class="btn btn-secondary" ng-click="navPage(1)" tabindex="0"><i class="mdi mdi-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-6">
+            <div class="form-group">
+                <div class="input-group">
+                    <input type="text" class="form-control ng-pristine ng-untouched ng-valid" placeholder="Search" ng-model="orderSearch.filter" ng-change="clearFilterButton(orderSearch.filter)" aria-label="Username" aria-describedby="basic-addon1" tabindex="0" aria-invalid="false">
+                    <div class="input-group-prepend">
+                        <button class="btn btn-secondary " ng-click="orderSearchFilter()" type="button" aria-haspopup="true" tabindex="0"> Search</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ngIf: !nav[25].activated && AssignedFulfiller.length && user.role == 'Admin' -->
+        <!--<br>-->
+        <br ng-show="orderfilterFlag" aria-hidden="true" class="ng-hide" style="">
+        <div id="order-history-filter" class="row ng-hide" ng-show="orderfilterFlag" aria-hidden="true" style="">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header p-3">
+                        Filter By
+                            <div class="badge badge-danger margin-5 float-right" ng-click="orderfilterFlag = false" role="button" tabindex="0"> Close</div>
+                    </div>
+                    <div class="card-body" style="padding: 0.88rem 0.81rem;">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">From</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control datepicker ng-valid ng-isolate-scope ng-valid-date ng-touched ng-dirty" id="orderstartdate" ng-model="orderSearch.date_from" placeholder="dd/mm/yyyy" ng-init="calender[0] = false" ng-click="calender[0] = true;" uib-datepicker-popup="dd-MMM-yyyy" is-open="calender[0]" show-button-bar="false" todayhighlight="true" tabindex="0" aria-invalid="false" style=""><!-- ngIf: isOpen --> </div>
+                                  </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">To</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-isolate-scope ng-valid-date" id="orderenddate" ng-model="orderSearch.date_to" placeholder="dd/mm/yyyy" ng-init="calender[1] = false" ng-click="calender[1] = true;" uib-datepicker-popup="dd-MMM-yyyy" is-open="calender[1]" show-button-bar="false" todayhighlight="true" tabindex="0" aria-invalid="false"><!-- ngIf: isOpen --> </div>
+                                  </div>
+                            </div>
+                            
+                            <!-- ngIf: !nav[25].activated && user.role != 'Dealer' --><div class="col-md-4 ng-scope" ng-if="!nav[25].activated &amp;&amp; user.role != &#39;Dealer&#39;">
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Source</label>
+                                    <div class="col-sm-9">
+                                        <select class="form-control ng-pristine ng-untouched ng-valid" ng-model="orderSearch.source" ng-options="source for source in sourceType" tabindex="0" aria-invalid="false"><option value="" selected="selected" class="">Select Source</option><option value="string:Pos" label="Pos">Pos</option><option value="string:Order" label="Order">Order</option><option value="string:App" label="App">App</option><option value="string:Shopify" label="Shopify">Shopify</option><option value="string:Old orders" label="Old orders">Old orders</option><option value="string:Superjini" label="Superjini">Superjini</option></select>
+                                    </div>
+                                </div>
+                            </div><!-- end ngIf: !nav[25].activated && user.role != 'Dealer' -->
+                        </div>
+                        <!-- ngIf: !nav[25].activated && user.role != 'Dealer' --><div class="row ng-scope" ng-if="!nav[25].activated &amp;&amp; user.role != &#39;Dealer&#39;">
+                            <div class="col-md-4">
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label ng-binding">Customers</label>
+                                    <div class="col-sm-9">
+                                        <div class="input-group">
+                                            <input type="text" name="ordercontactOther" class="form-control ng-pristine ng-untouched ng-valid" placeholder="Search by Name/Phone" ng-change="dealerPhoneFilter()" ng-model="orderSearch.dealerPhone_Name" tabindex="0" aria-invalid="false">
+                                            <div class="input-group-prepend">
+                                                <button class="btn btn-secondary" ng-click="dealerPhoneFilter()" type="submit" aria-haspopup="true" tabindex="0"><span class="fa fa-search"></span></button>
+                                            </div>
+                                            <!-- ngIf: showCustomersDropdown -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label ng-binding">Salesperson</label>
+                                    <div class="col-sm-9">
+                                        <select class="form-control ng-pristine ng-untouched ng-valid" ng-model="orderSearch.seller" ng-options="seller as seller.sellername for seller in roleSalesrep" tabindex="0" aria-invalid="false"><option value="" selected="selected" class="">Select Salesperson</option><option value="object:4391" label="VISHNU SALIM S">VISHNU SALIM S</option><option value="object:4392" label="NARENDRA KUMAR">NARENDRA KUMAR</option><option value="object:4393" label="SRINIVAS">SRINIVAS</option><option value="object:4394" label="DEBADATTA MOHANTY">DEBADATTA MOHANTY</option><option value="object:4395" label="ABDHUL WAHEED">ABDHUL WAHEED</option><option value="object:4396" label="SURESH KUMAR">SURESH KUMAR</option><option value="object:4397" label="KARTIK CONTRACTOR">KARTIK CONTRACTOR</option><option value="object:4398" label="MANISH SHARMA">MANISH SHARMA</option><option value="object:4399" label="PAVAN KUMAR">PAVAN KUMAR</option><option value="object:4400" label="NIDHIN.M">NIDHIN.M</option><option value="object:4401" label="SANTHOSH P MALALI">SANTHOSH P MALALI</option><option value="object:4402" label="VINAYAK">VINAYAK</option><option value="object:4403" label="AMIT BHARGAVA">AMIT BHARGAVA</option><option value="object:4404" label="BIJESH SANKHALA">BIJESH SANKHALA</option><option value="object:4405" label="GAURAV SHIVHARE">GAURAV SHIVHARE</option><option value="object:4406" label="JAYAN">JAYAN</option><option value="object:4407" label="KRUNAL DANKAR">KRUNAL DANKAR</option><option value="object:4408" label="MITHUN DATTA">MITHUN DATTA</option><option value="object:4409" label="PRAFULLA CHIMOTE">PRAFULLA CHIMOTE</option><option value="object:4410" label="SATHYARAJ">SATHYARAJ</option><option value="object:4411" label="VIKASH KUMAR">VIKASH KUMAR</option><option value="object:4412" label="Martin Duroflex">Martin Duroflex</option><option value="object:4413" label="Pooja Duroflex">Pooja Duroflex</option><option value="object:4414" label="Sasikala">Sasikala</option><option value="object:4415" label="KANISHKA SINGH">KANISHKA SINGH</option><option value="object:4416" label="DHARMENDRA KUSHWAHA">DHARMENDRA KUSHWAHA</option><option value="object:4417" label="OM PRAKASH NAMDEV">OM PRAKASH NAMDEV</option><option value="object:4418" label="SURYA PRATAP THAKUR">SURYA PRATAP THAKUR</option><option value="object:4419" label="ADITYA GOYAL">ADITYA GOYAL</option><option value="object:4420" label="ASHISH RANPARIYA">ASHISH RANPARIYA</option><option value="object:4421" label="Amol L">Amol L</option><option value="object:4422" label="SAURABH">SAURABH</option><option value="object:4423" label="MANEESH SHARMA">MANEESH SHARMA</option><option value="object:4424" label="Ganesan A">Ganesan A</option><option value="object:4425" label="JITENDRA">JITENDRA</option><option value="object:4426" label="NARENDRA KUMAR">NARENDRA KUMAR</option><option value="object:4427" label="Vasan Gowda">Vasan Gowda</option><option value="object:4428" label="Jyoti">Jyoti</option></select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label ng-binding">Stockist</label>
+                                    <div class="col-sm-9">
+                                        <select class="form-control ng-pristine ng-untouched ng-valid" ng-model="orderSearch.filterStockist" ng-options="stockist as stockist.StockistName for  stockist in allStockistFromDealer" value="" tabindex="0" aria-invalid="false"><option value="" selected="selected" class="">Select Stockist</option></select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- end ngIf: !nav[25].activated && user.role != 'Dealer' -->
+                        <!-- ngIf: !nav[25].activated --><div class="row ng-scope" ng-if="!nav[25].activated ">
+                            <!-- ngIf: !nav[25].activated  && user.role != 'Dealer' --><div class="col-md-4 ng-scope" ng-if="!nav[25].activated  &amp;&amp; user.role != &#39;Dealer&#39;">
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Hub</label>
+                                    <div class="col-sm-9">
+                                        <select class="form-control ng-pristine ng-untouched ng-valid" ng-model="orderSearch.warehouse" ng-options="houselocation.name as houselocation.name for houselocation in warehouseLocation" tabindex="0" aria-invalid="false"><option value="" selected="selected" class="">Select Hub</option></select>
+                                    </div>
+                                </div>
+                            </div><!-- end ngIf: !nav[25].activated  && user.role != 'Dealer' -->
+                            <div class="col-md-4">
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Payment Status</label>
+                                    <div class="col-sm-9">
+                                        <select class="form-control ng-pristine ng-untouched ng-valid" ng-model="orderSearch.paymentStatus" ng-options="paymentStatus for paymentStatus in orderPaymentStatus" tabindex="0" aria-invalid="false"><option value="" selected="selected" class="">Select Payment Status</option><option value="string:unpaid" label="unpaid">unpaid</option><option value="string:partially paid" label="partially paid">partially paid</option><option value="string:paid" label="paid">paid</option></select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Fulfillment Status</label>
+                                    <div class="col-sm-9">
+                                        <select class="form-control ng-pristine ng-untouched ng-valid" ng-model="orderSearch.fulfillmentStatus" ng-options="fulfillmentStatus for fulfillmentStatus in fulfillmentstatus" tabindex="0" aria-invalid="false"><option value="" selected="selected" class="">Select Fulfillment Status</option><option value="string:unfulfilled" label="unfulfilled">unfulfilled</option><option value="string:partially fulfilled" label="partially fulfilled">partially fulfilled</option><option value="string:fulfilled" label="fulfilled">fulfilled</option></select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- end ngIf: !nav[25].activated -->
+                        <!-- ngIf: !nav[25].activated && percentageDiscountFlag -->
+
+                        <!-- ngIf: !nav[25].activated && percentageDiscountFlag -->
+
+                        <div class="row">
+                            <div class="col-md-12">
+                            <button type="button" class="btn btn-primary toolbar-item float-right" ng-click="orderSearchFilter()" tabindex="0">&nbsp;Apply Filter</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br ng-show="showOrderFilter" aria-hidden="false" class="" style="">
+
+
+        <div class="row" ng-show="showOrderFilter" style="padding-left: 1%;" aria-hidden="false">
+            <p><strong>Filters applied :</strong></p>
+                <!-- ngIf: orderSearch.date_from --><span ng-if="orderSearch.date_from" class="font-size-14 ng-binding ng-scope">&nbsp;From date : 01-Jan-2023&nbsp;</span><!-- end ngIf: orderSearch.date_from -->
+                <!-- ngIf: orderSearch.date_to --><span ng-if="orderSearch.date_to" class="font-size-14 ng-binding ng-scope">&nbsp;To date : 03-Feb-2023&nbsp;</span><!-- end ngIf: orderSearch.date_to -->
+                <!-- ngIf: filterStatusSelect -->
+                <!-- ngIf: orderSearch.filter -->
+                <!-- ngIf: orderSearch.source -->
+                <!-- ngIf: orderSearch.seller -->
+                <!-- ngIf: orderSearch.dealer -->
+                <!-- ngIf: orderSearch.filterStockist -->
+                <!-- ngIf: orderSearch.paymentStatus -->
+                <!-- ngIf: orderSearch.fulfillmentStatus -->
+                <!-- ngIf: orderSearch.accountId -->
+                <!-- ngIf: orderSearch.orderType -->
+                <!-- ngIf: orderSearch.salesOrg -->
+                <!-- ngIf: orderSearch.employeeResponsible -->
+            &nbsp;<span class="clearFilter" ng-click="refreshTransactions()" role="button" tabindex="0"><div class="badge badge-danger float-right"> Clear filter</div></span>
+        </div>
+            <hr>
+
+        <div class="row">
+            <div class="col grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <!-- ngIf: orders.length --><div class="table-responsive ng-scope" ng-if="orders.length" style="">
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th>ORDER ID</th>
+                                    <th>ORDER DATE</th>
+                                    <th>ORDER STATUS</th>
+                                    <th>DELIVERY DATE</th>
+                                    <th>FULFILLER NAME</th>
+                                    <th>CUST ID</th>
+                                    <!-- ngIf: nav[24].activated --><th ng-if="nav[24].activated" class="ng-scope">CUST REF NO</th><!-- end ngIf: nav[24].activated -->
+                                    <!-- ngIf: nav[24].activated --><th ng-if="nav[24].activated" class="ng-scope">SALES ORDER NUMBER</th><!-- end ngIf: nav[24].activated -->
+                                    <th>CUSTOMER</th>
+                                    <th>ORDER PLACED BY</th>
+                                    <th>SALESPERSON</th>
+                                    <!-- ngIf: nav[24].activated --><th ng-if="nav[24].activated" class="ng-scope">CREATED BY</th><!-- end ngIf: nav[24].activated -->
+                                    <th>ITEMS</th>
+                                    <th>TOTAL AMOUNT</th>
+                                    <th>TOTAL PAID AMOUNT</th>
+                                    <th>CUSTOMER REQUEST DATE</th>
+                                    <!-- ngIf: nav[24].activated --><th ng-if="nav[24].activated" class="ng-scope">STANDARD ORDER</th><!-- end ngIf: nav[24].activated -->
+                                    <th ng-show="hideAndshowkitchen" aria-hidden="true" class="ng-hide">KITCHEN</th>
+                                    <th ng-show="!hideAndshowkitchen" aria-hidden="false" class="">WAREHOUSE</th>
+                                    <th>PAYMENT</th>
+                                    <th>FULFILLMENT</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- ngRepeat: order in orders.slice(orderViewLength, (orderViewLength + orderNewViewBy)) -->
+                                    <tr ng-repeat="order in orders.slice(orderViewLength, (orderViewLength + orderNewViewBy))" class="ng-scope">
+                                    <td>
+                                        <input type="checkbox" id="id_chk1" class="checkRow ng-pristine ng-untouched ng-valid" value="1" ng-model="order.assign" ng-change="multipleOrder(order,order.assign)" tabindex="0" aria-checked="false" aria-invalid="false">&nbsp;&nbsp;<a style="text-decoration: none" ng-click="multipleSelect(order)" href="dashboard#/order-details/2023000004" class="ng-binding" tabindex="0">2023000004</a></td>
+                                    <td class="ng-binding">24 - Jan - 2023</td>
+                                    <td style="margin:10px">
+                                        <!-- ngIf: !order.status || order.status == 'new' --><span ng-if="!order.status || order.status == &#39;new&#39;" class="badge badge-primary badge-pill unpaid ng-binding ng-scope">New</span><!-- end ngIf: !order.status || order.status == 'new' -->
+                                        <!-- ngIf: order.status && (order.status == 'open' || order.status == 'approved' || order.status == 'packed' || order.status == 'delivered') -->
+                                        <!-- ngIf: order.status && order.status == 'closed' -->
+                                        <!-- ngIf: order.status && order.status != 'closed' && order.status != 'packed' && order.status != 'delivered' && order.status != 'approved' && order.status != 'new' && order.status != 'open' -->
+                                    </td>
+                                    <td class="ng-binding">N/A</td>
+                                    <td class="ng-binding">N/A</td>
+                                    <td class="ng-binding">104793</td>
+                                        <!-- ngIf: nav[24].activated --><td ng-if="nav[24].activated" class="ng-binding ng-scope">3675436578</td><!-- end ngIf: nav[24].activated -->
+                                        <!-- ngIf: nav[24].activated --><td ng-if="nav[24].activated" class="ng-binding ng-scope">N/A</td><!-- end ngIf: nav[24].activated -->
+                                    <td class="ng-binding">AEROCOM CUSHIONS PVT LTD</td>
+                                        <td class="ng-binding">Jyoti</td>
+                                        <td class="ng-binding"> N/A</td>
+                                        <!-- ngIf: nav[24].activated --><td ng-if="nav[24].activated" class="ng-binding ng-scope">Jyoti</td><!-- end ngIf: nav[24].activated -->
+                                        <td class="ng-binding">1</td>
+                                    <td class="ng-binding"> ₹0.00</td>
+                                    <td class="ng-binding"> ₹0.00</td>
+                                    <td class="ng-binding"> N/A</td>
+                                    <!-- ngIf: nav[24].activated --><td ng-if="nav[24].activated" class="ng-binding ng-scope">S</td><!-- end ngIf: nav[24].activated -->
+                                    <td class="ng-binding">N/A</td>
+                                    <td style="margin:10px">
+                                        <!-- ngIf: order.paymentStatus && order.paymentStatus == 'paid' -->
+                                        <!-- ngIf: order.paymentStatus && order.paymentStatus == 'partially paid' -->
+                                        <!-- ngIf: order.paymentStatus && order.paymentStatus != 'paid' && order.paymentStatus != 'partially paid' --><span ng-if="order.paymentStatus &amp;&amp; order.paymentStatus != &#39;paid&#39; &amp;&amp; order.paymentStatus != &#39;partially paid&#39;" class="badge badge-danger badge-pill unpaid ng-binding ng-scope">Unpaid</span><!-- end ngIf: order.paymentStatus && order.paymentStatus != 'paid' && order.paymentStatus != 'partially paid' --></td>
+                                    <td style="margin:10px">
+                                        <!-- ngIf: order.fulfillmentStatus && order.fulfillmentStatus == 'fulfilled' -->
+                                        <!-- ngIf: order.fulfillmentStatus && order.fulfillmentStatus == 'partially fulfilled' -->
+                                        <!-- ngIf: order.fulfillmentStatus && order.fulfillmentStatus != 'fulfilled' && order.fulfillmentStatus != 'partially fulfilled' --><span ng-if="order.fulfillmentStatus &amp;&amp; order.fulfillmentStatus != &#39;fulfilled&#39; &amp;&amp; order.fulfillmentStatus != &#39;partially fulfilled&#39;" class="badge badge-danger badge-pill unpaid ng-binding ng-scope">Unfulfilled</span><!-- end ngIf: order.fulfillmentStatus && order.fulfillmentStatus != 'fulfilled' && order.fulfillmentStatus != 'partially fulfilled' -->
+                                    </td>
+                                </tr><!-- end ngRepeat: order in orders.slice(orderViewLength, (orderViewLength + orderNewViewBy)) --><tr ng-repeat="order in orders.slice(orderViewLength, (orderViewLength + orderNewViewBy))" class="ng-scope">
+                                    <td>
+                                        <input type="checkbox" id="id_chk1" class="checkRow ng-pristine ng-untouched ng-valid" value="1" ng-model="order.assign" ng-change="multipleOrder(order,order.assign)" tabindex="0" aria-checked="false" aria-invalid="false">&nbsp;&nbsp;<a style="text-decoration: none" ng-click="multipleSelect(order)" href="dashboard#/order-details/2023000003" class="ng-binding" tabindex="0">2023000003</a></td>
+                                    <td class="ng-binding">24 - Jan - 2023</td>
+                                    <td style="margin:10px">
+                                        <!-- ngIf: !order.status || order.status == 'new' --><span ng-if="!order.status || order.status == &#39;new&#39;" class="badge badge-primary badge-pill unpaid ng-binding ng-scope">New</span><!-- end ngIf: !order.status || order.status == 'new' -->
+                                        <!-- ngIf: order.status && (order.status == 'open' || order.status == 'approved' || order.status == 'packed' || order.status == 'delivered') -->
+                                        <!-- ngIf: order.status && order.status == 'closed' -->
+                                        <!-- ngIf: order.status && order.status != 'closed' && order.status != 'packed' && order.status != 'delivered' && order.status != 'approved' && order.status != 'new' && order.status != 'open' -->
+                                    </td>
+                                    <td class="ng-binding">N/A</td>
+                                    <td class="ng-binding">N/A</td>
+                                    <td class="ng-binding">104793</td>
+                                        <!-- ngIf: nav[24].activated --><td ng-if="nav[24].activated" class="ng-binding ng-scope">N/A</td><!-- end ngIf: nav[24].activated -->
+                                        <!-- ngIf: nav[24].activated --><td ng-if="nav[24].activated" class="ng-binding ng-scope">N/A</td><!-- end ngIf: nav[24].activated -->
+                                    <td class="ng-binding">AEROCOM CUSHIONS PVT LTD</td>
+                                        <td class="ng-binding">Jyoti</td>
+                                        <td class="ng-binding"> N/A</td>
+                                        <!-- ngIf: nav[24].activated --><td ng-if="nav[24].activated" class="ng-binding ng-scope">Jyoti</td><!-- end ngIf: nav[24].activated -->
+                                        <td class="ng-binding">1</td>
+                                    <td class="ng-binding"> ₹0.00</td>
+                                    <td class="ng-binding"> ₹0.00</td>
+                                    <td class="ng-binding"> N/A</td>
+                                    <!-- ngIf: nav[24].activated --><td ng-if="nav[24].activated" class="ng-binding ng-scope">S</td><!-- end ngIf: nav[24].activated -->
+                                    <td class="ng-binding">N/A</td>
+                                    <td style="margin:10px">
+                                        <!-- ngIf: order.paymentStatus && order.paymentStatus == 'paid' -->
+                                        <!-- ngIf: order.paymentStatus && order.paymentStatus == 'partially paid' -->
+                                        <!-- ngIf: order.paymentStatus && order.paymentStatus != 'paid' && order.paymentStatus != 'partially paid' --><span ng-if="order.paymentStatus &amp;&amp; order.paymentStatus != &#39;paid&#39; &amp;&amp; order.paymentStatus != &#39;partially paid&#39;" class="badge badge-danger badge-pill unpaid ng-binding ng-scope">Unpaid</span><!-- end ngIf: order.paymentStatus && order.paymentStatus != 'paid' && order.paymentStatus != 'partially paid' --></td>
+                                    <td style="margin:10px">
+                                        <!-- ngIf: order.fulfillmentStatus && order.fulfillmentStatus == 'fulfilled' -->
+                                        <!-- ngIf: order.fulfillmentStatus && order.fulfillmentStatus == 'partially fulfilled' -->
+                                        <!-- ngIf: order.fulfillmentStatus && order.fulfillmentStatus != 'fulfilled' && order.fulfillmentStatus != 'partially fulfilled' --><span ng-if="order.fulfillmentStatus &amp;&amp; order.fulfillmentStatus != &#39;fulfilled&#39; &amp;&amp; order.fulfillmentStatus != &#39;partially fulfilled&#39;" class="badge badge-danger badge-pill unpaid ng-binding ng-scope">Unfulfilled</span><!-- end ngIf: order.fulfillmentStatus && order.fulfillmentStatus != 'fulfilled' && order.fulfillmentStatus != 'partially fulfilled' -->
+                                    </td>
+                                </tr><!-- end ngRepeat: order in orders.slice(orderViewLength, (orderViewLength + orderNewViewBy)) --><tr ng-repeat="order in orders.slice(orderViewLength, (orderViewLength + orderNewViewBy))" class="ng-scope">
+                                    <td>
+                                        <input type="checkbox" id="id_chk1" class="checkRow ng-pristine ng-untouched ng-valid" value="1" ng-model="order.assign" ng-change="multipleOrder(order,order.assign)" tabindex="0" aria-checked="false" aria-invalid="false">&nbsp;&nbsp;<a style="text-decoration: none" ng-click="multipleSelect(order)" href="dashboard#/order-details/2023000002" class="ng-binding" tabindex="0">2023000002</a></td>
+                                    <td class="ng-binding">23 - Jan - 2023</td>
+                                    <td style="margin:10px">
+                                        <!-- ngIf: !order.status || order.status == 'new' --><span ng-if="!order.status || order.status == &#39;new&#39;" class="badge badge-primary badge-pill unpaid ng-binding ng-scope">New</span><!-- end ngIf: !order.status || order.status == 'new' -->
+                                        <!-- ngIf: order.status && (order.status == 'open' || order.status == 'approved' || order.status == 'packed' || order.status == 'delivered') -->
+                                        <!-- ngIf: order.status && order.status == 'closed' -->
+                                        <!-- ngIf: order.status && order.status != 'closed' && order.status != 'packed' && order.status != 'delivered' && order.status != 'approved' && order.status != 'new' && order.status != 'open' -->
+                                    </td>
+                                    <td class="ng-binding">N/A</td>
+                                    <td class="ng-binding">N/A</td>
+                                    <td class="ng-binding">105514</td>
+                                        <!-- ngIf: nav[24].activated --><td ng-if="nav[24].activated" class="ng-binding ng-scope">N/A</td><!-- end ngIf: nav[24].activated -->
+                                        <!-- ngIf: nav[24].activated --><td ng-if="nav[24].activated" class="ng-binding ng-scope">N/A</td><!-- end ngIf: nav[24].activated -->
+                                    <td class="ng-binding">A A BEDDING COMPANY</td>
+                                        <td class="ng-binding"></td>
+                                        <td class="ng-binding"> N/A</td>
+                                        <!-- ngIf: nav[24].activated --><td ng-if="nav[24].activated" class="ng-binding ng-scope"></td><!-- end ngIf: nav[24].activated -->
+                                        <td class="ng-binding">1</td>
+                                    <td class="ng-binding"> ₹0.00</td>
+                                    <td class="ng-binding"> ₹0.00</td>
+                                    <td class="ng-binding"> N/A</td>
+                                    <!-- ngIf: nav[24].activated --><td ng-if="nav[24].activated" class="ng-binding ng-scope">S</td><!-- end ngIf: nav[24].activated -->
+                                    <td class="ng-binding">N/A</td>
+                                    <td style="margin:10px">
+                                        <!-- ngIf: order.paymentStatus && order.paymentStatus == 'paid' -->
+                                        <!-- ngIf: order.paymentStatus && order.paymentStatus == 'partially paid' -->
+                                        <!-- ngIf: order.paymentStatus && order.paymentStatus != 'paid' && order.paymentStatus != 'partially paid' --><span ng-if="order.paymentStatus &amp;&amp; order.paymentStatus != &#39;paid&#39; &amp;&amp; order.paymentStatus != &#39;partially paid&#39;" class="badge badge-danger badge-pill unpaid ng-binding ng-scope">Unpaid</span><!-- end ngIf: order.paymentStatus && order.paymentStatus != 'paid' && order.paymentStatus != 'partially paid' --></td>
+                                    <td style="margin:10px">
+                                        <!-- ngIf: order.fulfillmentStatus && order.fulfillmentStatus == 'fulfilled' -->
+                                        <!-- ngIf: order.fulfillmentStatus && order.fulfillmentStatus == 'partially fulfilled' -->
+                                        <!-- ngIf: order.fulfillmentStatus && order.fulfillmentStatus != 'fulfilled' && order.fulfillmentStatus != 'partially fulfilled' --><span ng-if="order.fulfillmentStatus &amp;&amp; order.fulfillmentStatus != &#39;fulfilled&#39; &amp;&amp; order.fulfillmentStatus != &#39;partially fulfilled&#39;" class="badge badge-danger badge-pill unpaid ng-binding ng-scope">Unfulfilled</span><!-- end ngIf: order.fulfillmentStatus && order.fulfillmentStatus != 'fulfilled' && order.fulfillmentStatus != 'partially fulfilled' -->
+                                    </td>
+                                </tr><!-- end ngRepeat: order in orders.slice(orderViewLength, (orderViewLength + orderNewViewBy)) --><tr ng-repeat="order in orders.slice(orderViewLength, (orderViewLength + orderNewViewBy))" class="ng-scope">
+                                    <td>
+                                        <input type="checkbox" id="id_chk1" class="checkRow ng-pristine ng-untouched ng-valid" value="1" ng-model="order.assign" ng-change="multipleOrder(order,order.assign)" tabindex="0" aria-checked="false" aria-invalid="false">&nbsp;&nbsp;<a style="text-decoration: none" ng-click="multipleSelect(order)" href="dashboard#/order-details/2023000001" class="ng-binding" tabindex="0">2023000001</a></td>
+                                    <td class="ng-binding">06 - Jan - 2023</td>
+                                    <td style="margin:10px">
+                                        <!-- ngIf: !order.status || order.status == 'new' --><span ng-if="!order.status || order.status == &#39;new&#39;" class="badge badge-primary badge-pill unpaid ng-binding ng-scope">New</span><!-- end ngIf: !order.status || order.status == 'new' -->
+                                        <!-- ngIf: order.status && (order.status == 'open' || order.status == 'approved' || order.status == 'packed' || order.status == 'delivered') -->
+                                        <!-- ngIf: order.status && order.status == 'closed' -->
+                                        <!-- ngIf: order.status && order.status != 'closed' && order.status != 'packed' && order.status != 'delivered' && order.status != 'approved' && order.status != 'new' && order.status != 'open' -->
+                                    </td>
+                                    <td class="ng-binding">N/A</td>
+                                    <td class="ng-binding">N/A</td>
+                                    <td class="ng-binding">101265</td>
+                                        <!-- ngIf: nav[24].activated --><td ng-if="nav[24].activated" class="ng-binding ng-scope">N/A</td><!-- end ngIf: nav[24].activated -->
+                                        <!-- ngIf: nav[24].activated --><td ng-if="nav[24].activated" class="ng-binding ng-scope">N/A</td><!-- end ngIf: nav[24].activated -->
+                                    <td class="ng-binding">A B M FURNITURE WORLD</td>
+                                        <td class="ng-binding"></td>
+                                        <td class="ng-binding"> N/A</td>
+                                        <!-- ngIf: nav[24].activated --><td ng-if="nav[24].activated" class="ng-binding ng-scope"></td><!-- end ngIf: nav[24].activated -->
+                                        <td class="ng-binding">1</td>
+                                    <td class="ng-binding"> ₹0.00</td>
+                                    <td class="ng-binding"> ₹0.00</td>
+                                    <td class="ng-binding"> N/A</td>
+                                    <!-- ngIf: nav[24].activated --><td ng-if="nav[24].activated" class="ng-binding ng-scope">S</td><!-- end ngIf: nav[24].activated -->
+                                    <td class="ng-binding">N/A</td>
+                                    <td style="margin:10px">
+                                        <!-- ngIf: order.paymentStatus && order.paymentStatus == 'paid' -->
+                                        <!-- ngIf: order.paymentStatus && order.paymentStatus == 'partially paid' -->
+                                        <!-- ngIf: order.paymentStatus && order.paymentStatus != 'paid' && order.paymentStatus != 'partially paid' --><span ng-if="order.paymentStatus &amp;&amp; order.paymentStatus != &#39;paid&#39; &amp;&amp; order.paymentStatus != &#39;partially paid&#39;" class="badge badge-danger badge-pill unpaid ng-binding ng-scope">Unpaid</span><!-- end ngIf: order.paymentStatus && order.paymentStatus != 'paid' && order.paymentStatus != 'partially paid' --></td>
+                                    <td style="margin:10px">
+                                        <!-- ngIf: order.fulfillmentStatus && order.fulfillmentStatus == 'fulfilled' -->
+                                        <!-- ngIf: order.fulfillmentStatus && order.fulfillmentStatus == 'partially fulfilled' -->
+                                        <!-- ngIf: order.fulfillmentStatus && order.fulfillmentStatus != 'fulfilled' && order.fulfillmentStatus != 'partially fulfilled' --><span ng-if="order.fulfillmentStatus &amp;&amp; order.fulfillmentStatus != &#39;fulfilled&#39; &amp;&amp; order.fulfillmentStatus != &#39;partially fulfilled&#39;" class="badge badge-danger badge-pill unpaid ng-binding ng-scope">Unfulfilled</span><!-- end ngIf: order.fulfillmentStatus && order.fulfillmentStatus != 'fulfilled' && order.fulfillmentStatus != 'partially fulfilled' -->
+                                    </td>
+                                </tr><!-- end ngRepeat: order in orders.slice(orderViewLength, (orderViewLength + orderNewViewBy)) -->
+                                </tbody>
+                            </table>
+                        </div><!-- end ngIf: orders.length -->
+
+                        <!-- ngIf: !orders.length -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script class="ng-scope">
+    $('#order-history-filter').click(function(event){
+        $(".dealerDropdown").css('display', 'none');
+    });
+</script>
+<style class="ng-scope">
+    #just-line-break {
+        white-space: pre-line;
+        text-align: center;
+        padding: 15px 25px;
+    }
+    .partially{
+        background:rgba(255, 191, 0, 0.3);
+        color:#ff8000;
+        border:none
+    }
+    .unpaid{
+        background:rgba(33,150,243, 0.3);
+        color:darkblue;
+        border:none
+    }
+    .open{
+        background: rgba(94, 243, 35, 0.3);
+        color:darkgreen;
+        border:none
+    }
+    .paid{
+        background:rgba(0, 151, 19, 0.3);
+        color:darkgreen;
+        border:none
+    }
+    .cancelled{
+        background: rgba(255, 0, 0, 0.25);
+        color: rgba(255, 0, 0, 0.92);
+        border:none
+    }
+    .others{
+        background:rgba(128, 128, 128, 0.3);
+        color:black;
+        border:none
+    }
+    .user > div{
+        text-align:center;
+        padding:1%;
+        //border:1px solid lightgrey;
+        //width:30%;
+        //margin:1%;
+        cursor: pointer;
+        transition: all .1s ease-in;
+    }
+
+    .userGrid > div:hover{
+        background-color: #f0f2f5;
+        transform:scale(1.02);
+        cursor: pointer;
+
+    }
+
+    .userGrid-card{
+        text-align: center;
+        background-color: white;
+        padding: 10px;
+        box-shadow: 1px 1px 8px lightgrey;
+        border-radius: 5px;
+    }
+
+    .userGrid-card-details h4 {
+        color:#003366;
+        text-align: center;
+        font-weight: 400;
+        white-space: nowrap;
+        padding: 0 15px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .userGrid-card-details p {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        padding: 0 10px;
+        overflow: hidden;
+        font-size: 12px;
+        color: #003366;
+    }
+
+    .userGrid-card-details img{
+        border-radius:50%;
+        width:75px;
+        height:75px;
+    }
+    .swal-title {
+        color: rgba(0,0,0,.65);
+        font-weight: 600;
+        text-transform: none;
+        position: relative;
+        display: block;
+        padding: 13px 16px;
+        font-size: 20px;
+        line-height: normal;
+        text-align: center;
+        margin-bottom: 0;
+    }
+    
+</style></div>
+                   
+                </div>
+                <footer class="footer">
+                    <div class="container-fluid clearfix">
+                            <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © 2020 <a href="https://www.B2BOMS.com/" target="_blank">B2BOMS</a>. All rights reserved.</span>
+                        <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Made in India with <i class="mdi mdi-heart text-danger"></i>
+                            </span>
+
+<!--                        <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © 2020 <a href="https://www.B2BOMS.com" target="_blank">B2BOMS</a>. All rights reserved.</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
+<!--                        <span class= "d-block text-center text-sm-left d-sm-inline-block"><b>Terms and Conditions</b> | No Refunds & Goods once sold can be returned</span>-->
+<!--                        <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Made in India with <i class="mdi mdi-heart text-danger"></i></span>-->
+                    </div>
+                </footer>
+            </div>
+
+            <!-- main-panel ends -->
+        </div>
+        <!-- page-body-wrapper ends -->
+    </div>
+
+    <script>
+        function initMap() {
+            var input = document.getElementById('pickupaddress');
+
+            var autocomplete = new google.maps.places.Autocomplete(input);
+            autocomplete.addListener('place_changed', function () {
+                var place = autocomplete.getPlace();
+                //console.log(place);
+                var lat = place.geometry.location.lat();
+                var long = place.geometry.location.lng();
+                var jaddress = place.formatted_address;
+                console.log("lat and long" + lat, long);
+                var scope = angular.element(document.getElementById('pickupaddress')).scope();
+                scope.pickup.Address = jaddress;
+                scope.pickup.lat = lat;
+                scope.pickup.long = long;
+            })
+
+        }
+    </script>
+    <!--<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0CWTotBviZ_wJfqVPQ9_MhUM_DhEr_yQ&libraries=places,geometry&callback=initMap" ></script>-->
+<!--    <script type="text/javascript" src="https://maps.google.com/maps/api/js?key=AIzaSyDcQA42xdYwQY9aELNoT5M_jtS_7TCSkRI&libraries=geometry,places&callback=initMap"></script>-->
+    <!-- New API -->
+    <!--<script type="text/javascript" src="https://maps.google.com/maps/api/js?key=AIzaSyAPs4yVp42Ko_GzD7jUX6mBxFIQT-Ryguo&libraries=geometry,places"></script>-->
+
+
+    <!-- plugins:js -->
+    <script src="../js/vendor.bundle.base.js"></script><div class="razorpay-container" style="z-index: 2147483647; position: fixed; top: 0px; display: none; left: 0px; height: 100%; width: 100%; backface-visibility: hidden; overflow-y: visible;"><style>
+        
+    <script src="../js/vendor.bundle.addons.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page -->
+    
+    <script type="text/javascript" src="../js/jquery-jvectormap.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-jvectormap-world-mill-en.js"></script>
+    <script type="text/javascript" src="../js/raphael-2.1.4.min.js"></script>
+    <script type="text/javascript" src="../js/justgage.js"></script>
+    <!-- <script type="text/javascript" src="./assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.js"></script> -->
+
+<!-- endinject -->
+<!-- Plugin js for this page-->
+    <script type="text/javascript" src="../js/d3.min.js"></script>
+    <script type="text/javascript" src="../js/c3.js"></script>
+    <script type="text/javascript" src="../js/select2.min.js"></script>
+    <script type="text/javascript" src="../js/typeahead.bundle.min.js"></script>
+    <script type="text/javascript" src="../js/icheck.min.js"></script>
+    <script type="text/javascript" src="../js/owl.carousel.min.js"></script>
+    <!-- <script type="text/javascript" src="./assets/vendors/x-editable/bootstrap-editable.min.js"></script> -->
+<!-- End plugin js for this page-->
+<!-- inject:js -->
+<!-- endinject -->
+<!-- Custom js for this page-->
+    <script type="text/javascript" src="../js/off-canvas.js"></script>
+    <script type="text/javascript" src="../js/hoverable-collapse.js"></script>
+    <script type="text/javascript" src="../js/misc.js"></script>
+    <script type="text/javascript" src="../js/settings.js"></script>
+    <script type="text/javascript" src="../js/todolist.js"></script>
+    <script type="text/javascript" src="../js/toastDemo.js"></script>
+    <script type="text/javascript" src="../js/desktop-notification.js"></script>
+    <script type="text/javascript" src="../js/sortable.js"></script>
+<!--<script src="../assets/js/demo_1/dashboard.js"></script>-->
+    <!-- End custom js for this page-->
+
+
+<div id="onesignal-bell-container" class="onesignal-bell-container onesignal-reset onesignal-bell-container-bottom-right"><div id="onesignal-bell-launcher" class="onesignal-bell-launcher onesignal-bell-launcher-md onesignal-bell-launcher-bottom-right onesignal-bell-launcher-theme-default onesignal-bell-launcher-active"><div class="onesignal-bell-launcher-button"><svg class="onesignal-bell-svg" xmlns="http://www.w3.org/2000/svg" width="99.7" height="99.7" viewBox="0 0 99.7 99.7" style="filter: drop-shadow(0 2px 4px rgba(34,36,38,0.35));; -webkit-filter: drop-shadow(0 2px 4px rgba(34,36,38,0.35));;"><circle class="background" cx="49.9" cy="49.9" r="49.9" style=""></circle><path class="foreground" d="M50.1 66.2H27.7s-2-.2-2-2.1c0-1.9 1.7-2 1.7-2s6.7-3.2 6.7-5.5S33 52.7 33 43.3s6-16.6 13.2-16.6c0 0 1-2.4 3.9-2.4 2.8 0 3.8 2.4 3.8 2.4 7.2 0 13.2 7.2 13.2 16.6s-1 11-1 13.3c0 2.3 6.7 5.5 6.7 5.5s1.7.1 1.7 2c0 1.8-2.1 2.1-2.1 2.1H50.1zm-7.2 2.3h14.5s-1 6.3-7.2 6.3-7.3-6.3-7.3-6.3z" style=""></path><ellipse class="stroke" cx="49.9" cy="49.9" rx="37.4" ry="36.9" style=""></ellipse></svg></div><div class="onesignal-bell-launcher-badge" style="filter: drop-shadow(0 2px 4px rgba(34,36,38,0));; -webkit-filter: drop-shadow(0 2px 4px rgba(34,36,38,0));;"></div><div class="onesignal-bell-launcher-message"><div class="onesignal-bell-launcher-message-body"></div></div><div class="onesignal-bell-launcher-dialog" style="filter: drop-shadow(0px 2px 2px rgba(34,36,38,.15));; -webkit-filter: drop-shadow(0px 2px 2px rgba(34,36,38,.15));;"><div class="onesignal-bell-launcher-dialog-body"></div></div></div></div></body></html>
